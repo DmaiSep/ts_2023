@@ -1,0 +1,150 @@
+.swiper-container {
+    padding: 15px!important;
+}
+
+//flechas de carrusell
+.swiper-button-next {
+    background-color: #7d79dc6e;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.swiper-button-prev {
+    background-color: #7d79dc6e;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.side-nav .logo-wrapper {
+    border-bottom: none!important;
+}
+
+.side-nav {
+    width: 16rem!important;
+}
+
+.side-nav .sidenav-bg {
+    width: 16rem!important;
+}
+
+.card3 {
+    position: relative;
+    width: 315px;
+    height: 350px;
+    //margin: 30px auto;
+    box-shadow: 0 0 5px rgb(0 0 0 / 40%);
+    background-color: #f2e7f8bf;
+    border-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.card-header3 {
+    position: relative;
+    height: 200px;
+    background-size: cover;
+    background-position: top;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-header3:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgb(5 85 134 / 30%), rgba(181, 181, 181, 0.1));
+}
+
+.card-header-bar3 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    width: 100%;
+}
+
+svg .polygon {
+    fill: #f5edfa;
+}
+
+.card-header-slanted-edge3 {
+    position: absolute;
+    bottom: -3px;
+    z-index: 1;
+    width: 100%;
+    right: 0;
+    left: 0;
+}
+
+.card-body3 {
+    text-align: center;
+    padding-left: 10px;
+}
+
+.name3 {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 auto;
+    color: #5d5b5b;
+}
+
+.job-title3 {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #af7fc9;
+}
+
+.card-footer3 {
+    // position: absolute;
+    left: 0;
+    width: 100%;
+    //bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.stat3 {
+    box-sizing: border-box;
+    width: calc(100% / 3);
+    float: left;
+    text-align: center;
+    border-left: 1px solid #EBEBEB;
+    margin: 10px;
+}
+
+.stat3 .label {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #95989A;
+}
+
+.stat3 .value {
+    display: block;
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.btn-floating i {
+    line-height: 41px !important;
+}
+
+.btn-floating {
+    box-shadow: 0 5px 6px #0000002e, 0 0px 6px #00000026;
+    width: 40px;
+    height: 40px;
+}

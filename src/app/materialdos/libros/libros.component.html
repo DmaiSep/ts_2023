@@ -1,0 +1,133 @@
+<div class="row">
+    <div class="col-md-6 col-lg-6">
+        <div class="md-form">
+            <mdb-select-2 placeholder="Elige una opción" label="Seleciona un grado" [dropdownClass]="'mdb-select-dropdown-colorful mdb-select-dropdown-ins'">
+                <mdb-select-option *ngFor="let option of options" [value]="option.value">{{ option.label }}</mdb-select-option>
+            </mdb-select-2>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-6">
+        <div class="md-form">
+            <mdb-select-2 placeholder="Elige una opción" label="Seleciona una asignatura">
+                <mdb-select-option *ngFor="let asignaturas of asignatura" [value]="asignaturas.value">{{ asignaturas.label }}</mdb-select-option>
+            </mdb-select-2>
+        </div>
+    </div>
+</div>
+
+<blockquote class="blockquote bq-warning">
+    <p class="bq-title">Libros para el Alumno</p>
+</blockquote>
+
+<swiper [config]="config">
+    <div class="swiper-wrapper">
+        <!--<div class="card2 swiper-slide" *ngFor="let uno of Images">
+            <img [src]="uno.src" />
+            <div class="info">
+                <p>{{uno.name}}</p>
+                <a href="{{uno.url}}" target="_blank"><button>Ver mas</button></a>
+            </div>
+        </div> -->
+        <div class="card3 swiper-slide" *ngFor="let uno of Images">
+            <div class="card-header3" style="background-image: url(https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Espanol/3_11.png)">
+
+
+                <div class="card-header-slanted-edge3">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200"><path class="polygon" d="M-20,200,1000,0V200Z" /></svg>
+
+                </div>
+            </div>
+
+            <div class="card-body3">
+                <h4 class="job-title3"> 3er Grado / Bloque 1 </h4>
+                <h2 class="name3">Lengua Materna. Español</h2>
+            </div>
+
+            <div class="card-footer3">
+                <div class="">
+                    <div class="stat3">
+                        <span class="label">Ver</span>
+                        <span class="">
+                            <a mdbBtn floating="true"  class="night-fade-gradient" size="2x" gradient="">
+                                <mdb-icon fas icon="play"></mdb-icon>
+                              </a>
+                        </span>
+                    </div>
+                    <div class="stat3">
+                        <span class="label">Descargar</span>
+                        <span class="">
+                            <a mdbBtn floating="true"  class="night-fade-gradient" size="2x" gradient="">
+                                <mdb-icon fas icon="arrow-alt-circle-down"></mdb-icon>
+                              </a>
+                        </span>
+                    </div>
+                    <!-- <div class="stat">
+                        <span class="label">Likes</span>
+                        <span class="value">320</span>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</swiper>
+
+<blockquote class="blockquote bq-warning">
+    <p class="bq-title">Libros para el Maestro</p>
+</blockquote>
+<swiper [config]="config">
+    <div class="swiper-wrapper">
+        <!--<div class="card2 swiper-slide" *ngFor="let uno of Images">
+            <img [src]="uno.src" />
+            <div class="info">
+                <p>{{uno.name}}</p>
+                <a href="{{uno.url}}" target="_blank"><button>Ver mas</button></a>
+            </div>
+        </div> -->
+        <div class="card3 swiper-slide" *ngFor="let uno of Images">
+            <div class="card-header3" style="background-image: url(https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Espanol/3_11.png)">
+
+
+                <div class="card-header-slanted-edge3">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200"><path class="polygon" d="M-20,200,1000,0V200Z" /></svg>
+
+                </div>
+            </div>
+
+            <div class="card-body3">
+                <h4 class="job-title3"> 3er Grado / Bloque 1 </h4>
+                <h2 class="name3">Lengua Materna. Español</h2>
+            </div>
+
+            <div class="card-footer3">
+                <div class="">
+                    <div class="stat3">
+                        <span class="label">Ver</span>
+                        <span class="">
+                            <a mdbBtn floating="true"  class="night-fade-gradient" size="2x" gradient="">
+                                <mdb-icon fas icon="play"></mdb-icon>
+                              </a>
+                        </span>
+                    </div>
+                    <div class="stat3">
+                        <span class="label">Descargar</span>
+                        <span class="">
+                            <a mdbBtn floating="true"  class="young-passion-gradient" size="2x" gradient="">
+                                <mdb-icon fas icon="arrow-alt-circle-down"></mdb-icon>
+                              </a>
+                        </span>
+                    </div>
+                    <!-- <div class="stat">
+                        <span class="label">Likes</span>
+                        <span class="value">320</span>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</swiper>

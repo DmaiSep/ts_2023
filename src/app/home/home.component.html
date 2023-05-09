@@ -1,0 +1,92 @@
+<app-header></app-header>
+<mdb-card style="background-image: url('https://mdbootstrap.com/img/Photos/Others/gradient12.webp')">
+    <div class="text-white text-center py-5 px-4 my-5">
+      <div>
+        <h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Telesecundaria </strong></h2>
+        <p class="mx-5 mb-5">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
+          optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos. Odit sed qui, dolorum!
+        </p>
+        <a mdbBtn color="white" outline="true" class="waves-light" mdbWavesEffect>
+          <mdb-icon fas icon="clone" class="left"></mdb-icon>View project
+        </a>
+      </div>
+    </div>
+  </mdb-card>
+  <div class="container mt-5 text-center mb-5">
+    <h1>Telesecundaria</h1>
+    <section class="text-justify">
+         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </section>
+    <hr>
+   <!--CARRRUSEL DE NOTICIAS-->
+    <mdb-carousel class="carousel slide mt-5 carousel-fade" [type]="'carousel-thumbnails'" [animation]="'fade'">
+        <mdb-carousel-item>
+          <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(88).webp" alt="First slide">
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(121).webp" alt="Second slide">
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(31).webp" alt="Third slide">
+        </mdb-carousel-item>
+      </mdb-carousel>
+     <!--Materiales por Grados -->
+      <h1>Materiales Educativos</h1>
+      <hr>
+    <div class="row mt-5">
+       <div class="col-md-6">
+          <!--Card-->
+          <mdb-card cascade="true" narrower="true" [routerLink]="['/Materiales/inicio', { outlets: { Dinamyk: 'Suger' }}]">
+      
+            <!--Card image-->
+            <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+              <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).webp"></mdb-card-img>
+              <a>
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <!--/Card image-->
+      
+            <mdb-card-body cascade="true" class="text-center">
+                   
+              <!--Title-->
+              <h4 class="card-title">Primer Grado</h4>
+              <!--Text-->
+      
+            </mdb-card-body>
+            <!--/.Card content-->
+      
+          </mdb-card>
+          <!--/.Card-->
+        </div>
+        <div class="col-md-6">
+            <!--Card-->
+            <mdb-card cascade="true" narrower="true" [routerLink]="['/Materialesdos/inicio', { outlets: { Dinamyk2: 'Suger' }}]" >
+        
+              <!--Card image-->
+              <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+                <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).webp"></mdb-card-img>
+                <a>
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+              <!--/Card image-->
+        
+              <mdb-card-body cascade="true" class="text-center">
+                     
+                <!--Title-->
+                <h4 class="card-title">Segundo / Tercer Grado</h4>
+                <!--Text-->
+        
+              </mdb-card-body>
+              <!--/.Card content-->
+        
+            </mdb-card>
+            <!--/.Card-->
+          </div>
+       
+      </div>
+  </div>
+
+  <app-footer></app-footer>
