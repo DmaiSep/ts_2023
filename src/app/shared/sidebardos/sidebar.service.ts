@@ -117,33 +117,13 @@ export class SidebarService {
         }
       ]
     },
-  
-    {
-      title: '',
-      type: 'header'
-    },
-   /* {
-      title: 'Documentation',
-      icon: 'fa fa-book',
-      active: false,
-      type: 'simple',
-      badge: {
-        text: 'Beta',
-        class: 'badge-primary'
-      },
-    },*/
     {
       title: 'Calendario',
       icon: 'fa fa-calendar',
       active: false,
-      type: 'simple'
-    }/*,
-    {
-      title: 'Examples',
-      icon: 'fa fa-folder',
-      active: false,
-      type: 'simple'
-    }*/
+      type: 'simple',
+      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/calendario/CALENDARIO_ESCOLAR_2022-2023_v3.pdf'
+    }
   ];
   constructor() { }
 

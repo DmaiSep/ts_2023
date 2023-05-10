@@ -32,6 +32,13 @@ export class SidebarService {
         
       ]
     },
+    {
+      title: 'Calendario',
+      icon: 'fa fa-calendar',
+      active: false,
+      type: 'simple',
+      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/calendario/CALENDARIO_ESCOLAR_2022-2023_v3.pdf'
+    }
     /*{
       title: 'Fortalecimiento de capacidades técnicas',
       icon: 'fas fa-edit',
