@@ -5,15 +5,27 @@ import { InicioComponent } from './inicio/inicio.component';
 import { LibrosComponent } from './libros/libros.component';
 import { AudiovisualesComponent } from './audiovisuales/audiovisuales.component';
 import { InformaticosComponent } from './informaticos/informaticos.component';
+import { ApuntesComponent } from './apuntes/apuntes.component';
+import { DebilidadvComponent } from './debilidadv/debilidadv.component';
+import { MatricesaComponent } from './matricesa/matricesa.component';
+import { MatrizcComponent } from './matrizc/matrizc.component';
+import { CirculolComponent } from './circulol/circulol.component';
+import { InglestComponent } from './inglest/inglest.component';
 
 const routes: Routes = [
   {
-    path:'inicio', component: MaterialdosComponent,
+    path:'Inicio', component: MaterialdosComponent,
     children:[
-      { path:'Suger', component: InicioComponent,outlet: "Dinamyk2"}, 
-      { path:'Libros', component: LibrosComponent,outlet: "Dinamyk2"}, 
-      {path:'Audiovisual', component: AudiovisualesComponent, outlet: "Dinamyk2"},
-      {path:'Informatico', component: InformaticosComponent, outlet: "Dinamyk2"},
+      { path:'Home', component: InicioComponent,outlet: "Secc"}, 
+      { path:'Libros', component: LibrosComponent,outlet: "Secc"}, 
+      {path:'Audiovisuales', component: AudiovisualesComponent, outlet: "Secc"},
+      {path:'Informaticos', component: InformaticosComponent, outlet: "Secc"},
+      {path:'Apuntes', component: ApuntesComponent, outlet: "Secc"},
+      {path:'DebilidadV', component: DebilidadvComponent, outlet: "Secc"},
+      {path:'MatricezA', component: MatricesaComponent, outlet: "Secc"},
+      {path:'MatrizC', component: MatrizcComponent, outlet: "Secc"},
+      {path:'CirculoLectura', component: CirculolComponent, outlet: "Secc"},
+      {path:'InglesTele', component: InglestComponent, outlet: "Secc"},
     ]
   
   }

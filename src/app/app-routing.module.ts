@@ -6,10 +6,10 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'Materiales',
+  { path: 'MaterialesE',
     loadChildren:()=> import('./materialedu/materialedu.module').then(m => m.MaterialeduModule)
   },
-  {path: 'Materialesdos',
+  {path: 'Materiales',
     loadChildren:()=> import('./materialdos/materialdos.module').then(m => m.MaterialdosModule)
   },
   { path: '**', redirectTo:'home' }

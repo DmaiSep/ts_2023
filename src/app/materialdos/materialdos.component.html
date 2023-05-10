@@ -7,12 +7,12 @@
                     <div class="col-xs-12 col-md-12">
                         <mdb-icon fas icon="bars" size="2x" style="color: #465056;" (click)="toggleSidebar()"></mdb-icon>
                         
-                        <a (click)="oupen('/home')">
+                        <a [routerLink]="['/']">
                            
-                            <p class="d-inline-block p-3 font-weight-bold  text-default " style="font-size: 20px;">Inicio</p>
+                            <p class="d-inline-block p-2 font-weight-bold  text-default " style="font-size: 20px;">Inicio</p>
                         </a>
                         /
-                        <p class="d-inline-block p-3 " style="font-size: 20px;color: #66615b;font-weight: 400;">Material Educativo</p>
+                        <p class="d-inline-block p-2 " style="font-size: 20px;color: #66615b;font-weight: 400;">Material Educativo</p>
                        
                     </div>
                   
@@ -21,7 +21,7 @@
                
             </div>
             <div class="container my-5">
-                <router-outlet name="Dinamyk2"></router-outlet>
+                <router-outlet name="Secc"></router-outlet>
             </div>
           
         </div>

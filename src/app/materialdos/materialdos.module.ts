@@ -10,6 +10,12 @@ import { InformaticosComponent } from './informaticos/informaticos.component';
 import { MDBBootstrapModulesPro } from 'ng-uikit-pro-standard';
 import { SharedModule } from '../shared/shared.module';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
+import { ApuntesComponent } from './apuntes/apuntes.component';
+import { DebilidadvComponent } from './debilidadv/debilidadv.component';
+import { MatricesaComponent } from './matricesa/matricesa.component';
+import { MatrizcComponent } from './matrizc/matrizc.component';
+import { CirculolComponent } from './circulol/circulol.component';
+import { InglestComponent } from './inglest/inglest.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +23,13 @@ import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
     LibrosComponent,
     InicioComponent,
     AudiovisualesComponent,
-    InformaticosComponent
+    InformaticosComponent,
+    ApuntesComponent,
+    DebilidadvComponent,
+    MatricesaComponent,
+    MatrizcComponent,
+    CirculolComponent,
+    InglestComponent
   ],
   imports: [
     CommonModule,

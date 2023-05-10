@@ -23,28 +23,37 @@ export class SidebarService {
         },
         {
           title: 'Materiales audiovisuales',
-          url:'Audiovisual'
+          url:'Audiovisuales'
         },
         {
           title: 'Materiales informáticos',
-          url:'Informatico'
+          url:'Informaticos'
         }
         ,
         {
-          title: 'Apuntes'
+          title: 'Materiales para debilidad visual',
+          url:'DebilidadV'
+        }
+        ,
+        {
+          title: 'Apuntes',
+          url:'Apuntes'
         },
         {
           title: 'Matriz de Recursos Audiovisuales',
-          url:'/Materiales/matrices'
+          url:'MatricezA'
         },
         {
-          title: 'Matriz de Correspondencia'
+          title: 'Matriz de Correspondencia',
+          url:'MatrizC'
         },
         {
-          title: 'Círculos de lectura'
+          title: 'Círculos de lectura',
+          url:'CirculoLectura'
         },
         {
-          title: 'Inglés en Telesecundaria'
+          title: 'Inglés en Telesecundaria',
+          url:'InglesTele'
         }
       ]
     },
