@@ -122,7 +122,7 @@ export class SidebarService {
       icon: 'fa fa-calendar',
       active: false,
       type: 'simple',
-      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/calendario/CALENDARIO_ESCOLAR_2022-2023_v3.pdf'
+      url: './assets/docs/calendario/CALENDARIO_ESCOLAR_2022-2023_v3.pdf'
     }
   ];
   constructor() { }
