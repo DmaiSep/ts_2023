@@ -28,6 +28,7 @@ import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
+
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
@@ -40,6 +41,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     HomeComponent,
     HeaderComponent,
     FooterComponent,
+    
   ],
   imports: [
     BrowserModule,

@@ -1,13 +1,54 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SwiperOptions } from 'swiper';
 import { HttpClient } from "@angular/common/http";
+import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
+
 @Component({
   selector: 'app-libros',
   templateUrl: './libros.component.html',
   styleUrls: ['./libros.component.scss']
 })
-export class LibrosComponent {
-  constructor(private httpClient: HttpClient) { }
+export class LibrosComponent implements OnInit{
+  form: FormGroup;
+  gradosUnicos = [];
+  asigMenu = [];
+  libroSelect = [];
+  gradosSelect:number = 0;
+  asigSelect:number = 0;
+  
+  constructor(private httpClient: HttpClient, private _formBuilder: FormBuilder) {
+    this.form = this._formBuilder.group({
+      grado  : ['', [ Validators.required]  ],
+      asignatura  : ['', [ Validators.required]  ],
+    });
+  }
+  
+  ngOnInit(): void {
+    this.form.controls['asignatura'].disable();
+    this.gradUnicos();
+  
+  }
+
+  //agrupa todos los grados existentes en un objeto
+  gradUnicos(){
+    
+    this.menu.forEach((elemento) => {
+      if(!this.gradosUnicos.length){
+        this.gradosUnicos.push(elemento);
+      }else{
+        let status = false;
+        this.gradosUnicos.forEach(gradosU => {
+          if(gradosU.id_grado === elemento.id_grado){
+            status = true;
+          }
+        });
+
+        if(!status){
+          this.gradosUnicos.push(elemento);
+        }
+      }
+    });
+  }
 
   config: SwiperOptions = {
     slidesPerView: 3,
@@ -40,52 +81,101 @@ export class LibrosComponent {
     },
     
   }; 
+  
+  menu = [
+    { 
+      id_grado: '2', 
+      grado: 'Segundo Grado',
+      id_asig: '1',
+      asig: 'Español',
+    },{ 
+      id_grado: '2', 
+      grado: 'Segundo Grado',
+      id_asig: '2',
+      asig: 'Matematicas',
+    },{ 
+      id_grado: '2', 
+      grado: 'Segundo Grado',
+      id_asig: '3',
+      asig: 'Fisica',
+    },{ 
+      id_grado: '2', 
+      grado: 'Segundo Grado',
+      id_asig: '4',
+      asig: 'Historia',
+    },{ 
+      id_grado: '2', 
+      grado: 'Segundo Grado',
+      id_asig: '5',
+      asig: 'Formación Civica y Etica',
+    },{ 
+      id_grado: '3', 
+      grado: 'Tercer Grado',
+      id_asig: '1',
+      asig: 'Español',
+    },{ 
+      id_grado: '3', 
+      grado: 'Tercer Grado',
+      id_asig: '2',
+      asig: 'Matematicas',
+    },{ 
+      id_grado: '3', 
+      grado: 'Tercer Grado',
+      id_asig: '3',
+      asig: 'Química',
+    },{ 
+      id_grado: '3', 
+      grado: 'Tercer Grado',
+      id_asig: '4',
+      asig: 'Historia',
+    },{ 
+      id_grado: '3', 
+      grado: 'Tercer Grado',
+      id_asig: '5',
+      asig: 'Formación Civica y Etica',
+    }
+  ];
+  
+  libros = [
+    { perfil: '1', id_grado: '2', id_asig:'1', id_libro: '1', titulo: 'Español', ver:'', desc:'', img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/Ciencias/TS-LPA-CIENCIA-FIS-2-V1-BAJA1.png' },
+    { perfil: '1', id_grado: '2', id_asig:'2', id_libro: '2', titulo: 'Matematicas',ver:'', desc:'', img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/Ciencias/TS-LPA-CIENCIA-FIS-2-V1-BAJA1.png' },
+    { perfil: '1', id_grado: '2', id_asig:'3', id_libro: '3', titulo: 'Fisica', ver:'', desc:'',img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/Ciencias/TS-LPA-CIENCIA-FIS-2-V1-BAJA1.png' },
+    { perfil: '1', id_grado: '2', id_asig:'4', id_libro: '4', titulo: 'Historia',ver:'', desc:'', img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/Ciencias/TS-LPA-CIENCIA-FIS-2-V1-BAJA1.png' },
+    { perfil: '1', id_grado: '2', id_asig:'5', id_libro: '5', titulo: 'Formación Civica y Etica',ver:'', desc:'', img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/Ciencias/TS-LPA-CIENCIA-FIS-2-V1-BAJA1.png' },
+    { perfil: '1', id_grado: '3', id_asig:'1', id_libro: '6', titulo: 'Español', ver:'', desc:'', img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/7.png' },
+    { perfil: '1', id_grado: '3', id_asig:'2', id_libro: '7', titulo: 'Matematicas',ver:'', desc:'', img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/7.png' },
+    { perfil: '1', id_grado: '3', id_asig:'3', id_libro: '8', titulo: 'Química', ver:'', desc:'',img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/7.png' },
+    { perfil: '1', id_grado: '3', id_asig:'4', id_libro: '9', titulo: 'Historia',ver:'', desc:'', img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/7.png' },
+    { perfil: '1', id_grado: '3', id_asig:'5', id_libro: '10', titulo: 'Formación Civica y Etica',ver:'', desc:'', img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/7.png' },
+    { perfil: '2', id_grado: '2', id_asig:'1', id_libro: '1', titulo: 'Español', ver:'', desc:'', img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/6.png' },
+    { perfil: '2', id_grado: '2', id_asig:'2', id_libro: '2', titulo: 'Matematicas',ver:'', desc:'', img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/6.png' },
+    { perfil: '2', id_grado: '2', id_asig:'3', id_libro: '3', titulo: 'Fisica', ver:'', desc:'',img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/6.png' },
+    { perfil: '2', id_grado: '2', id_asig:'4', id_libro: '4', titulo: 'Historia',ver:'', desc:'', img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/6.png' },
+    { perfil: '2', id_grado: '2', id_asig:'5', id_libro: '5', titulo: 'Formación Civica y Etica',ver:'', desc:'', img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/6.png' },
+    { perfil: '2', id_grado: '3', id_asig:'1', id_libro: '6', titulo: 'Español', ver:'', desc:'', img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Espanol/3_11.png' },
+    { perfil: '2', id_grado: '3', id_asig:'2', id_libro: '7', titulo: 'Matematicas',ver:'', desc:'', img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Espanol/3_11.png' },
+    { perfil: '2', id_grado: '3', id_asig:'3', id_libro: '8', titulo: 'Química', ver:'', desc:'',img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Espanol/3_11.png' },
+    { perfil: '2', id_grado: '3', id_asig:'4', id_libro: '9', titulo: 'Historia',ver:'', desc:'', img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Espanol/3_11.png' },
+    { perfil: '2', id_grado: '3', id_asig:'5', id_libro: '10', titulo: 'Formación Civica y Etica',ver:'', desc:'', img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Espanol/3_11.png' }
+  ];
 
+  grado(){
+    if(this.form.get('grado').value){
+      this.gradosSelect = this.form.get('grado').value;
+      this.asigMenu = this.menu.filter(asignatura => Number(asignatura.id_grado) == this.gradosSelect);
+      this.form.controls['asignatura'].enable();
+    }
+   
+  }
 
-  options = [
-    { value: '1', label: 'Primer Grado' },
-    { value: '2', label: 'Segundo Grado' },
-    { value: '3', label: 'Tercer Grado' },
-  ];
-  asignatura = [
-    { value: '1', label: 'Español' },
-    { value: '2', label: 'Matematicas' },
-    { value: '3', label: 'Fisica' },
-    { value: '4', label: 'Historia' },
-    { value: '5', label: 'Formación Civica y Etica' },
-  ];
-  bloque = [
-    { value: '1', label: '1' },
-    { value: '2', label: '2' },
-    { value: '3', label: '3' },
-  ];
-  Images: Array<object> = [
-    {
-      src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Espanol/3_1.png',
-      name: 'Lengua Materna.español',
-      alt: 'Image 1',
-      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf',
-    }, {
-      src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Ciencias/3_3_v21.png',
-      name: 'Matematicas',
-      alt: 'Image 2',
-      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
-    }, {
-      src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Historia/3_51.png',
-      name: 'Historia',
-      alt: 'Image 3',
-      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
-    }, {
-      src: 'https://loremflickr.com/600/400/brazil,rio',
-      name: 'Formación Civica y Etica',
-      alt: 'Image 4',
-      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
-    }, {
-      src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Ciencias/3_3_v21.png',
-      name: 'Ciencias',
-      alt: 'Image 5',
-      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
-    }  
-  ]
+  asignaturaf(){
+    if(this.form.get('asignatura').value){
+      this.asigSelect = this.form.get('asignatura').value;
+
+    }
+
+  }
+
+ 
 
 }

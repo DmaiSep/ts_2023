@@ -10,6 +10,7 @@ import { MDBBootstrapModulesPro } from 'ng-uikit-pro-standard';
 import { AudiovisualComponent } from './audiovisual/audiovisual.component';
 import { InformaticoComponent } from './informatico/informatico.component';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,14 +18,15 @@ import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
     LibrosComponent,
     InicioComponent,
     AudiovisualComponent,
-    InformaticoComponent
+    InformaticoComponent,
   ],
   imports: [
     CommonModule,
     MaterialeduRoutingModule,
     SharedModule,
     MDBBootstrapModulesPro.forRoot(),
-    NgxUsefulSwiperModule
+    NgxUsefulSwiperModule,
+    ReactiveFormsModule
   ]
 })
 export class MaterialeduModule { }
