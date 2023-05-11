@@ -17,8 +17,6 @@ import { MatrizcComponent } from './matrizc/matrizc.component';
 import { CirculolComponent } from './circulol/circulol.component';
 import { InglestComponent } from './inglest/inglest.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { PipeGradoPipe } from './pipes/pipe-grado.pipe';
-import { PipePerfilPipe } from './pipes/pipe-perfil.pipe';
 import { FilterTPipe } from './pipes/filter-t.pipe';
 
 
@@ -35,8 +33,6 @@ import { FilterTPipe } from './pipes/filter-t.pipe';
     MatrizcComponent,
     CirculolComponent,
     InglestComponent,
-    PipeGradoPipe,
-    PipePerfilPipe,
     FilterTPipe,
   ],
   imports: [
