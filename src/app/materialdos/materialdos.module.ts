@@ -18,6 +18,8 @@ import { CirculolComponent } from './circulol/circulol.component';
 import { InglestComponent } from './inglest/inglest.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FilterTPipe } from './pipes/filter-t.pipe';
+import { MenuAsigPipe } from './pipes/menu-asig.pipe';
+import { MenuGradoPipe } from './pipes/menu-grado.pipe';
 
 
 @NgModule({
@@ -34,6 +36,8 @@ import { FilterTPipe } from './pipes/filter-t.pipe';
     CirculolComponent,
     InglestComponent,
     FilterTPipe,
+    MenuAsigPipe,
+    MenuGradoPipe,
   ],
   imports: [
     CommonModule,

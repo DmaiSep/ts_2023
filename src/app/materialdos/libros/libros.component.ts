@@ -24,30 +24,8 @@ export class LibrosComponent implements OnInit{
   }
   
   ngOnInit(): void {
+    //desabilita el input de asignatura al iniciar el componente
     this.form.controls['asignatura'].disable();
-    this.gradUnicos();
-  
-  }
-
-  //agrupa todos los grados existentes en un objeto
-  gradUnicos(){
-    
-    this.menu.forEach((elemento) => {
-      if(!this.gradosUnicos.length){
-        this.gradosUnicos.push(elemento);
-      }else{
-        let status = false;
-        this.gradosUnicos.forEach(gradosU => {
-          if(gradosU.id_grado === elemento.id_grado){
-            status = true;
-          }
-        });
-
-        if(!status){
-          this.gradosUnicos.push(elemento);
-        }
-      }
-    });
   }
 
   config: SwiperOptions = {
@@ -82,6 +60,7 @@ export class LibrosComponent implements OnInit{
     
   }; 
   
+  //array de grados y asignaturas, importante debe tener id_grado, id_asig para que funcione el filtrado
   menu = [
     { 
       id_grado: '2', 
@@ -136,6 +115,7 @@ export class LibrosComponent implements OnInit{
     }
   ];
   
+  //array de los materiales, importante debe de tener perfil,_id_grado, id_asig, para que funcione el filtrado
   libros = [
     { perfil: '1', id_grado: '2', id_asig:'1', id_libro: '1', titulo: 'Español', ver:'', desc:'', img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/Ciencias/TS-LPA-CIENCIA-FIS-2-V1-BAJA1.png' },
     { perfil: '1', id_grado: '2', id_asig:'2', id_libro: '2', titulo: 'Matematicas',ver:'', desc:'', img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/Ciencias/TS-LPA-CIENCIA-FIS-2-V1-BAJA1.png' },
@@ -160,22 +140,20 @@ export class LibrosComponent implements OnInit{
   ];
 
   grado(){
+    //verifica si hay algun valor seleccionado
     if(this.form.get('grado').value){
       this.gradosSelect = this.form.get('grado').value;
-      this.asigMenu = this.menu.filter(asignatura => Number(asignatura.id_grado) == this.gradosSelect);
       this.form.controls['asignatura'].enable();
     }
    
   }
 
   asignaturaf(){
+    //verifica si hay algun valor seleccionado
     if(this.form.get('asignatura').value){
       this.asigSelect = this.form.get('asignatura').value;
-
     }
 
   }
-
- 
 
 }
