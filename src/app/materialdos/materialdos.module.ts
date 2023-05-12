@@ -20,6 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FilterTPipe } from './pipes/filter-t.pipe';
 import { MenuAsigPipe } from './pipes/menu-asig.pipe';
 import { MenuGradoPipe } from './pipes/menu-grado.pipe';
+import { ProgramacionrComponent } from './programacionr/programacionr.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { MenuGradoPipe } from './pipes/menu-grado.pipe';
     FilterTPipe,
     MenuAsigPipe,
     MenuGradoPipe,
+    ProgramacionrComponent,
   ],
   imports: [
     CommonModule,

@@ -11,6 +11,7 @@ import { MatricesaComponent } from './matricesa/matricesa.component';
 import { MatrizcComponent } from './matrizc/matrizc.component';
 import { CirculolComponent } from './circulol/circulol.component';
 import { InglestComponent } from './inglest/inglest.component';
+import { ProgramacionrComponent } from './programacionr/programacionr.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,7 @@ const routes: Routes = [
       {path:'MatrizC', component: MatrizcComponent, outlet: "Secc"},
       {path:'CirculoLectura', component: CirculolComponent, outlet: "Secc"},
       {path:'InglesTele', component: InglestComponent, outlet: "Secc"},
+      {path:'Programareg', component: ProgramacionrComponent, outlet: "Secc"},
     ]
   
   }

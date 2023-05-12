@@ -1,1 +1,241 @@
-<p>inglest works!</p>
+<section class="my-5">
+
+    <!-- Section heading -->
+    <h2 class="h1-responsive font-weight-bold text-center my-5">Alternativa 2017
+    </h2><hr>
+    <!-- Section description -->
+    <p class="text-justify w-responsive mx-auto mb-5">Esta alternativa cuenta con una matriz para cada grado que permite a los docentes de Telesecundaria de manera sencilla y práctica, la fácil localización de las 10 prácticas sociales del lenguaje en los diversos libros de texto con que cuentan las y los estudiantes. Además, Videos con orientaciones didácticas para cada una de las prácticas sociales del lenguaje de Lengua Extranjera. Inglés, presentadas por docentes de Telesecundaria en servicio, en las que nos comparten sus experiencias de trabajo con estas prácticas sociales.</p>
+    <div class="row">
+        <div class="col-md-4">
+            <!--Card-->
+            <mdb-card cascade="true" narrower="true">
+        
+              <!--Card image-->
+              <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+                <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).webp"></mdb-card-img>
+                <a>
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+              <!--/Card image-->
+        
+              <mdb-card-body cascade="true" class="text-center pb-0 px-0">
+                <!--Card content-->
+                <h4 class="card-title">Círculos de lectura</h4>
+                <!--Text-->
+        
+                <mdb-card-text>
+                    Grado: 1°
+                </mdb-card-text>
+        
+               <!--Facebook-->
+               <a type="button" mdbBtn floating="true" size="sm" color="fb" class="waves-light" mdbWavesEffect>
+                <mdb-icon fas icon="play"></mdb-icon>
+              </a>
+              <!--Twitter-->
+              <a type="button" mdbBtn floating="true" size="sm" color="tw" class="waves-light" mdbWavesEffect>
+                <mdb-icon fas icon="file-download"></mdb-icon>
+              </a>
+            
+        
+               
+        
+              </mdb-card-body>
+              <!--/.Card content-->
+        
+            </mdb-card>
+            <!--/.Card-->
+          </div>
+        
+        <div class="col-md-4">
+          <!--Card-->
+          <mdb-card cascade="true" narrower="true">
+      
+            <!--Card image-->
+            <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+              <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).webp"></mdb-card-img>
+              <a>
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <!--/Card image-->
+      
+            <mdb-card-body cascade="true" class="text-center pb-0 px-0">
+              <!--Card content-->
+              <h4 class="card-title">Círculos de lectura</h4>
+              <!--Text-->
+      
+              <mdb-card-text>
+                  Grado: 1°
+              </mdb-card-text>
+      
+             <!--Facebook-->
+             <a type="button" mdbBtn floating="true" size="sm" color="fb" class="waves-light" mdbWavesEffect>
+              <mdb-icon fas icon="play"></mdb-icon>
+            </a>
+            <!--Twitter-->
+            <a type="button" mdbBtn floating="true" size="sm" color="tw" class="waves-light" mdbWavesEffect>
+              <mdb-icon fas icon="file-download"></mdb-icon>
+            </a>
+          
+            </mdb-card-body>
+            <!--/.Card content-->
+      
+          </mdb-card>
+          <!--/.Card-->
+        </div>
+      
+        <div class="col-md-4">
+          <!--Card-->
+          <mdb-card cascade="true" narrower="true">
+        
+            <!--Card image-->
+            <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+              <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).webp"></mdb-card-img>
+              <a>
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <!--/Card image-->
+      
+            <mdb-card-body cascade="true" class="text-center pb-0 px-0">
+              <!--Card content-->
+              <h4 class="card-title">Círculos de lectura</h4>
+              <!--Text-->
+      
+              <mdb-card-text>
+                  Grado: 1°
+              </mdb-card-text>
+      
+             <!--Facebook-->
+             <a type="button" mdbBtn floating="true" size="sm" color="fb" class="waves-light" mdbWavesEffect>
+              <mdb-icon fas icon="play"></mdb-icon>
+            </a>
+            <!--Twitter-->
+            <a type="button" mdbBtn floating="true" size="sm" color="tw" class="waves-light" mdbWavesEffect>
+              <mdb-icon fas icon="file-download"></mdb-icon>
+            </a>
+          
+      
+             
+      
+            </mdb-card-body>
+            <!--/.Card content-->
+      
+          </mdb-card>
+          <!--/.Card-->
+        </div>        
+    </div>
+
+    <blockquote class="blockquote bq-warning mt-5">
+      <p class="bq-title">Primer Grado</p>
+  </blockquote>
+  
+  <swiper [config]="config">
+      <div class="swiper-wrapper">
+          <div class="card2 swiper-slide" *ngFor="let uno of Images">
+              <img [src]="uno.src" />
+              <div class="info">
+                  <p>{{uno.name}}</p>
+                  <a href="{{uno.url}}" target="_blank"><button>Ver mas</button></a>
+              </div>
+          </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+  </swiper>
+  <blockquote class="blockquote bq-warning mt-5">
+    <p class="bq-title">Segundo Grado</p>
+</blockquote>
+
+<swiper [config]="config">
+    <div class="swiper-wrapper">
+        <div class="card2 swiper-slide" *ngFor="let uno of Images">
+            <img [src]="uno.src" />
+            <div class="info">
+                <p>{{uno.name}}</p>
+                <a href="{{uno.url}}" target="_blank"><button>Ver mas</button></a>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</swiper>
+<blockquote class="blockquote bq-warning mt-5">
+  <p class="bq-title">Tercer Grado</p>
+</blockquote>
+
+<swiper [config]="config">
+  <div class="swiper-wrapper">
+      <div class="card2 swiper-slide" *ngFor="let uno of Images">
+          <img [src]="uno.src" />
+          <div class="info">
+              <p>{{uno.name}}</p>
+              <a href="{{uno.url}}" target="_blank"><button>Ver mas</button></a>
+          </div>
+      </div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</swiper>
+
+</section>  
+
+<!--Alternativa 2006-->
+<section class="mt-5">
+ <!-- Section heading -->
+ <h2 class="h1-responsive font-weight-bold text-center my-5">Alternativa 2006
+</h2><hr>
+<!-- Section description -->
+<p class="text-justify w-responsive mx-auto mb-5">
+  Los docentes pueden seleccionar secuencias didácticas con apoyo de los materiales educativos llamados Apuntes, de sus videos y audios. Estos materiales se encuentran integrados en este apartado.
+  Materiales educativos 2006
+</p>
+<div class="row">
+  <div class="col-md-4">
+      <!--Card-->
+      <mdb-card cascade="true" narrower="true">
+  
+        <!--Card image-->
+        <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+          <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).webp"></mdb-card-img>
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <!--/Card image-->
+  
+        <mdb-card-body cascade="true" class="text-center pb-0 px-0">
+          <!--Card content-->
+          <h4 class="card-title">Círculos de lectura</h4>
+          <!--Text-->
+  
+          <mdb-card-text>
+              Grado: 1°
+          </mdb-card-text>
+  
+         <!--Facebook-->
+         <a type="button" mdbBtn floating="true" size="sm" color="fb" class="waves-light" mdbWavesEffect>
+          <mdb-icon fas icon="play"></mdb-icon>
+        </a>
+        <!--Twitter-->
+        <a type="button" mdbBtn floating="true" size="sm" color="tw" class="waves-light" mdbWavesEffect>
+          <mdb-icon fas icon="file-download"></mdb-icon>
+        </a>
+      
+  
+         
+  
+        </mdb-card-body>
+        <!--/.Card content-->
+  
+      </mdb-card>
+      <!--/.Card-->
+    </div>
+ 
+</div>
+
+</section>

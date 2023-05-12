@@ -55,6 +55,11 @@ export class SidebarService {
           title: 'Inglés en Telesecundaria',
           url:'InglesTele'
         }
+        ,
+        {
+          title: 'Programación Regular',
+          url:'Programareg'
+        }
       ]
     },
     {
