@@ -46,7 +46,18 @@ export class ApuntesComponent {
     { value: '2', label: 'Segundo Grado' },
     { value: '3', label: 'Tercer Grado' },
   ];
- 
+  asignatura = [
+    { value: '1', label: 'Español' },
+    { value: '2', label: 'Matematicas' },
+    { value: '3', label: 'Fisica' },
+    { value: '4', label: 'Historia' },
+    { value: '5', label: 'Formación Civica y Etica' },
+  ];
+  bloque = [
+    { value: '1', label: '1' },
+    { value: '2', label: '2' },
+    { value: '3', label: '3' },
+  ];
  
   Images: any = [
     {

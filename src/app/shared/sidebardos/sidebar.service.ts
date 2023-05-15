@@ -60,6 +60,11 @@ export class SidebarService {
           title: 'Programación Regular',
           url:'Programareg'
         }
+        ,
+        {
+          title: 'Matrices',
+          url:'Matrices'
+        }
       ]
     },
     {

@@ -29,18 +29,18 @@ export class LibrosComponent implements OnInit{
   }
 
   config: SwiperOptions = {
-    slidesPerView: 3,
+    slidesPerView: 4,
     spaceBetween: 20,
     slidesPerGroup: 5,
     loop: false,
     loopFillGroupWithBlank: false,
     breakpoints: {
       1368: {
-        slidesPerView: 3,
+        slidesPerView: 4,
         slidesPerGroup: 3,
       },
       1023: {
-        slidesPerView: 3,
+        slidesPerView: 4,
         slidesPerGroup: 3,
       },
       768: {

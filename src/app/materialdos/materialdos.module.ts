@@ -21,6 +21,8 @@ import { FilterTPipe } from './pipes/filter-t.pipe';
 import { MenuAsigPipe } from './pipes/menu-asig.pipe';
 import { MenuGradoPipe } from './pipes/menu-grado.pipe';
 import { ProgramacionrComponent } from './programacionr/programacionr.component';
+import { MatricesComponent } from './matrices/matrices.component';
+import { ModalvComponent } from './modalv/modalv.component';
 
 
 @NgModule({
@@ -40,6 +42,8 @@ import { ProgramacionrComponent } from './programacionr/programacionr.component'
     MenuAsigPipe,
     MenuGradoPipe,
     ProgramacionrComponent,
+    MatricesComponent,
+    ModalvComponent,
   ],
   imports: [
     CommonModule,
@@ -48,6 +52,7 @@ import { ProgramacionrComponent } from './programacionr/programacionr.component'
     MDBBootstrapModulesPro.forRoot(),
     NgxUsefulSwiperModule,
     ReactiveFormsModule
-  ]
+  ],
+  entryComponents: [ ModalvComponent ]
 })
 export class MaterialdosModule { }

@@ -1,4 +1,6 @@
-<form autocomplete="off" [formGroup]="form" >
+<h1 class="text-center">Libros de Texto</h1>
+
+<form autocomplete="off" [formGroup]="form" class="mt-5">
     <div class="row">
         <div class="col-md-6 col-lg-6">
             <div class="md-form">
@@ -23,38 +25,24 @@
 </blockquote>
 
 <swiper [config]="config">
-    <div class="swiper-wrapper" >
-        <div class="card3 swiper-slide"  *ngFor="let libro of  libros | filterT:1:gradosSelect:asigSelect ">
+    <div class="swiper-wrapper">
+
+        <div class="card3 swiper-slide fgrado{{libro.id_grado}}" *ngFor="let libro of libros | filterT:1:gradosSelect:asigSelect ">
             <div class="card-header3" style="background-image: url({{libro.img}})">
-                <div class="card-header-slanted-edge3">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200"><path class="polygon" d="M-20,200,1000,0V200Z" /></svg>
-                </div>
+                <div class="topright fgrado{{libro.id_grado}}"><h4>{{libro.id_grado}}º</h4></div>
             </div>
             <div class="card-body3">
-                <h4 class="job-title3">  {{libro.id_grado}}º</h4>
-                <h2 class="name3">{{libro.titulo}}</h2>
+                <h2 class="name3 textw mt-3 mb-3">{{libro.titulo}}</h2>
             </div>
             <div class="card-footer3">
-                <div class="">
-                    <div class="stat3">
-                        <span class="label">Ver</span>
-                        <span class="">
-                            <a mdbBtn floating="true"  class="night-fade-gradient" size="2x" gradient="">
-                                <mdb-icon fas icon="play"></mdb-icon>
-                              </a>
-                        </span>
-                    </div>
-                    <div class="stat3">
-                        <span class="label">Descargar</span>
-                        <span class="">
-                            <a mdbBtn floating="true"  class="night-fade-gradient" size="2x" gradient="">
-                                <mdb-icon fas icon="arrow-alt-circle-down"></mdb-icon>
-                              </a>
-                        </span>
-                    </div>
+                <div class="text-center mb-3">
+                    <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 ml-0"><mdb-icon fab icon="youtube" size="2x" class="white-text"></mdb-icon></a>
+                    <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 ml-0"><mdb-icon fas icon="arrow-circle-down" size="2x" class="white-text"></mdb-icon></a>
+                    <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 ml-0"><mdb-icon fas icon="info-circle" size="2x" class="white-text"></mdb-icon></a>
                 </div>
             </div>
         </div>
+
     </div>
     <div class="swiper-pagination"></div>
     <div class="swiper-button-next"></div>
@@ -66,43 +54,24 @@
 </blockquote>
 <swiper [config]="config">
     <div class="swiper-wrapper">
-        <div class="card3 swiper-slide" *ngFor="let libro of  libros | filterT:2:gradosSelect:asigSelect  ">
+
+        <div class="card3 swiper-slide fgrado{{libro.id_grado}}" *ngFor="let libro of libros | filterT:2:gradosSelect:asigSelect">
             <div class="card-header3" style="background-image: url({{libro.img}})">
-
-
-                <div class="card-header-slanted-edge3">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200"><path class="polygon" d="M-20,200,1000,0V200Z" /></svg>
-
-                </div>
+                <div class="topright fgrado{{libro.id_grado}}"><h4>{{libro.id_grado}}º</h4></div>
             </div>
-
             <div class="card-body3">
-                <h4 class="job-title3"> {{libro.id_grado}}º </h4>
-                <h2 class="name3">{{libro.titulo}}</h2>
+                <h2 class="name3 textw mt-3 mb-3">{{libro.titulo}}</h2>
             </div>
 
             <div class="card-footer3">
-                <div class="">
-                    <div class="stat3">
-                        <span class="label">Ver</span>
-                        <span class="">
-                            <a mdbBtn floating="true"  class="night-fade-gradient" size="2x" gradient="">
-                                <mdb-icon fas icon="play"></mdb-icon>
-                              </a>
-                        </span>
-                    </div>
-                    <div class="stat3">
-                        <span class="label">Descargar</span>
-                        <span class="">
-                            <a mdbBtn floating="true"  class="young-passion-gradient" size="2x" gradient="">
-                                <mdb-icon fas icon="arrow-alt-circle-down"></mdb-icon>
-                              </a>
-                        </span>
-                    </div>
-
+                <div class="text-center mb-3">
+                    <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 ml-0"><mdb-icon fab icon="youtube" size="2x" class="white-text"></mdb-icon></a>
+                    <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 ml-0"><mdb-icon fas icon="arrow-circle-down" size="2x" class="white-text"></mdb-icon></a>
+                    <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 ml-0"><mdb-icon fas icon="info-circle" size="2x" class="white-text"></mdb-icon></a>
                 </div>
             </div>
         </div>
+
     </div>
     <div class="swiper-pagination"></div>
     <div class="swiper-button-next"></div>
