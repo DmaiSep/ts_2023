@@ -148,3 +148,141 @@ svg .polygon {
     width: 40px;
     height: 40px;
 }
+
+
+
+/*ESTILOS DE TARJETAS INDIVIDUALES*/
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 1.5em !important;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+h5 {
+    font-size: 1em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+h6 {
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+p {
+    font-weight: 300;
+}
+
+.card-r {
+    margin: 10px;
+}
+
+.card-l {
+    margin: 10px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.card-i {
+    margin: 10px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.fgrado1 {
+    background: rgb(0,164,181);
+    background: linear-gradient(270deg, rgba(0,164,181,1) 0%, rgba(55,117,127,1) 100%);
+}
+
+.fgrado2 {
+    background: rgb(103,58,143);
+    background: linear-gradient(270deg, rgba(103,58,143,1) 0%, rgba(60,39,87,1) 100%);
+}
+
+.fgrado3 {
+    background: rgb(230,46,57);
+    background: linear-gradient(270deg, rgba(230,46,57,1) 0%, rgba(82,25,25,1) 100%);
+}
+
+.textw {
+    color: #efefef;
+}
+
+.textg1 {
+    color: rgb(0,164,181);
+}
+
+.textg2 {
+    color: rgb(103,58,143);
+}
+
+.textg3 {
+    color: rgb(230,46,57);
+}
+
+.esquinas10 {
+    border-radius: 10px;
+}
+
+.esquinas20 {
+    border-radius: 20px;
+}
+
+.materiale {
+    background-color: #efefef;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+
+.topleft {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    color: #efefef;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 10px 0px 10px 0px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0px;
+    left: 15px;
+}
+
+.topright {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    color: #efefef;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 0px 10px 0px 10px;
+    width: 60px !important;
+    height: 60px !important;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
