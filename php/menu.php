@@ -10,9 +10,9 @@ include 'conecta.php';
 /*QUERY LISTADO GENERAL DE TODOS LOS GRADOS Y TODAS LAS ASIGNATURAS*/
 
 $q = "SELECT DISTINCT cat_grado.id_grado, cat_grado.grado, cat_asignatura.id_asignatura, cat_asignatura.asignatura 
-FROM ((cat_libros 
-INNER JOIN cat_grado ON cat_grado.id_grado = cat_libros.id_grado) 
-INNER JOIN cat_asignatura ON cat_asignatura.id_asignatura = cat_libros.id_asignatura) 
+FROM ((lib_libros
+INNER JOIN cat_grado ON cat_grado.id_grado = lib_libros.id_grado) 
+INNER JOIN cat_asignatura ON cat_asignatura.id_asignatura = lib_libros.id_asignatura) where lib_libros.estado= 1
 ORDER BY `id_grado` ASC, `asignatura` ASC;";
 
 

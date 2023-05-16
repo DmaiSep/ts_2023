@@ -4,10 +4,10 @@ header("Access-Control-Allow-Methods: PUT, GET, POST, DELETE");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 
 function conecta_bd(){
-	$servidor = "localhost";
-	$usuario = "root";  //usario de la base de datos
-	$clave = ""; // passwoord de la base de datos
-	$bd = "ts_2023";
+	$servidor = "192.168.103.20";
+	$usuario = "S2.k@Rz";  //usario de la base de datos
+	$clave = "Xr24*@z3"; // passwoord de la base de datos
+	$bd = "db_ts-2023";
 
 	$conn=mysqli_connect($servidor,$usuario,$clave, $bd);
 

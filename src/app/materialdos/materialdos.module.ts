@@ -23,6 +23,7 @@ import { MenuGradoPipe } from './pipes/menu-grado.pipe';
 import { ProgramacionrComponent } from './programacionr/programacionr.component';
 import { MatricesComponent } from './matrices/matrices.component';
 import { ModalvComponent } from './modalv/modalv.component';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { ModalvComponent } from './modalv/modalv.component';
     ProgramacionrComponent,
     MatricesComponent,
     ModalvComponent,
+    DomseguroPipe,
   ],
   imports: [
     CommonModule,
