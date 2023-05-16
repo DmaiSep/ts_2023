@@ -13,6 +13,16 @@ export class MenuGradoPipe implements PipeTransform {
     let grados = [];
     value.forEach((elemento) => {
       if(grados.length == 0){
+        grados.push({ 
+          id_grado: '999', 
+          grado: 'Todos'
+        });
+        value.push({ 
+          id_grado: elemento.id_grado, 
+          grado: elemento.grado,
+          id_asignatura: 999,
+          asignatura: 'Todos'
+        });
         grados.push(elemento);
       }else{
         let status = false;
@@ -23,10 +33,17 @@ export class MenuGradoPipe implements PipeTransform {
         });
 
         if(!status){
+          value.push({ 
+            id_grado: elemento.id_grado, 
+            grado: elemento.grado,
+            id_asignatura: 999,
+            asignatura: 'Todos'
+          });
           grados.push(elemento);
         }
       }
     });
+    console.log(grados);
     return grados;
   }
 
