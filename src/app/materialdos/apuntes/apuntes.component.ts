@@ -16,7 +16,7 @@ export class ApuntesComponent {
     loopFillGroupWithBlank: false,
     breakpoints: {
       1368: {
-        slidesPerView: 4,
+        slidesPerView: 5,
         slidesPerGroup: 3,
       },
       1023: {
@@ -61,7 +61,7 @@ export class ApuntesComponent {
  
   Images: any = [
     {
-      src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Espanol/3_1.png',
+      src: 'http://telesecundaria.sep.gob.mx/Content/Repositorio/apuntes/imagenes/1/Artes_visuales-1ro.png',
       name: 'Lengua Materna.español',
       alt: 'Image 1',
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf',
