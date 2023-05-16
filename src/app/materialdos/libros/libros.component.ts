@@ -52,7 +52,7 @@ export class LibrosComponent implements OnInit{
     loopFillGroupWithBlank: false,
     breakpoints: {
       1368: {
-        slidesPerView: 4,
+        slidesPerView: 5,
         slidesPerGroup: 3,
       },
       1023: {
