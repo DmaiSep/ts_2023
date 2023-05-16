@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SwiperOptions } from 'swiper';
-import { HttpClient } from "@angular/common/http";
-import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators} from '@angular/forms';
 import { LibrosService } from '../services/libros.service';
 
 @Component({
@@ -11,15 +10,12 @@ import { LibrosService } from '../services/libros.service';
 })
 export class LibrosComponent implements OnInit{
   form: FormGroup;
-  gradosUnicos = [];
-  asigMenu = [];
-  libroSelect = [];
   gradosSelect:number = 0;
   asigSelect:number = 0;
   menu: any = [];
   libros: any = [];
   
-  constructor(private httpClient: HttpClient, private _formBuilder: FormBuilder, private _libros:LibrosService) {
+  constructor( private _formBuilder: FormBuilder, private _libros:LibrosService) {
     this.form = this._formBuilder.group({
       grado  : ['', [ Validators.required]  ],
       asignatura  : ['', [ Validators.required]  ],
@@ -80,12 +76,16 @@ export class LibrosComponent implements OnInit{
     //verifica si hay algun valor seleccionado
     if(this.form.get('grado').value){
       this.gradosSelect = this.form.get('grado').value;
-      this.form.controls['asignatura'].enable();
+      if(this.form.get('grado').value != 999){
+        this.form.controls['asignatura'].enable();
+      }else{
+        this.form.controls['asignatura'].disable();
+      }
     }
    
   }
 
-  asignaturaf(){
+  asignaturas(){
     //verifica si hay algun valor seleccionado
     if(this.form.get('asignatura').value){
       this.asigSelect = this.form.get('asignatura').value;

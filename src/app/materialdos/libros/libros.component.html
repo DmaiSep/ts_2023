@@ -12,7 +12,7 @@
         <div class="col-md-6 col-lg-6">
             <div class="md-form">
                 <mdb-select-2 formControlName="asignatura"  placeholder="Elige una opción" label="Seleciona una asignatura" >
-                    <mdb-select-option  *ngFor="let asignatura of menu | menuAsig:gradosSelect"  [value]="asignatura.id_asignatura" (click)="asignaturaf()">{{ asignatura.asignatura }}</mdb-select-option>
+                    <mdb-select-option  *ngFor="let asignatura of menu | menuAsig:gradosSelect"  [value]="asignatura.id_asignatura" (click)="asignaturas()">{{ asignatura.asignatura }}</mdb-select-option>
                 </mdb-select-2>
             </div>
         </div>
@@ -27,7 +27,7 @@
 <swiper [config]="config">
     <div class="swiper-wrapper">
 
-        <div class="card3 swiper-slide fgrado{{libro.id_grado}}" *ngFor="let libro of libros | filterT:2:gradosSelect:asigSelect ">
+        <div class="card3 swiper-slide fgrado{{libro.id_grado}}" *ngFor="let libro of libros | filterT2:2:gradosSelect:asigSelect:0 ">
             <div class="card-header3" style="background-image: url({{libro.img}})">
                 <div class="topright fgrado{{libro.id_grado}}"><h4>{{libro.id_grado}}º</h4></div>
             </div>
@@ -55,7 +55,7 @@
 <swiper [config]="config">
     <div class="swiper-wrapper">
 
-        <div class="card3 swiper-slide fgrado{{libro.id_grado}}" *ngFor="let libro of libros | filterT:1:gradosSelect:asigSelect">
+        <div class="card3 swiper-slide fgrado{{libro.id_grado}}" *ngFor="let libro of libros | filterT2:1:gradosSelect:asigSelect:0">
             <div class="card-header3" style="background-image: url({{libro.img}})">
                 <div class="topright fgrado{{libro.id_grado}}"><h4>{{libro.id_grado}}º</h4></div>
             </div>
