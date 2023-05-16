@@ -135,6 +135,21 @@ export class SidebarService {
       url: './assets/docs/calendario/CALENDARIO_ESCOLAR_2022-2023_v3.pdf'
     }
   ];
+  breadcrumbs: any[] = [
+    {url: 'Home',modulo:'Material Sugerido', seccion: ''},
+    {url: 'Libros',modulo:'Materiales Educativos', seccion: 'Libros de texto'},
+    {url: 'Audiovisuales',modulo:'Materiales Educativos', seccion: 'Materiales audiovisuales'},
+    {url: 'Informaticos',modulo:'Materiales Educativos', seccion: 'Materiales informáticos'},
+    {url: 'DebilidadV',modulo:'Materiales Educativos', seccion: 'Materiales para debilidad visual'},
+    {url: 'Apuntes',modulo:'Materiales Educativos', seccion: 'Apuntes'},
+    {url: 'MatricezA',modulo:'Materiales Educativos', seccion: 'Matriz de Recursos Audiovisuales'},
+    {url: 'MatrizC',modulo:'Materiales Educativos', seccion: 'Matriz de Correspondencia'},
+    {url: 'CirculoLectura',modulo:'Materiales Educativos', seccion: 'Círculos de lectura'},
+    {url: 'InglesTele',modulo:'Materiales Educativos', seccion: 'Inglés en Telesecundaria'},
+    {url: 'Programareg',modulo:'Materiales Educativos', seccion: 'Programación Regular'},
+    {url: 'Matrices',modulo:'Materiales Educativos', seccion: 'Matrices'},
+    
+  ];
   constructor() { }
 
   toggle() {
@@ -151,6 +166,9 @@ export class SidebarService {
 
   getMenuList() {
     return this.menus;
+  }
+  getBreadcrumbs() {
+    return this.breadcrumbs;
   }
 
   get hasBackgroundImage() {

@@ -25,6 +25,7 @@ import { MatricesComponent } from './matrices/matrices.component';
 import { ModalvComponent } from './modalv/modalv.component';
 import { DomseguroPipe } from './pipes/domseguro.pipe';
 import { FilterT2Pipe } from './pipes/filter-t2.pipe';
+import { RutaPipe } from './pipes/ruta.pipe';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { FilterT2Pipe } from './pipes/filter-t2.pipe';
     ModalvComponent,
     DomseguroPipe,
     FilterT2Pipe,
+    RutaPipe,
   ],
   imports: [
     CommonModule,
