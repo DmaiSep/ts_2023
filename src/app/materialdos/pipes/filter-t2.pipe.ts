@@ -9,7 +9,7 @@ export class FilterT2Pipe implements PipeTransform {
   transform(value: any[], perfil: Number, grado:Number , asig: Number, bloque: Number) {
     let datos = [];
     
-    console.log(perfil, grado, asig, bloque);
+    //console.log(perfil, grado, asig, bloque);
     if(perfil ===  0 || perfil === undefined) {
       return value;
     }
