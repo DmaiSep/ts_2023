@@ -19,3 +19,21 @@
 .video-fluid {
   max-width: unset;
 }
+
+.social{
+  /*las imágenes usadas tienen width de 48px*/
+  width: 48px;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  padding-left: 30px;
+}
+
+/* Extra centrado vertical*/
+
+.social{
+  top: 20%;
+  height: 205px;
+  margin-top: -100px;
+  z-index: 10;
+}
