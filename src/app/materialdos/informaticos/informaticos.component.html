@@ -1,5 +1,4 @@
-<h1 class="text-center">Materiales Informaticos
-</h1>
+
 <div class="row mt-5">
     <div class="col-md-4 col-lg-4">
         <div class="md-form">
@@ -31,11 +30,39 @@
 
 <swiper [config]="config">
     <div class="swiper-wrapper">
-        <div class="card2 swiper-slide" *ngFor="let uno of Images">
-            <img [src]="uno.src" />
-            <div class="info">
-                <p>{{uno.name}}</p>
-                <a href="{{uno.url}}" target="_blank"><button>Ver mas</button></a>
+       
+        <div class="card3 fgrado1 swiper-slide" *ngFor="let uno of Images">
+            <div class="card-header3" style="background-image: url(https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Espanol/3_11.png)">
+
+
+                <div class="card-header-slanted-edge3">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200"><path class="polygon" d="M-20,200,1000,0V200Z" /></svg>
+
+                </div> <mdb-badge  pill="true" default="true">Informatico</mdb-badge>
+            </div>
+
+            <div class="card-body3">
+                
+                <h2 class="name3">Intereses y aspiraciones del presente para imaginar el futuro</h2>
+                <h4 class="job-title3">Tercer Grado/Historia/Bloque 1 </h4>
+            </div>
+
+            <div class="card-footer3">
+                <div class="">
+                    <div class="stat3">
+                        <span class="">
+                            <a mdbBtn floating="true"  class="night-fade-gradient" size="2x" gradient="">
+                                <mdb-icon fas icon="play"></mdb-icon>
+                              </a>
+                        </span>
+                    </div>
+                    <div class="stat3">
+                        <span class="">
+                            <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 ml-0 mt-3"><mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon></a>
+                        </span>
+                    </div>
+                  
+                </div>
             </div>
         </div>
     </div>
@@ -47,13 +74,44 @@
 <blockquote class="blockquote bq-warning mt-5 mb-5">
     <p class="bq-title">Informaticos para el Maestro</p>
 </blockquote>
+
 <swiper [config]="config">
     <div class="swiper-wrapper">
-        <div class="card2 swiper-slide" *ngFor="let uno of Images">
-            <img [src]="uno.src" />
-            <div class="info">
-                <p>{{uno.name}}</p>
-                <a href="{{uno.url}}" target="_blank"><button>Ver mas</button></a>
+        
+        <div class="card3 swiper-slide" *ngFor="let uno of Images">
+            <div class="card-header3" style="background-image: url(https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Espanol/3_11.png)">
+
+
+                <div class="card-header-slanted-edge3">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200"><path class="polygon" d="M-20,200,1000,0V200Z" /></svg>
+
+                </div> <mdb-badge  pill="true" default="true">Informatico</mdb-badge>
+            </div>
+
+            <div class="card-body3">
+                
+                <h2 class="name3">Intereses y aspiraciones del presente para imaginar el futuro</h2>
+                <h4 class="job-title3">Tercer Grado/Historia/Bloque 1 </h4>
+            </div>
+
+            <div class="card-footer3">
+                <div class="">
+                    <div class="stat3">
+                        <span class="">
+                            <a mdbBtn floating="true"  class="night-fade-gradient" size="2x" gradient="">
+                                <mdb-icon fas icon="play"></mdb-icon>
+                              </a>
+                        </span>
+                    </div>
+                    <div class="stat3">
+                        <span class="">
+                            <a mdbBtn floating="true"  class="night-fade-gradient" size="2x" gradient="">
+                                <mdb-icon fas icon="arrow-alt-circle-down"></mdb-icon>
+                              </a>
+                        </span>
+                    </div>
+                   
+                </div>
             </div>
         </div>
     </div>
@@ -61,4 +119,3 @@
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
 </swiper>
-
