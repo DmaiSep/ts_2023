@@ -19,51 +19,62 @@ export class SidebarService {
       submenus: [
         {
           title: 'Libros de texto',
-          url:'Libros'
+          url:'Libros',
+          tipo: 'interno'
         },
         {
           title: 'Materiales audiovisuales',
-          url:'Audiovisuales'
+          url:'Audiovisuales',
+          tipo: 'interno'
         },
         {
           title: 'Materiales informáticos',
-          url:'Informaticos'
+          url:'Informaticos',
+          tipo: 'interno'
         }
         ,
         {
           title: 'Materiales para debilidad visual',
-          url:'DebilidadV'
+          url:'https://telesecundaria.sep.gob.mx/Content/Discapacitados/',
+          tipo: 'externo'
         }
         ,
         {
           title: 'Apuntes',
-          url:'Apuntes'
+          url:'Apuntes',
+          tipo: 'interno'
         },
         {
           title: 'Matriz de Recursos Audiovisuales',
-          url:'MatricezA'
+          url:'MatricezA',
+          tipo: 'interno'
         },
         {
           title: 'Matriz de Correspondencia',
-          url:'MatrizC'
+          url:'MatrizC',
+          tipo: 'interno'
         },
         {
           title: 'Círculos de lectura',
-          url:'CirculoLectura'
+          url:'CirculoLectura',
+          tipo: 'interno'
         },
         {
           title: 'Inglés en Telesecundaria',
-          url:'InglesTele'
+          url:'InglesTele',
+          tipo: 'interno'
         }
         ,
         {
           title: 'Programación Regular',
-          url:'Programareg'
+          url:'Programareg',
+          tipo: 'interno'
         }
         ,
         {
           title: 'Matrices',
-          url:'Matrices'
+          url:'Matrices',
+          tipo: 'interno'
         }
       ]
     },
