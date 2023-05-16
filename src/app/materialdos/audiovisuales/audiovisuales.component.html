@@ -1,23 +1,23 @@
-<form autocomplete="off" [formGroup]="formA" class="mt-5">
-  <div class="row mt-5">
+<form autocomplete="off" [formGroup]="form" class="mt-5">
+  <div class="row">
       <div class="col-md-4 col-lg-4">
           <div class="md-form">
               <mdb-select-2 formControlName="grado" placeholder="Elige una opción" label="Seleciona un grado" [dropdownClass]="'mdb-select-dropdown-colorful mdb-select-dropdown-ins'">
-                  <mdb-select-option *ngFor="let option of menuA | menuGrado" [value]="option.id_grado" (click)="grado()">{{ option.grado }}</mdb-select-option>
+                  <mdb-select-option *ngFor="let option of menu | menuGrado" [value]="option.id_grado" (click)="grado()">{{ option.grado }}</mdb-select-option>
               </mdb-select-2>
           </div>
       </div>
       <div class="col-md-4 col-lg-4">
           <div class="md-form">
-              <mdb-select-2 formControlName="asignatura" placeholder="Elige una opción" label="Seleciona una asignatura">
-                  <mdb-select-option *ngFor="let asignaturas of menuA | menuAsig:gradosSelect" [value]="asignaturas.id_asignatura" (click)="asignaturaf()">{{ asignaturas.asignatura }}</mdb-select-option>
+              <mdb-select-2  formControlName="asignatura" placeholder="Elige una opción" label="Seleciona una asignatura">
+                  <mdb-select-option *ngFor="let asignaturas of menu | menuAsig:gradosSelect" [value]="asignaturas.id_asignatura" (click)="asignaturaf()">{{ asignaturas.asignatura }}</mdb-select-option>
               </mdb-select-2>
           </div>
       </div>
       <div class="col-md-4 col-lg-4">
           <div class="md-form">
-              <mdb-select-2 placeholder="Elige una opción" label="Seleciona un Bloque">
-                  <mdb-select-option *ngFor="let bloques of bloque" [value]="bloques.value">{{ bloques.label }}</mdb-select-option>
+              <mdb-select-2  formControlName="bloque"  placeholder="Elige una opción" label="Seleciona un Bloque">
+                  <mdb-select-option *ngFor="let bloques of bloque" [value]="bloques.id_bloque" (click)="bloquef()">{{ bloques.bloque}}</mdb-select-option>
               </mdb-select-2>
           </div>
       </div>
@@ -29,122 +29,115 @@
 </blockquote>
 
 <swiper [config]="config">
-    <div class="swiper-wrapper">
-        <!--<div class="card2 swiper-slide" *ngFor="let uno of Images">
-            <img [src]="uno.src" />
-            <div class="info">
-                <p>{{uno.name}}</p>
-                <button (click)="openModal()">Ver mas</button>
-            </div>
-        </div>-->
-        <mdb-card  class=" cardu swiper-slide color-block fgrado1   white-text" *ngFor="let uno of Images">
-           <mdb-card-body >
-                      <!-- Grid row -->
-  <div class="row">
+  <div class="swiper-wrapper">
+      <mdb-card class="cardu swiper-slide color-block white-text fgrado{{dat.id_grado}}" *ngFor="let dat of Audiovisuales | filterT2:2:gradosSelect:asigSelect:bloqueSelect">
+          <mdb-card-body>
+              <!-- Grid row -->
+              <div class="row">
 
-    <!-- Grid column -->
-    <div class="col-lg-5 text-center">
+                  <!-- Grid column -->
+                  <div class="col-lg-5 text-center">
 
-      <!-- Featured image -->
-      <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4 waves-light" mdbWavesEffect>
-        <img class="img-fluid" [src]="uno.src" alt="Sample image">
-        
-        <a>
-          <div class="mask rgba-white-slight"></div>
-        </a>
-      </div>
-       <!--Facebook-->
-       <a type="button" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" mdbWavesEffect (click)="openModal()">
-        <mdb-icon fab icon="youtube" size="2x" class="white-text"></mdb-icon>
-      </a>
-      <!--Twitter-->
-      <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3"><mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon></a>
+                      <!-- Featured image -->
+                      <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4 waves-light" mdbWavesEffect>
+                          <img class="img-fluid" [src]="dat.img" alt="Sample image">
 
-    </div>
-    <!-- Grid column -->
+                          <a>
+                              <div class="mask rgba-white-slight"></div>
+                          </a>
+                      </div>
+                      <!--Facebook-->
+                      <a type="button" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" mdbWavesEffect (click)="openModal()">
+                          <mdb-icon fab icon="youtube" size="2x" class="white-text"></mdb-icon>
+                      </a>
+                      <!--Twitter-->
+                      <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3"><mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon></a>
 
-    <!-- Grid column -->
-    <div class="col-lg-7">
+                  </div>
+                  <!-- Grid column -->
 
-      <!-- Category -->
-      <mdb-badge  pill="true" default="true">Audiovisual</mdb-badge>
-      <!-- Post title -->
-      <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime</p><br>
-      <p>Secuencia 12. Probabilidad clásica 1</p>
-      <hr>
-      <!-- Post data -->
-      <p>Segundo Grado/Lengua Materna Español/Bloque 1</p>
-      
-     
-    </div>
-    <!-- Grid column -->
+                  <!-- Grid column -->
+                  <div class="col-lg-7">
 
+                      <!-- Category -->
+                      <mdb-badge pill="true" default="true">Audiovisual</mdb-badge>
+                      <!-- Post title -->
+                      <p>{{dat.titulo_audiovisual}}</p><br>
+                      <p>{{dat.secuencia}}</p>
+                      <hr>
+                      <!-- Post data -->
+                      <p>{{dat.grado}}/{{dat.asignatura}}/Bloque {{dat.bloque}}</p>
+
+
+                  </div>
+                  <!-- Grid column -->
+
+              </div>
+              <!-- Grid row -->
+
+          </mdb-card-body>
+      </mdb-card>
   </div>
-  <!-- Grid row -->
-             
-            </mdb-card-body>
-          </mdb-card>
-    </div>
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
 </swiper>
 
 <blockquote class="blockquote bq-warning mt-5 mb-5">
     <p class="bq-title">Audiovisuales para el Maestro</p>
 </blockquote>
+
 <swiper [config]="config">
-    <div class="swiper-wrapper">
-       
-        <mdb-card  class=" cardu swiper-slide color-block fgrado1   white-text" *ngFor="let uno of Images">
-           <mdb-card-body >
-                      <!-- Grid row -->
-  <div class="row">
+  <div class="swiper-wrapper">
+      <mdb-card class="cardu swiper-slide color-block white-text fgrado{{dat.id_grado}}" *ngFor="let dat of Audiovisuales | filterT2:1:gradosSelect:asigSelect:bloqueSelect">
+          <mdb-card-body>
+              <!-- Grid row -->
+              <div class="row">
 
-    <!-- Grid column -->
-    <div class="col-lg-5 text-center">
+                  <!-- Grid column -->
+                  <div class="col-lg-5 text-center">
 
-      <!-- Featured image -->
-      <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4 waves-light" mdbWavesEffect>
-        <img class="img-fluid" [src]="uno.src" alt="Sample image">
-        
-        <a>
-          <div class="mask rgba-white-slight"></div>
-        </a>
-      </div>
-       <!--Facebook-->
-       <a type="button" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" mdbWavesEffect (click)="openModal()">
-        <mdb-icon fab icon="youtube" size="2x" class="white-text"></mdb-icon>
-      </a>
-      <!--Twitter-->
-      <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3"><mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon></a>
+                      <!-- Featured image -->
+                      <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4 waves-light" mdbWavesEffect>
+                          <img class="img-fluid" [src]="dat.img" alt="Sample image">
 
-    </div>
-    <!-- Grid column -->
+                          <a>
+                              <div class="mask rgba-white-slight"></div>
+                          </a>
+                      </div>
+                      <!--Facebook-->
+                      <a type="button" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" mdbWavesEffect (click)="openModal()">
+                          <mdb-icon fab icon="youtube" size="2x" class="white-text"></mdb-icon>
+                      </a>
+                      <!--Twitter-->
+                      <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3"><mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon></a>
 
-    <!-- Grid column -->
-    <div class="col-lg-7">
+                  </div>
+                  <!-- Grid column -->
 
-      <!-- Category -->
-      <mdb-badge  pill="true" default="true">Audiovisual</mdb-badge>
-      <!-- Post title -->
-      <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime</p><br>
-      <p>Secuencia 12. Probabilidad clásica 1</p>
-      <hr>
-      <!-- Post data -->
-      <p>Segundo Grado/Lengua Materna Español/Bloque 1</p>
-      
-     
-    </div>
-    <!-- Grid column -->
+                  <!-- Grid column -->
+                  <div class="col-lg-7">
 
+                      <!-- Category -->
+                      <mdb-badge pill="true" default="true">Audiovisual</mdb-badge>
+                      <!-- Post title -->
+                      <p>{{dat.titulo_audiovisual}}</p><br>
+                      <p>{{dat.secuencia}}</p>
+                      <hr>
+                      <!-- Post data -->
+                      <p>{{dat.grado}}/{{dat.asignatura}}/Bloque {{dat.bloque}}</p>
+
+
+                  </div>
+                  <!-- Grid column -->
+
+              </div>
+              <!-- Grid row -->
+
+          </mdb-card-body>
+      </mdb-card>
   </div>
-  <!-- Grid row -->
-             
-            </mdb-card-body>
-          </mdb-card>
-    </div>
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
 </swiper>
