@@ -43,7 +43,7 @@ export class MenuGradoPipe implements PipeTransform {
         }
       }
     });
-    console.log(grados);
+    //console.log(grados);
     return grados;
   }
 
