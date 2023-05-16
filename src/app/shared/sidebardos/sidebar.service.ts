@@ -86,12 +86,18 @@ export class SidebarService {
       submenus: [
         {
           title: 'Products',
+          url:'',
+          tipo: 'interno'
         },
         {
-          title: 'Orders'
+          title: 'Orders',
+          url:'',
+          tipo: 'interno'
         },
         {
-          title: 'Credit cart'
+          title: 'Credit cart',
+          url:'',
+          tipo: 'interno'
         }
       ]
     },
@@ -103,18 +109,28 @@ export class SidebarService {
       submenus: [
         {
           title: 'General',
+          url:'',
+          tipo: 'interno'
         },
         {
-          title: 'Panels'
+          title: 'Panels',
+          url:'',
+          tipo: 'interno'
         },
         {
-          title: 'Tables'
+          title: 'Tables',
+          url:'',
+          tipo: 'interno'
         },
         {
-          title: 'Icons'
+          title: 'Icons',
+          url:'',
+          tipo: 'interno'
         },
         {
-          title: 'Forms'
+          title: 'Forms',
+          url:'',
+          tipo: 'interno'
         }
       ]
     },
@@ -126,15 +142,23 @@ export class SidebarService {
       submenus: [
         {
           title: 'Pie chart',
+          url:'',
+          tipo: 'interno'
         },
         {
-          title: 'Line chart'
+          title: 'Line chart',
+          url:'',
+          tipo: 'interno'
         },
         {
-          title: 'Bar chart'
+          title: 'Bar chart',
+          url:'',
+          tipo: 'interno'
         },
         {
-          title: 'Histogram'
+          title: 'Histogram',
+          url:'',
+          tipo: 'interno'
         }
       ]
     },
