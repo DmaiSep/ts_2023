@@ -23,6 +23,7 @@ export class AudiovisualesComponent {
       bloque  : ['', [ Validators.required]  ],
     });
   }
+  
   openModal( tit, dir ) {
     console.log(tit, dir);
     this.modalRef = this.modalService.show(ModalvComponent, {
