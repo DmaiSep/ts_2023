@@ -26,7 +26,7 @@ export class ModaldiComponent {
       alt: 'Image 3',
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
     }, {
-      src: 'https://loremflickr.com/600/400/brazil,rio',
+      src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Historia/3_51.png',
       name: 'Formación Civica y Etica',
       alt: 'Image 4',
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
@@ -36,7 +36,7 @@ export class ModaldiComponent {
       alt: 'Image 5',
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
     }, {
-      src: 'https://loremflickr.com/600/400/brazil,rio',
+      src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Historia/3_51.png',
       name: 'Lengua Materna.español',
       alt: 'Image 6',
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
