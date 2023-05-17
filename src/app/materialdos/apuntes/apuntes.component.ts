@@ -149,8 +149,6 @@ export class ApuntesComponent {
   ]
 
   ngOnInit(): void {
-   
-
   }
 
   grado(){
