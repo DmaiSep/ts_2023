@@ -39,37 +39,113 @@ export class MatricesaComponent {
     },
     
   }; 
-
-
-  options = [
-    { value: '1', label: 'Primer Grado' },
-    { value: '2', label: 'Segundo Grado' },
-    { value: '3', label: 'Tercer Grado' },
-  ];
  
- 
-  Images: any = [
-    {
-      src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Espanol/3_1.png',
-      name: 'Lengua Materna.español',
-      alt: 'Image 1',
-      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf',
-    }, {
-      src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Ciencias/3_3_v21.png',
-      name: 'Matematicas',
-      alt: 'Image 2',
-      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
-    }, {
-      src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Historia/3_51.png',
-      name: 'Historia',
-      alt: 'Image 3',
-      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
-    }, {
-      src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Historia/3_51.png',
-      name: 'Formación Civica y Etica',
-      alt: 'Image 4',
-      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
-    }  
+  Avisuales: any = [
+    { 
+      id_perfil:'1',
+      id_grado:'1',
+      img: 'https://telesecundaria.sep.gob.mx/images/Docente/ilustraciones_colores/ICONS_artes_visuales_2018.png',
+      titulo_asignatura: 'Artes Visuales',
+      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Sitio/matriz_artes/index.html',
+    }, 
+    { 
+      id_perfil:'1',
+      id_grado:'1',
+      img: 'https://telesecundaria.sep.gob.mx/images/Docente/ilustraciones_colores/ICONS_danza_2018.png',
+      titulo_asignatura: 'Danza',
+      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Sitio/matriz_danza/index.html',
+    }, 
+    { 
+      id_perfil:'1',
+      id_grado:'1',
+      img: 'https://telesecundaria.sep.gob.mx/images/Docente/ilustraciones_colores/ICONS_musica_2018.png',
+      titulo_asignatura: 'Música',
+      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Sitio/matriz_musica/index.html',
+    }, 
+    { 
+      id_perfil:'1',
+      id_grado:'1',
+      img: 'https://telesecundaria.sep.gob.mx/images/Docente/ilustraciones_colores/ICONS_teatro_2018.png',
+      titulo_asignatura: 'Teatro',
+      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Sitio/matriz_teatro/index.html',
+    }, 
+    { 
+      id_perfil:'1',
+      id_grado:'1',
+      img: 'https://telesecundaria.sep.gob.mx/images/Docente/ilustraciones_colores/PORT_artes_PDF_2018.png',
+      titulo_asignatura: 'Seleccion especial',    
+      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Maestro/pdf/ARTES_TS_2018_v3_opt.pdf',
+    }, 
+    { 
+      id_perfil:'1',
+      id_grado:'2',
+      img: 'https://telesecundaria.sep.gob.mx/images/Docente/ilustraciones_colores/ICONS_artes_visuales_2018.png',
+      titulo_asignatura: 'Artes Visuales',
+      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Sitio/matriz_artes2/index.html',
+    }, 
+    { 
+      id_perfil:'1',
+      id_grado:'2',
+      img: 'https://telesecundaria.sep.gob.mx/images/Docente/ilustraciones_colores/ICONS_danza_2018.png',
+      titulo_asignatura: 'Danza',
+      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Sitio/matriz_danza2/index.html',
+    }, 
+    { 
+      id_perfil:'1',
+      id_grado:'2',
+      img: 'https://telesecundaria.sep.gob.mx/images/Docente/ilustraciones_colores/ICONS_musica_2018.png',
+      titulo_asignatura: 'Música',
+      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Sitio/matriz_musica2/index.html',
+    }, 
+    { 
+      id_perfil:'1',
+      id_grado:'2',
+      img: 'https://telesecundaria.sep.gob.mx/images/Docente/ilustraciones_colores/ICONS_teatro_2018.png',
+      titulo_asignatura: 'Teatro',
+      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Sitio/matriz_teatro2/index.html',
+    },
+    { 
+      id_perfil:'1',
+      id_grado:'2',
+      img: 'https://telesecundaria.sep.gob.mx/images/Docente/ilustraciones_colores/PORT_artes_PDF_2018.png',
+      titulo_asignatura: 'Seleccion especial',    
+      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Maestro/pdf/ARTES_TS_2018_v3_opt.pdf',
+    },  
+    { 
+      id_perfil:'1',
+      id_grado:'3',
+      img: 'https://telesecundaria.sep.gob.mx/images/Docente/ilustraciones_colores/ICONS_artes_visuales_2018.png',
+      titulo_asignatura: 'Artes Visuales',
+      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Sitio/matriz_artes3/index.html',
+    }, 
+    { 
+      id_perfil:'1',
+      id_grado:'3',
+      img: 'https://telesecundaria.sep.gob.mx/images/Docente/ilustraciones_colores/ICONS_danza_2018.png',
+      titulo_asignatura: 'Danza',
+      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Sitio/matriz_danza3/index.html',
+    }, 
+    { 
+      id_perfil:'1',
+      id_grado:'3',
+      img: 'https://telesecundaria.sep.gob.mx/images/Docente/ilustraciones_colores/ICONS_musica_2018.png',
+      titulo_asignatura: 'Música',
+      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Sitio/matriz_musica3/index.html',
+    }, 
+    { 
+      id_perfil:'1',
+      id_grado:'3',
+      img: 'https://telesecundaria.sep.gob.mx/images/Docente/ilustraciones_colores/ICONS_teatro_2018.png',
+      titulo_asignatura: 'Teatro',
+      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Sitio/matriz_teatro3/index.html',
+    }, 
+    { 
+      id_perfil:'1',
+      id_grado:'3',
+      img: 'https://telesecundaria.sep.gob.mx/images/Docente/ilustraciones_colores/PORT_artes_PDF_2018.png',
+      titulo_asignatura: 'Seleccion especial',    
+      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Maestro/pdf/ARTES_TS_2018_v3_opt.pdf',
+    }, 
   ]
   ngOnInit(): void {
    
