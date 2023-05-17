@@ -1,13 +1,21 @@
 import { Component } from '@angular/core';
 import { SwiperOptions } from 'swiper';
-import { HttpClient } from "@angular/common/http";
+import { FormGroup, FormBuilder, Validators} from '@angular/forms';
+
 @Component({
   selector: 'app-apuntes',
   templateUrl: './apuntes.component.html',
   styleUrls: ['./apuntes.component.scss']
 })
 export class ApuntesComponent {
-  constructor(private httpClient: HttpClient) { }
+  form: FormGroup;
+  gradosSelect:number = 0;
+
+  constructor(private _formBuilder: FormBuilder) {
+    this.form = this._formBuilder.group({
+      grado  : ['', [ Validators.required]  ],
+    });
+   }
   config: SwiperOptions = {
     slidesPerView: 3,
     spaceBetween: 20,
@@ -40,61 +48,103 @@ export class ApuntesComponent {
     
   }; 
 
+  menu = [
+    { 
+      id_grado: '2', 
+      grado: 'Segundo Grado',
+     
+    },{ 
+      id_grado: '3', 
+      grado: 'Tercer Grado',
+    }
+  ];
 
-  options = [
-    { value: '1', label: 'Primer Grado' },
-    { value: '2', label: 'Segundo Grado' },
-    { value: '3', label: 'Tercer Grado' },
-  ];
-  asignatura = [
-    { value: '1', label: 'Español' },
-    { value: '2', label: 'Matematicas' },
-    { value: '3', label: 'Fisica' },
-    { value: '4', label: 'Historia' },
-    { value: '5', label: 'Formación Civica y Etica' },
-  ];
-  bloque = [
-    { value: '1', label: '1' },
-    { value: '2', label: '2' },
-    { value: '3', label: '3' },
-  ];
- 
-  Images: any = [
-    {
-      src: 'http://telesecundaria.sep.gob.mx/Content/Repositorio/apuntes/imagenes/1/Artes_visuales-1ro.png',
-      name: 'Lengua Materna.español',
-      alt: 'Image 1',
+  Apuntes: any = [
+    { 
+      id_grado:'2',
+      id_perfil:'1',
+      img: 'http://telesecundaria.sep.gob.mx/Content/Repositorio/apuntes/imagenes/1/Artes_visuales-1ro.png',
+      titulo_apuntes: 'Lengua Materna.español',
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf',
     }, {
-      src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Ciencias/3_3_v21.png',
-      name: 'Matematicas',
-      alt: 'Image 2',
+      id_grado:'2',
+      id_perfil:'1',
+      img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Ciencias/3_3_v21.png',
+      titulo_apuntes: 'Matematicas',
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
     }, {
-      src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Historia/3_51.png',
-      name: 'Historia',
-      alt: 'Image 3',
+      id_grado:'2',
+      id_perfil:'1',
+      img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Historia/3_51.png',
+      titulo_apuntes: 'Historia',
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
     }, {
-      src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Historia/3_51.png',
-      name: 'Formación Civica y Etica',
-      alt: 'Image 4',
+      id_grado:'2',
+      id_perfil:'2',
+      img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Historia/3_51.png',
+      titulo_apuntes: 'Formación Civica y Etica',
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
     }, {
-      src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Ciencias/3_3_v21.png',
-      name: 'Ciencias',
-      alt: 'Image 5',
+      id_grado:'2',
+      id_perfil:'1',
+      img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Ciencias/3_3_v21.png',
+      titulo_apuntes: 'Ciencias',
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
     }, {
-      src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Historia/3_51.png',
-      name: 'Lengua Materna.español',
-      alt: 'Image 6',
+      id_grado:'2',
+      id_perfil:'2',
+      img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Historia/3_51.png',
+      titulo_apuntes: 'Lengua Materna.español',
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
-    }    
+    },
+    { 
+      id_grado:'3',
+      id_perfil:'2',
+      img: 'http://telesecundaria.sep.gob.mx/Content/Repositorio/apuntes/imagenes/1/Artes_visuales-1ro.png',
+      titulo_apuntes: 'Lengua Materna.español',
+      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf',
+    }, {
+      id_grado:'3',
+      id_perfil:'1',
+      img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Ciencias/3_3_v21.png',
+      titulo_apuntes: 'Matematicas',
+      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
+    }, {
+      id_grado:'3',
+      id_perfil:'2',
+      img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Historia/3_51.png',
+      titulo_apuntes: 'Historia',
+      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
+    }, {
+      id_grado:'3',
+      id_perfil:'2',
+      img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Historia/3_51.png',
+      titulo_apuntes: 'Formación Civica y Etica',
+      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
+    }, {
+      id_grado:'3',
+      id_perfil:'1',
+      img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Ciencias/3_3_v21.png',
+      titulo_apuntes: 'Ciencias',
+      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
+    }, {
+      id_grado:'3',
+      id_perfil:'2',
+      img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Historia/3_51.png',
+      titulo_apuntes: 'Lengua Materna.español',
+      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
+    }       
   ]
-  ngOnInit(): void {
-   
 
+  ngOnInit(): void {
+  }
+
+  grado(){
+    //verifica si hay algun valor seleccionado
+    if(this.form.get('grado').value){
+      this.gradosSelect = this.form.get('grado').value;
+    }
+   
   }
 
 }

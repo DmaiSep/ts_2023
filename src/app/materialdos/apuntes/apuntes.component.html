@@ -1,26 +1,26 @@
-
-<div class="row mt-5">
-    <div class="col-md-4 col-lg-4">
-        <div class="md-form">
-            <mdb-select-2 placeholder="Elige una opción" label="Seleciona un grado" [dropdownClass]="'mdb-select-dropdown-colorful mdb-select-dropdown-ins'">
-                <mdb-select-option *ngFor="let option of options" [value]="option.value">{{ option.label }}</mdb-select-option>
-            </mdb-select-2>
+<form autocomplete="off" [formGroup]="form" class="mt-5">
+    <div class="row mt-5">
+        <div class="col-md-4 col-lg-4">
+            <div class="md-form">
+                <mdb-select-2 formControlName="grado" placeholder="Elige una opción" label="Seleciona un grado" [dropdownClass]="'mdb-select-dropdown-colorful mdb-select-dropdown-ins'">
+                    <mdb-select-option *ngFor="let option of menu | menuGrado" [value]="option.id_grado" (click)="grado()">{{ option.grado }}</mdb-select-option>
+                </mdb-select-2>
+            </div>
         </div>
     </div>
-    
-   
-</div>
+
+</form>
 <blockquote class="blockquote bq-warning">
     <p class="bq-title">Apuntes</p>
 </blockquote>
 
 <swiper [config]="config">
     <div class="swiper-wrapper">
-        <div class="card2 swiper-slide" *ngFor="let uno of Images">
-            <img [src]="uno.src" />
+        <div class="card2 swiper-slide" *ngFor="let dat of Apuntes | filterT2:1:gradosSelect:0:0 | slice:0:50">
+            <img [src]="dat.img" />
             <div class="info">
-                <p>{{uno.name}}</p>
-                <a href="{{uno.url}}" target="_blank"><button>Ver mas</button></a>
+                <p>{{dat.titulo_apunte}}</p>
+                <a href="{{dat.url}}" target="_blank"><button>Ver mas</button></a>
             </div>
         </div>
     </div>
@@ -34,11 +34,11 @@
 </blockquote>
 <swiper [config]="config">
     <div class="swiper-wrapper">
-        <div class="card2 swiper-slide" *ngFor="let uno of Images">
-            <img [src]="uno.src" />
+        <div class="card2 swiper-slide" *ngFor="let dat of Apuntes | filterT2:2:gradosSelect:0:0 | slice:0:50">
+            <img [src]="dat.img" />
             <div class="info">
-                <p>{{uno.name}}</p>
-                <a href="{{uno.url}}" target="_blank"><button>Ver mas</button></a>
+                <p>{{dat.titulo_apunte}}</p>
+                <a href="{{dat.url}}" target="_blank"><button>Ver mas</button></a>
             </div>
         </div>
     </div>

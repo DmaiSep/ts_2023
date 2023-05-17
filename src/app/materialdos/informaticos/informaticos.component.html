@@ -32,7 +32,7 @@
 <swiper [config]="config">
     <div class="swiper-wrapper">
        
-        <div class="card3 swiper-slide fgrado{{dat.id_grado}}" *ngFor="let dat of Informaticos | filterT2:2:gradosSelect:asigSelect:bloqueSelect">
+        <div class="card3 swiper-slide fgrado{{dat.id_grado}}" *ngFor="let dat of Informaticos | filterT2:2:gradosSelect:asigSelect:bloqueSelect | slice:0:50">
             <div class="card-header3" style="background-image: url({{dat.img}})">
 
 
@@ -79,7 +79,7 @@
 <swiper [config]="config">
     <div class="swiper-wrapper">
        
-        <div class="card3 swiper-slide fgrado{{dat.id_grado}}" *ngFor="let dat of Informaticos | filterT2:1:gradosSelect:asigSelect:bloqueSelect">
+        <div class="card3 swiper-slide fgrado{{dat.id_grado}}" *ngFor="let dat of Informaticos | filterT2:1:gradosSelect:asigSelect:bloqueSelect | slice:0:50">
             <div class="card-header3" style="background-image: url({{dat.img}})">
 
 
