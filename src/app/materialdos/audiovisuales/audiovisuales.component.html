@@ -41,13 +41,12 @@
                       <!-- Featured image -->
                       <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4 waves-light" mdbWavesEffect>
                           <img class="img-fluid" [src]="dat.img" alt="Sample image">
-
                           <a>
-                              <div class="mask rgba-white-slight"></div>
+                              <div class="mask rgba-white-slight" (click)="openModal(dat.titulo_audiovisual, dat.url)"></div>
                           </a>
                       </div>
                       <!--Facebook-->
-                      <a type="button" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" mdbWavesEffect (click)="openModal()">
+                      <a type="button" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" mdbWavesEffect (click)="openModal(dat.titulo_audiovisual, dat.url)">
                           <mdb-icon fab icon="youtube" size="2x" class="white-text"></mdb-icon>
                       </a>
                       <!--Twitter-->
@@ -99,14 +98,14 @@
 
                       <!-- Featured image -->
                       <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4 waves-light" mdbWavesEffect>
-                          <img class="img-fluid" [src]="dat.img" alt="Sample image">
+                          <img class="img-fluid" [src]="dat.img" alt="Sample image" >
 
                           <a>
-                              <div class="mask rgba-white-slight"></div>
+                              <div class="mask rgba-white-slight" (click)="openModal(dat.titulo_audiovisual, dat.url)"></div>
                           </a>
                       </div>
                       <!--Facebook-->
-                      <a type="button" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" mdbWavesEffect (click)="openModal()">
+                      <a type="button" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" mdbWavesEffect (click)="openModal(dat.titulo_audiovisual, dat.url)">
                           <mdb-icon fab icon="youtube" size="2x" class="white-text"></mdb-icon>
                       </a>
                       <!--Twitter-->

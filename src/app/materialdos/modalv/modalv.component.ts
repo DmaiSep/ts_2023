@@ -6,7 +6,8 @@ import { MDBModalRef } from 'ng-uikit-pro-standard';
   styleUrls: ['./modalv.component.scss']
 })
 export class ModalvComponent implements OnInit {
-
+  title: string | null = null;
+  url: string | null = null;
   constructor(public modalRef: MDBModalRef) { }
 
   ngOnInit(): void {

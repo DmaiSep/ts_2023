@@ -23,8 +23,10 @@ export class AudiovisualesComponent {
       bloque  : ['', [ Validators.required]  ],
     });
   }
-  openModal() {
+  openModal( tit, dir ) {
+    console.log(tit, dir);
     this.modalRef = this.modalService.show(ModalvComponent, {
+      data: { title: tit, url: 'https://www.youtube.com/embed/'+dir },
       backdrop: true,
       keyboard: true,
       focus: true,
