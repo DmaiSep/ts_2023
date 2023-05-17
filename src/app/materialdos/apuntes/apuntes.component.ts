@@ -65,42 +65,36 @@ export class ApuntesComponent {
       id_perfil:'1',
       img: 'http://telesecundaria.sep.gob.mx/Content/Repositorio/apuntes/imagenes/1/Artes_visuales-1ro.png',
       titulo_apuntes: 'Lengua Materna.español',
-      alt: 'Image 1',
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf',
     }, {
       id_grado:'2',
       id_perfil:'1',
       img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Ciencias/3_3_v21.png',
       titulo_apuntes: 'Matematicas',
-      alt: 'Image 2',
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
     }, {
       id_grado:'2',
       id_perfil:'1',
       img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Historia/3_51.png',
       titulo_apuntes: 'Historia',
-      alt: 'Image 3',
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
     }, {
       id_grado:'2',
       id_perfil:'2',
       img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Historia/3_51.png',
       titulo_apuntes: 'Formación Civica y Etica',
-      alt: 'Image 4',
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
     }, {
       id_grado:'2',
       id_perfil:'1',
       img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Ciencias/3_3_v21.png',
       titulo_apuntes: 'Ciencias',
-      alt: 'Image 5',
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
     }, {
       id_grado:'2',
       id_perfil:'2',
       img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Historia/3_51.png',
       titulo_apuntes: 'Lengua Materna.español',
-      alt: 'Image 6',
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
     },
     { 
@@ -108,42 +102,36 @@ export class ApuntesComponent {
       id_perfil:'2',
       img: 'http://telesecundaria.sep.gob.mx/Content/Repositorio/apuntes/imagenes/1/Artes_visuales-1ro.png',
       titulo_apuntes: 'Lengua Materna.español',
-      alt: 'Image 1',
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf',
     }, {
       id_grado:'3',
       id_perfil:'1',
       img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Ciencias/3_3_v21.png',
       titulo_apuntes: 'Matematicas',
-      alt: 'Image 2',
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
     }, {
       id_grado:'3',
       id_perfil:'2',
       img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Historia/3_51.png',
       titulo_apuntes: 'Historia',
-      alt: 'Image 3',
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
     }, {
       id_grado:'3',
       id_perfil:'2',
       img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Historia/3_51.png',
       titulo_apuntes: 'Formación Civica y Etica',
-      alt: 'Image 4',
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
     }, {
       id_grado:'3',
       id_perfil:'1',
       img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Ciencias/3_3_v21.png',
       titulo_apuntes: 'Ciencias',
-      alt: 'Image 5',
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
     }, {
       id_grado:'3',
       id_perfil:'2',
       img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Historia/3_51.png',
       titulo_apuntes: 'Lengua Materna.español',
-      alt: 'Image 6',
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
     }       
   ]
