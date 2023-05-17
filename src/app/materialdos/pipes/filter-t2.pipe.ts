@@ -58,7 +58,7 @@ export class FilterT2Pipe implements PipeTransform {
         datos = value.filter(material => Number(material.id_perfil) == Number(perfil));
         datos = datos.filter(material => Number(material.id_grado) == Number(grado));
         datos = datos.filter(material => Number(material.id_asignatura) == Number(asig));
-        return datos.filter(material => Number(material.bloque) == Number(bloque));
+        return datos.filter(material => Number(material.id_bloque) == Number(bloque));
 
       }
       
