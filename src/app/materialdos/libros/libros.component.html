@@ -28,7 +28,7 @@
     <div class="swiper-wrapper">
 
         <div class="card3 swiper-slide fgrado{{libro.id_grado}}" *ngFor="let libro of libros | filterT2:2:gradosSelect:asigSelect:0 ">
-            <div class="card-header3" style="background-image: url({{libro.img}})">
+            <div class="card-header3" style="background-image: url({{libro.img_libro}})">
                 <div class="topright fgrado{{libro.id_grado}}"><h4>{{libro.id_grado}}º</h4></div>
             </div>
             <div class="card-body3">
@@ -56,7 +56,7 @@
     <div class="swiper-wrapper">
 
         <div class="card3 swiper-slide fgrado{{libro.id_grado}}" *ngFor="let libro of libros | filterT2:1:gradosSelect:asigSelect:0">
-            <div class="card-header3" style="background-image: url({{libro.img}})">
+            <div class="card-header3" style="background-image: url({{libro.img_libro}})">
                 <div class="topright fgrado{{libro.id_grado}}"><h4>{{libro.id_grado}}º</h4></div>
             </div>
             <div class="card-body3">
