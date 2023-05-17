@@ -34,7 +34,7 @@ export class LibrosComponent implements OnInit{
 
     this._libros.getLibros().subscribe(res =>{
       this.libros = res;
-      console.log(this.libros);
+      //console.log(this.libros);
     },err =>{
       console.log(err);
     });

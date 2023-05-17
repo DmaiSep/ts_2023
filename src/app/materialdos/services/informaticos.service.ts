@@ -4,21 +4,20 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class LibrosService {
+export class InformaticosService {
 
   constructor(private http: HttpClient) { }
-  private url = 'https://telesecundaria.sep.gob.mx/php/libros/';
+  private url = 'https://telesecundaria.sep.gob.mx/php/informaticos/';
 
   getMenu(){
     return this.http.get(
-      `${this.url}menu.php`
+      `${this.url}menu_Informaticos.php`
     );
   }
 
-  getLibros(){
+  getInformaticos(){
     return this.http.get(
-      `${this.url}libros.php`
+      `${this.url}lib_mat_informaticos.php`
     );
   }
-
 }

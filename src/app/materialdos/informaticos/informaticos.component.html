@@ -44,7 +44,7 @@
 
             <div class="card-body3">
                 
-                <h3 class="name3">{{dat.titulo_informatico}}</h3>
+                <h3 class="name3">{{dat.nom_material}}</h3>
                 <h4 class="job-title3">{{dat.grado}}/{{dat.asignatura}}/Bloque {{dat.bloque}} </h4>
             </div>
 
@@ -93,7 +93,7 @@
 
             <div class="card-body3">
                 
-                <h3 class="name3">{{dat.titulo_informatico}}</h3>
+                <h3 class="name3">{{dat.nom_material}}</h3>
                 <h4 class="job-title3">{{dat.grado}}/{{dat.asignatura}}/Bloque {{dat.bloque}} </h4>
             </div>
 
@@ -101,14 +101,16 @@
                 <div class="">
                     <div class="stat3">
                         <span class="">
-                            <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3">
+                            <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" href="{{dat.url}}" target="_blank">
                                 <mdb-icon fas icon="atlas" size="2x" class="white-text"></mdb-icon>
                               </a>
                         </span>
                     </div>
                     <div class="stat3">
                         <span class="">
-                            <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3"><mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon></a>
+                            <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" href="{{dat.zip}}" target="_blank">
+                                <mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon>
+                            </a>
                         </span>
                     </div>
                   

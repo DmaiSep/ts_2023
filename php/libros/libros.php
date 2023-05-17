@@ -5,7 +5,7 @@ header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
 header('content-type: application/json; charset=utf-8');
 
 
-include 'conecta.php';
+include '../conecta.php';
 
 $q = "SELECT cat_perfil.id_perfil, cat_grado.id_grado, cat_asignatura.id_asignatura, lib_libros.id_libro, lib_libros.titulo_libro, lib_libros.ver_libro, lib_libros.img_libro, lib_libros.estado 
 FROM (((lib_libros 

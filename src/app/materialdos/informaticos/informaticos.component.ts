@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SwiperOptions } from 'swiper';
 import { FormGroup, FormBuilder, Validators} from '@angular/forms';
+import { InformaticosService } from '../services/informaticos.service';
 @Component({
   selector: 'app-informaticos',
   templateUrl: './informaticos.component.html',
@@ -11,8 +12,10 @@ export class InformaticosComponent {
   gradosSelect:number = 0;
   asigSelect:number = 0;
   bloqueSelect:number = 0;
+  menu: any = [];
+  Informaticos: any = [];
 
-  constructor(private _formBuilder: FormBuilder) { 
+  constructor(private _formBuilder: FormBuilder, private _informaticos:InformaticosService) { 
     this.form = this._formBuilder.group({
       grado  : ['', [ Validators.required]  ],
       asignatura  : ['', [ Validators.required]  ],
@@ -51,93 +54,26 @@ export class InformaticosComponent {
     
   }; 
 
-  menu = [
-    { 
-      id_grado: '2', 
-      grado: 'Segundo Grado',
-      id_asignatura: '1',
-      asignatura: 'Español',
-    },{ 
-      id_grado: '2', 
-      grado: 'Segundo Grado',
-      id_asignatura: '2',
-      asignatura: 'Matematicas',
-    },{ 
-      id_grado: '2', 
-      grado: 'Segundo Grado',
-      id_asignatura: '3',
-      asignatura: 'Fisica',
-    },{ 
-      id_grado: '2', 
-      grado: 'Segundo Grado',
-      id_asignatura: '4',
-      asignatura: 'Historia',
-    },{ 
-      id_grado: '2', 
-      grado: 'Segundo Grado',
-      id_asignatura: '5',
-      asignatura: 'Formación Civica y Etica',
-    },{ 
-      id_grado: '3', 
-      grado: 'Tercer Grado',
-      id_asignatura: '1',
-      asignatura: 'Español',
-    },{ 
-      id_grado: '3', 
-      grado: 'Tercer Grado',
-      id_asignatura: '2',
-      asignatura: 'Matematicas',
-    },{ 
-      id_grado: '3', 
-      grado: 'Tercer Grado',
-      id_asignatura: '3',
-      asignatura: 'Química',
-    },{ 
-      id_grado: '3', 
-      grado: 'Tercer Grado',
-      id_asignatura: '4',
-      asignatura: 'Historia',
-    },{ 
-      id_grado: '3', 
-      grado: 'Tercer Grado',
-      id_asignatura: '5',
-      asignatura: 'Formación Civica y Etica',
-    }
-  ];
-
   bloque = [
     { id_bloque: '1', bloque: '1' },
     { id_bloque: '2', bloque: '2' },
     { id_bloque: '3', bloque: '3' },
     { id_bloque: '999', bloque: 'Todos' }
   ];
-  
-  Informaticos = [
-    { id_perfil: '1', id_grado: '2',grado: 'Segundo Grado', id_bloque: '1',id_asignatura:'1', asignatura: 'Español',id_informatico: '1', titulo_informatico: 'Español. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime', secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/Ciencias/TS-LPA-CIENCIA-FIS-2-V1-BAJA1.png', url:'HlO0gY836rk', zip: '' },
-    { id_perfil: '1', id_grado: '2',grado: 'Segundo Grado', id_bloque: '2',id_asignatura:'2', asignatura: 'Matematicas',id_informatico: '2', titulo_informatico: 'Matematicas. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime',secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/Ciencias/TS-LPA-CIENCIA-FIS-2-V1-BAJA1.png', url:'HlO0gY836rk', zip: '' },
-    { id_perfil: '1', id_grado: '2',grado: 'Segundo Grado', id_bloque: '3',id_asignatura:'3', asignatura: 'Química',id_informatico: '3', titulo_informatico: 'Fisica. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime', secuencia:'Secuencia 12. Probabilidad clásica 1', img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/Ciencias/TS-LPA-CIENCIA-FIS-2-V1-BAJA1.png', url:'HlO0gY836rk', zip: '' },
-    { id_perfil: '1', id_grado: '2',grado: 'Segundo Grado', id_bloque: '1',id_asignatura:'4', asignatura: 'Historia',id_informatico: '4', titulo_informatico: 'Historia. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime',secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/Ciencias/TS-LPA-CIENCIA-FIS-2-V1-BAJA1.png', url:'HlO0gY836rk', zip: '' },
-    { id_perfil: '1', id_grado: '2',grado: 'Segundo Grado', id_bloque: '2',id_asignatura:'5', asignatura: 'Formación Civica y Etica',id_informatico: '5', titulo_informatico: 'Formación Civica y Etica. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime',secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/Ciencias/TS-LPA-CIENCIA-FIS-2-V1-BAJA1.png', url:'HlO0gY836rk', zip: '' },
-    { id_perfil: '1', id_grado: '3',grado: 'Tercer Grado', id_bloque: '3',id_asignatura:'1', asignatura: 'Español',id_informatico: '6', titulo_informatico: 'Español. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime', secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/7.png', url:'HlO0gY836rk', zip: '' },
-    { id_perfil: '1', id_grado: '3',grado: 'Tercer Grado', id_bloque: '1',id_asignatura:'2', asignatura: 'Matematicas',id_informatico: '7', titulo_informatico: 'Matematicas. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime',secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/7.png', url:'HlO0gY836rk', zip: '' },
-    { id_perfil: '1', id_grado: '3',grado: 'Tercer Grado', id_bloque: '2',id_asignatura:'3', asignatura: 'Química',id_informatico: '8', titulo_informatico: 'Química', secuencia:'Secuencia 12. Probabilidad clásica 1', img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/7.png', url:'HlO0gY836rk', zip: '' },
-    { id_perfil: '1', id_grado: '3',grado: 'Tercer Grado', id_bloque: '3',id_asignatura:'4', asignatura: 'Historia',id_informatico: '9', titulo_informatico: 'Historia. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime',secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/7.png', url:'HlO0gY836rk', zip: '' },
-    { id_perfil: '1', id_grado: '3',grado: 'Tercer Grado', id_bloque: '1',id_asignatura:'5', asignatura: 'Formación Civica y Etica',id_informatico: '10', titulo_informatico: 'Formación Civica y Etica. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime',secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/7.png', url:'HlO0gY836rk', zip: '' },
-    { id_perfil: '2', id_grado: '2',grado: 'Segundo Grado', id_bloque: '2',id_asignatura:'1', asignatura: 'Español',id_informatico: '1', titulo_informatico: 'Español. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime', secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/6.png', url:'HlO0gY836rk', zip: '' },
-    { id_perfil: '2', id_grado: '2',grado: 'Segundo Grado', id_bloque: '3',id_asignatura:'2', asignatura: 'Matematicas',id_informatico: '2', titulo_informatico: 'Matematicas. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime',secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/6.png', url:'HlO0gY836rk', zip: '' },
-    { id_perfil: '2', id_grado: '2',grado: 'Segundo Grado', id_bloque: '1',id_asignatura:'3', asignatura: 'Química',id_informatico: '3', titulo_informatico: 'Fisica. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime', secuencia:'Secuencia 12. Probabilidad clásica 1', img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/6.png', url:'HlO0gY836rk', zip: '' },
-    { id_perfil: '2', id_grado: '2',grado: 'Segundo Grado', id_bloque: '2',id_asignatura:'4', asignatura: 'Historia',id_informatico: '4', titulo_informatico: 'Historia. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime',secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/6.png', url:'HlO0gY836rk', zip: '' },
-    { id_perfil: '2', id_grado: '2',grado: 'Segundo Grado', id_bloque: '3',id_asignatura:'5', asignatura: 'Formación Civica y Etica',id_informatico: '5', titulo_informatico: 'Formación Civica y Etica. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime',secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/6.png', url:'HlO0gY836rk', zip: '' },
-    { id_perfil: '2', id_grado: '3',grado: 'Tercer Grado', id_bloque: '1',id_asignatura:'1', asignatura: 'Español',id_informatico: '6', titulo_informatico: 'Español. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime', secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Espanol/3_11.png', url:'HlO0gY836rk', zip: '' },
-    { id_perfil: '2', id_grado: '3',grado: 'Tercer Grado', id_bloque: '2',id_asignatura:'2', asignatura: 'Matematicas',id_informatico: '7', titulo_informatico: 'Matematicas. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime',secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Espanol/3_11.png', url:'HlO0gY836rk', zip: '' },
-    { id_perfil: '2', id_grado: '3',grado: 'Tercer Grado', id_bloque: '3',id_asignatura:'3', asignatura: 'Química',id_informatico: '8', titulo_informatico: 'Química', secuencia:'Secuencia 12. Probabilidad clásica 1', img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Espanol/3_11.png', url:'HlO0gY836rk', zip: '' },
-    { id_perfil: '2', id_grado: '3',grado: 'Tercer Grado', id_bloque: '1',id_asignatura:'4', asignatura: 'Historia',id_informatico: '9', titulo_informatico: 'Historia. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime',secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Espanol/3_11.png', url:'HlO0gY836rk', zip: '' },
-    { id_perfil: '2', id_grado: '3',grado: 'Tercer Grado', id_bloque: '2',id_asignatura:'5', asignatura: 'Formación Civica y Etica',id_informatico: '10', titulo_informatico: 'Formación Civica y Etica. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime',secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Espanol/3_11.png', url:'HlO0gY836rk', zip: '' }
-  ]
 
   ngOnInit(): void {
-   
+    this._informaticos.getMenu().subscribe(res =>{
+      this.menu = res;
+    },err =>{
+      console.log(err);
+    });
 
+    this._informaticos.getInformaticos().subscribe(res =>{
+      this.Informaticos = res;
+      //console.log(this.Informaticos);
+    },err =>{
+      console.log(err);
+    });
   }
 
   grado(){
