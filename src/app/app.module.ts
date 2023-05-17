@@ -26,6 +26,7 @@ import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { ModaldiComponent } from './modaldi/modaldi.component';
 
 
 
@@ -41,6 +42,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     HomeComponent,
     HeaderComponent,
     FooterComponent,
+    ModaldiComponent,
     
   ],
   imports: [
@@ -63,6 +65,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     NgxUsefulSwiperModule
     
     ],
+    entryComponents: [ ModaldiComponent ],
   providers: [
     MDBSpinningPreloader,{
     provide: PERFECT_SCROLLBAR_CONFIG,
