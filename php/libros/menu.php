@@ -5,7 +5,7 @@ header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
 header('content-type: application/json; charset=utf-8');
 
 
-include 'conecta.php';
+include '../conecta.php';
 
 /*QUERY LISTADO GENERAL DE TODOS LOS GRADOS Y TODAS LAS ASIGNATURAS*/
 
