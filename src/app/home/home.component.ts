@@ -19,7 +19,7 @@ export class HomeComponent {
         focus: true,
         show: false,
         ignoreBackdropClick: false,
-        class: 'modal-dialog modal-lg modal-top modal-notify  modal-success modal-dialog-scrollable ldim',
+        class: 'modal-dialog modal-lg modal-top modal-notify  modal-dialog-scrollable ldim',
         containerClass: '',
         animated: true
     });

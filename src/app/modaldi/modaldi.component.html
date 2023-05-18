@@ -1,4 +1,4 @@
-<div class="modal-header">
+<div class="modal-header  stylish-color-dark">
     <button type="button" class="close" aria-label="Close" (click)="modalRef.hide()">
         <span aria-hidden="true" class="white-text">&times;</span>
     </button>
@@ -14,13 +14,25 @@
     
        <swiper [config]="config">
         <div class="swiper-wrapper">
-            <div class="card2 swiper-slide" *ngFor="let uno of Images">
-                <img [src]="uno.src" />
-                <div class="info">
-                    <p>{{uno.name}}</p>
-                    <a href="{{uno.url}}" target="_blank"><button>Ver mas</button></a>
+            <mdb-card cascade="true" narrower="true" class="swiper-slide amp" *ngFor="let uno of Images" style="margin-bottom: 5px;">
+               <!--Card image-->
+                <div class="view view-cascade overlay waves-light" mdbWavesEffect style="margin-top: 0.75rem!important; height: 200px;">
+                  <mdb-card-img src="http://telesecundaria.sep.gob.mx/images/imgli/alumno/1/hist_1.png"></mdb-card-img>
+                  <a>
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
                 </div>
-            </div>
+                <!--/Card image-->
+                <mdb-card-body cascade="true" class="text-center">  
+                  <h5 class="card-title text-white">Formación Civica y Etica</h5>
+                  <!--Text-->
+                     
+                  <mdb-icon fas icon="play-circle" size="3x" style="color: white;"></mdb-icon>
+               
+                </mdb-card-body>
+                <!--/.Card content-->
+              </mdb-card>
+              <!--/.Card-->
         </div>
         <div class="swiper-pagination"></div>
         <div class="swiper-button-next"></div>
@@ -30,39 +42,61 @@
         <p class="bq-title ">Bloque 2</p>
         </blockquote>
     
-       <swiper [config]="config">
-        <div class="swiper-wrapper">
-            <div class="card2 swiper-slide" *ngFor="let uno of Images">
-                <img [src]="uno.src" />
-                <div class="info">
-                    <p>{{uno.name}}</p>
-                    <a href="{{uno.url}}" target="_blank"><button>Ver mas</button></a>
-                </div>
+        <swiper [config]="config">
+            <div class="swiper-wrapper">
+                <mdb-card cascade="true" narrower="true" class="swiper-slide amp" *ngFor="let uno of Images" style="margin-bottom: 5px;">
+                   <!--Card image-->
+                    <div class="view view-cascade overlay waves-light" mdbWavesEffect style="margin-top: 0.75rem!important; height: 200px;">
+                      <mdb-card-img src="http://telesecundaria.sep.gob.mx/images/imgli/alumno/1/hist_1.png"></mdb-card-img>
+                      <a>
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+                    <!--/Card image-->
+                    <mdb-card-body cascade="true" class="text-center">  
+                      <h5 class="card-title text-white">Formación Civica y Etica</h5>
+                      <!--Text-->
+                         
+                      <mdb-icon fas icon="play-circle" size="3x" style="color: white;"></mdb-icon>
+                   
+                    </mdb-card-body>
+                    <!--/.Card content-->
+                  </mdb-card>
+                  <!--/.Card-->
             </div>
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </swiper>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </swiper>
     <blockquote class="blockquote bq-warning mt-5">
         <p class="bq-title">Bloque 3</p>
         </blockquote>
-    
-       <swiper [config]="config">
-        <div class="swiper-wrapper">
-            <div class="card2 swiper-slide" *ngFor="let uno of Images">
-                <img [src]="uno.src" />
-                <div class="info">
-                    <p>{{uno.name}}</p>
-                    <a href="{{uno.url}}" target="_blank"><button>Ver mas</button></a>
-                </div>
+        <swiper [config]="config">
+            <div class="swiper-wrapper">
+                <mdb-card cascade="true" narrower="true" class="swiper-slide amp" *ngFor="let uno of Images" style="margin-bottom: 5px;">
+                   <!--Card image-->
+                    <div class="view view-cascade overlay waves-light" mdbWavesEffect style="margin-top: 0.75rem!important; height: 200px;">
+                      <mdb-card-img src="http://telesecundaria.sep.gob.mx/images/imgli/alumno/1/hist_1.png"></mdb-card-img>
+                      <a>
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+                    <!--/Card image-->
+                    <mdb-card-body cascade="true" class="text-center">  
+                      <h5 class="card-title text-white">Formación Civica y Etica</h5>
+                      <!--Text-->
+                         
+                      <mdb-icon fas icon="play-circle" size="3x" style="color: white;"></mdb-icon>
+                   
+                    </mdb-card-body>
+                    <!--/.Card content-->
+                  </mdb-card>
+                  <!--/.Card-->
             </div>
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </swiper>
-
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </swiper>
 
     </div>
 </div>
