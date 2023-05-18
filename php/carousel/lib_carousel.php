@@ -7,7 +7,7 @@ header('content-type: application/json; charset=utf-8');
 
 include '../conecta.php';
 
- $q = "SELECT * FROM lib_carrusel;";
+ $q = "SELECT * FROM lib_carrusel WHERE estado = 0 order by orden_carrusel desc ;";
   
   $conn	=	conecta_bd();
   $result = mysqli_query($conn,$q);

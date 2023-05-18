@@ -18,10 +18,13 @@
    <!--CARRRUSEL DE NOTICIAS-->
     <mdb-carousel class="carousel slide mt-5 carousel-fade" [type]="'carousel-thumbnails'" [animation]="'fade'">
         <mdb-carousel-item *ngFor="let item of Carousel">
-          <a *ngIf="item.url_carousel">
-            <img  class="d-block w-100" src="http://telesecundaria.sep.gob.mx/images/carrusel/Banner-maestros-WEB_2023.png" alt="First slide">
+          <a *ngIf="item.url_carrusel && item.pestana_nueva == 1" href="{{item.url_carrusel}}" target="_blank">
+            <img  class="d-block w-100" src="./RepositorioT/carousel/{{item.img_carrusel}}" alt="First slide">
           </a>
-          <img  *ngIf="!item.url_carousel" class="d-block w-100" src="http://telesecundaria.sep.gob.mx/images/carrusel/Banner-maestros-WEB_2023.png" alt="First slide">
+          <a *ngIf="item.url_carrusel && item.pestana_nueva != 1" href="{{item.url_carrusel}}">
+            <img  class="d-block w-100" src="./RepositorioT/carousel/{{item.img_carrusel}}" alt="First slide">
+          </a>
+          <img  *ngIf="!item.url_carrusel" class="d-block w-100" src="./RepositorioT/carousel/{{item.img_carrusel}}" alt="{{item.img_carrusel}}">
         </mdb-carousel-item>
         
       </mdb-carousel>
