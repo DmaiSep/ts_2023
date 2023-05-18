@@ -4,7 +4,7 @@ UPDATE lib_libros SET  ver_libro = REPLACE(ver_libro, '../Repositorio/Maestro/',
 UPDATE lib_libros SET  img_libro = REPLACE(img_libro, '../Repositorio/Maestro/', './RepositorioT/libros/Maestro/') WHERE img_libro LIKE '../Repositorio/Maestro/%';
 
 
-UPDATE lib_libros SET  ver_libro = REPLACE(ver_libro, '../Repositorio/Alumno/', './RepositorioT/libros/Alumno/') WHERE ver_libro LIKE '../Repositorio/Maestro/%';
+UPDATE lib_libros SET  ver_libro = REPLACE(ver_libro, '../Repositorio/Alumno/', './RepositorioT/libros/Alumno/') WHERE ver_libro LIKE '../Repositorio/Alumno/%';
 UPDATE lib_libros SET  img_libro = REPLACE(img_libro, '../Repositorio/Alumno/', './RepositorioT/libros/Alumno/') WHERE img_libro LIKE '../Repositorio/Alumno/%';
 
 
