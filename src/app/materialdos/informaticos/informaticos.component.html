@@ -45,7 +45,7 @@
             <div class="card-body3">
                 
                 <h3 class="name3">{{dat.nom_material}}</h3>
-                <h4 class="job-title3">{{dat.grado}}/{{dat.asignatura}}/Bloque {{dat.bloque}} </h4>
+                <h4 class="job-title3">{{dat.grado}}/{{dat.asignatura}}/Bloque {{dat.id_bloque}} </h4>
             </div>
 
             <div class="card-footer3">
@@ -59,7 +59,7 @@
                     </div>
                     <div class="stat3">
                         <span class="">
-                            <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" href="{{dat.zip}}" target="_blank">
+                            <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" href="{{dat.exe}}" target="_blank">
                                 <mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon>
                             </a>
                         </span>
@@ -74,7 +74,7 @@
     <div class="swiper-button-prev"></div>
 </swiper>
 
-<blockquote class="blockquote bq-warning mt-5 mb-5">
+<blockquote class="blockquote bq-warning mt-5 mb-5" *ngIf="Informaticos | filterT2:1:gradosSelect:asigSelect:bloqueSelect">
     <p class="bq-title">Informaticos para el Maestro</p>
 </blockquote>
 
@@ -94,7 +94,7 @@
             <div class="card-body3">
                 
                 <h3 class="name3">{{dat.nom_material}}</h3>
-                <h4 class="job-title3">{{dat.grado}}/{{dat.asignatura}}/Bloque {{dat.bloque}} </h4>
+                <h4 class="job-title3">{{dat.grado}}/{{dat.asignatura}}/Bloque {{dat.id_bloque}}</h4>
             </div>
 
             <div class="card-footer3">
@@ -108,7 +108,7 @@
                     </div>
                     <div class="stat3">
                         <span class="">
-                            <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" href="{{dat.zip}}" target="_blank">
+                            <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" href="{{dat.exe}}" target="_blank">
                                 <mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon>
                             </a>
                         </span>

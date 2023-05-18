@@ -17,7 +17,6 @@ import { MatrizcComponent } from './matrizc/matrizc.component';
 import { CirculolComponent } from './circulol/circulol.component';
 import { InglestComponent } from './inglest/inglest.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FilterTPipe } from './pipes/filter-t.pipe';
 import { MenuAsigPipe } from './pipes/menu-asig.pipe';
 import { MenuGradoPipe } from './pipes/menu-grado.pipe';
 import { ProgramacionrComponent } from './programacionr/programacionr.component';
@@ -41,7 +40,6 @@ import { RutaPipe } from './pipes/ruta.pipe';
     MatrizcComponent,
     CirculolComponent,
     InglestComponent,
-    FilterTPipe,
     MenuAsigPipe,
     MenuGradoPipe,
     ProgramacionrComponent,
