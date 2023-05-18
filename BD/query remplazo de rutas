@@ -36,7 +36,7 @@ SELECT * FROM `db_ts-2023`.lib_materiales_informaticos WHERE exe LIKE '../Reposi
 SELECT * FROM `db_ts-2023`.lib_materiales_informaticos WHERE exe LIKE '/Content/Repositorio/informaticos2/A%';
 SELECT * FROM `db_ts-2023`.lib_materiales_informaticos WHERE exe LIKE '/Content/Repositorio/informaticos3/A%';
 
-UPDATE lib_materiales_informaticos SET  exe = REPLACE(url, '../Repositorio/Informaticos/A', './RepositorioT/informaticos/grado1/A') WHERE exe LIKE '../Repositorio/Informaticos/A%';
-UPDATE lib_materiales_informaticos SET  exe = REPLACE(url, '../Repositorio/Informaticos/M', './RepositorioT/informaticos/grado1/M') WHERE exe LIKE '../Repositorio/Informaticos/M%';
-UPDATE lib_materiales_informaticos SET  exe = REPLACE(url, '/Content/Repositorio/informaticos2/A', './RepositorioT/informaticos/grado2/A') WHERE exe LIKE '/Content/Repositorio/informaticos2/A%';
-UPDATE lib_materiales_informaticos SET  exe = REPLACE(url, '/Content/Repositorio/informaticos3/A', './RepositorioT/informaticos/grado3/A') WHERE exe LIKE '/Content/Repositorio/informaticos3/A%';
+UPDATE lib_materiales_informaticos SET  exe = REPLACE(exe, '../Repositorio/Informaticos/A', './RepositorioT/informaticos/grado1/A') WHERE exe LIKE '../Repositorio/Informaticos/A%';
+UPDATE lib_materiales_informaticos SET  exe = REPLACE(exe, '../Repositorio/Informaticos/M', './RepositorioT/informaticos/grado1/M') WHERE exe LIKE '../Repositorio/Informaticos/M%';
+UPDATE lib_materiales_informaticos SET  exe = REPLACE(exe, '/Content/Repositorio/informaticos2/A', './RepositorioT/informaticos/grado2/A') WHERE exe LIKE '/Content/Repositorio/informaticos2/A%';
+UPDATE lib_materiales_informaticos SET  exe = REPLACE(exe, '/Content/Repositorio/informaticos3/A', './RepositorioT/informaticos/grado3/A') WHERE exe LIKE '/Content/Repositorio/informaticos3/A%';
