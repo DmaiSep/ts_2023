@@ -42,3 +42,6 @@ UPDATE lib_materiales_informaticos SET  exe = REPLACE(exe, '../Repositorio/Infor
 UPDATE lib_materiales_informaticos SET  exe = REPLACE(exe, '../Repositorio/Informaticos/M', './RepositorioT/informaticos/grado1/M') WHERE exe LIKE '../Repositorio/Informaticos/M%';
 UPDATE lib_materiales_informaticos SET  exe = REPLACE(exe, '/Content/Repositorio/informaticos2/A', './RepositorioT/informaticos/grado2/A') WHERE exe LIKE '/Content/Repositorio/informaticos2/A%';
 UPDATE lib_materiales_informaticos SET  exe = REPLACE(exe, '/Content/Repositorio/informaticos3/A', './RepositorioT/informaticos/grado3/A') WHERE exe LIKE '/Content/Repositorio/informaticos3/A%';
+
+SELECT * FROM `db_ts-2023`.lib_apuntes WHERE url_apunte LIKE '../Repositorio/%';
+UPDATE lib_apuntes SET  url_apunte = REPLACE(url_apunte, '../Repositorio/', './RepositorioT/') WHERE url_apunte LIKE '../Repositorio/%';

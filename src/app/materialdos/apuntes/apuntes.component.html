@@ -17,10 +17,10 @@
 <swiper [config]="config">
     <div class="swiper-wrapper">
         <div class="card2 swiper-slide" *ngFor="let dat of Apuntes | filterT2:1:gradosSelect:0:0 | slice:0:50">
-            <img [src]="dat.img" />
+            <img [src]="dat.img_apunte" />
             <div class="info">
-                <p>{{dat.titulo_apunte}}</p>
-                <a href="{{dat.url}}" target="_blank"><button>Ver mas</button></a>
+                <p>{{dat.nombre_apunte}}</p>
+                <a href="{{dat.url_apunte}}" target="_blank"><button>Ver más</button></a>
             </div>
         </div>
     </div>
@@ -35,10 +35,10 @@
 <swiper [config]="config">
     <div class="swiper-wrapper">
         <div class="card2 swiper-slide" *ngFor="let dat of Apuntes | filterT2:2:gradosSelect:0:0 | slice:0:50">
-            <img [src]="dat.img" />
+            <img [src]="dat.img_apunte" />
             <div class="info">
-                <p>{{dat.titulo_apunte}}</p>
-                <a href="{{dat.url}}" target="_blank"><button>Ver mas</button></a>
+                <p>{{dat.nombre_apunte}}</p>
+                <a href="{{dat.url_apunte}}" target="_blank"><button>Ver más</button></a>
             </div>
         </div>
     </div>
