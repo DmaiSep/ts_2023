@@ -27,18 +27,17 @@
     <swiper [config]="config">
         <div class="swiper-wrapper">
     
-            <div class="card3 swiper-slide fgrado{{libro.id_grado}}" *ngFor="let libro of libros | filterT2:2:gradosSelect:asigSelect:0 ">
-                <div class="card-header3" style="background-image: url({{libro.img_libro}})">
-                    <div class="topright fgrado{{libro.id_grado}}"><h4>{{libro.id_grado}}º</h4></div>
+            <div class="card3 swiper-slide fgrado{{dat.id_grado}}" *ngFor="let dat of libros | filterT2:2:gradosSelect:asigSelect:0 ">
+                <div class="card-header3" style="background-image: url({{dat.img_libro}})">
+                    <div class="topright fgrado{{dat.id_grado}}"><h4>{{dat.id_grado}}º</h4></div>
                 </div>
                 <div class="card-body3">
-                    <h3 class="name3 textw mt-3 mb-3">{{libro.titulo_libro}}</h3>
+                    <h3 class="name3 textw mt-3 mb-3">{{dat.titulo_libro}}</h3>
                 </div>
                 <div class="card-footer3">
                     <div class="text-center mb-3">
-                        <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 "><mdb-icon fas icon="book" size="2x" class="white-text"></mdb-icon></a>
-                        <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 "><mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon></a>
-                        <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 "><mdb-icon fas icon="info-circle" size="2x" class="white-text"></mdb-icon></a>
+                        <a *ngIf="dat.ver_libro" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 " href="{{dat.ver_libro}}" target="_blank"><mdb-icon fas icon="book" size="2x" class="white-text"></mdb-icon></a>
+                        <a *ngIf="dat.zip" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 " href="{{dat.zip}}"><mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon></a>
                     </div>
                 </div>
             </div>
@@ -53,24 +52,23 @@
 
 <section *ngIf="libros | pefilContent:1">
     <blockquote class="blockquote bq-warning">
-        <p class="bq-title">Libros para el Maestro</p>
+        <p class="bq-title">Libros para el Alumno</p>
     </blockquote>
+    
     <swiper [config]="config">
         <div class="swiper-wrapper">
     
-            <div class="card3 swiper-slide fgrado{{libro.id_grado}}" *ngFor="let libro of libros | filterT2:1:gradosSelect:asigSelect:0">
-                <div class="card-header3" style="background-image: url({{libro.img_libro}})">
-                    <div class="topright fgrado{{libro.id_grado}}"><h4>{{libro.id_grado}}º</h4></div>
+            <div class="card3 swiper-slide fgrado{{dat.id_grado}}" *ngFor="let dat of libros | filterT2:1:gradosSelect:asigSelect:0 ">
+                <div class="card-header3" style="background-image: url({{dat.img_libro}})">
+                    <div class="topright fgrado{{dat.id_grado}}"><h4>{{dat.id_grado}}º</h4></div>
                 </div>
                 <div class="card-body3">
-                    <h3 class="name3 textw mt-3 mb-3">{{libro.titulo_libro}}</h3>
+                    <h3 class="name3 textw mt-3 mb-3">{{dat.titulo_libro}}</h3>
                 </div>
-    
                 <div class="card-footer3">
                     <div class="text-center mb-3">
-                        <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 "><mdb-icon fab icon="youtube" size="2x" class="white-text"></mdb-icon></a>
-                        <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 "><mdb-icon fas icon="arrow-circle-down" size="2x" class="white-text"></mdb-icon></a>
-                        <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 "><mdb-icon fas icon="info-circle" size="2x" class="white-text"></mdb-icon></a>
+                        <a *ngIf="dat.ver_libro" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 " href="{{dat.ver_libro}}" target="_blank"><mdb-icon fas icon="book" size="2x" class="white-text"></mdb-icon></a>
+                        <a *ngIf="dat.zip" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 " href="{{dat.zip}}"><mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon></a>
                     </div>
                 </div>
             </div>
