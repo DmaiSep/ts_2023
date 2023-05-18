@@ -37,7 +37,7 @@
                 <div class="card-footer3">
                     <div class="text-center mb-3">
                         <a *ngIf="dat.ver_libro" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 " href="{{dat.ver_libro}}" target="_blank"><mdb-icon fas icon="book" size="2x" class="white-text"></mdb-icon></a>
-                        <a *ngIf="dat.zip" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 " href="{{dat.zip_libro}}"><mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon></a>
+                        <a *ngIf="dat.zip_libro" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 " href="{{dat.zip_libro}}"><mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon></a>
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@
 
 <section *ngIf="libros | pefilContent:1">
     <blockquote class="blockquote bq-warning">
-        <p class="bq-title">Libros para el Alumno</p>
+        <p class="bq-title">Libros para el Maestro</p>
     </blockquote>
     
     <swiper [config]="config">
@@ -68,7 +68,7 @@
                 <div class="card-footer3">
                     <div class="text-center mb-3">
                         <a *ngIf="dat.ver_libro" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 " href="{{dat.ver_libro}}" target="_blank"><mdb-icon fas icon="book" size="2x" class="white-text"></mdb-icon></a>
-                        <a *ngIf="dat.zip" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 " href="{{dat.zip_libro}}"><mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon></a>
+                        <a *ngIf="dat.zip_libro" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 " href="{{dat.zip_libro}}"><mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon></a>
                     </div>
                 </div>
             </div>
