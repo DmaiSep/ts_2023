@@ -1,0 +1,47 @@
+SET SQL_SAFE_UPDATES = 0;
+
+UPDATE lib_libros SET  ver_libro = REPLACE(ver_libro, '../Repositorio/Maestro/', './RepositorioT/libros/Maestro/') WHERE ver_libro LIKE '../Repositorio/Maestro/%';
+UPDATE lib_libros SET  img_libro = REPLACE(img_libro, '../Repositorio/Maestro/', './RepositorioT/libros/Maestro/') WHERE img_libro LIKE '../Repositorio/Maestro/%';
+UPDATE lib_libros SET  zip_libro = REPLACE(zip_libro, '../Repositorio/Maestro/', './RepositorioT/libros/Maestro/') WHERE zip_libro LIKE '../Repositorio/Maestro/%';
+
+
+UPDATE lib_libros SET  ver_libro = REPLACE(ver_libro, '../Repositorio/Alumno/', './RepositorioT/libros/Alumno/') WHERE ver_libro LIKE '../Repositorio/Alumno/%';
+UPDATE lib_libros SET  img_libro = REPLACE(img_libro, '../Repositorio/Alumno/', './RepositorioT/libros/Alumno/') WHERE img_libro LIKE '../Repositorio/Alumno/%';
+UPDATE lib_libros SET  zip_libro = REPLACE(zip_libro, '../Repositorio/Alumno/', './RepositorioT/libros/Alumno/') WHERE zip_libro LIKE '../Repositorio/Alumno/%';
+
+
+
+SELECT * FROM `db_ts-2023`.lib_materiales_informaticos WHERE img LIKE '../Repositorio/Informaticos/A%';
+SELECT * FROM `db_ts-2023`.lib_materiales_informaticos WHERE img LIKE '../Repositorio/informaticos2/A%';
+SELECT * FROM `db_ts-2023`.lib_materiales_informaticos WHERE img LIKE '/Content/Repositorio/informaticos2/A%';
+SELECT * FROM `db_ts-2023`.lib_materiales_informaticos WHERE img LIKE '/Content/Repositorio/informaticos3/A%';
+
+SET SQL_SAFE_UPDATES = 0;
+UPDATE lib_materiales_informaticos SET  img = REPLACE(img, '../Repositorio/Informaticos/A', './RepositorioT/informaticos/grado1/A') WHERE img LIKE '../Repositorio/Informaticos/A%';
+UPDATE lib_materiales_informaticos SET  img = REPLACE(img, '../Repositorio/informaticos2/A', './RepositorioT/informaticos/grado2/A') WHERE img LIKE '../Repositorio/informaticos2/A%';
+UPDATE lib_materiales_informaticos SET  img = REPLACE(img, '/Content/Repositorio/informaticos2/A', './RepositorioT/informaticos/grado2/A') WHERE img LIKE '%/Content/Repositorio/informaticos2/A%';
+UPDATE lib_materiales_informaticos SET  img = REPLACE(img, '/Content/Repositorio/informaticos3/A', './RepositorioT/informaticos/grado3/A') WHERE img LIKE '%/Content/Repositorio/informaticos3/A%';
+
+SELECT * FROM `db_ts-2023`.lib_materiales_informaticos WHERE url LIKE '../Repositorio/Informaticos/A%';
+SELECT * FROM `db_ts-2023`.lib_materiales_informaticos WHERE url LIKE '../Repositorio/Informaticos/M%';
+SELECT * FROM `db_ts-2023`.lib_materiales_informaticos WHERE url LIKE '/Content/Repositorio/informaticos2/A%';
+SELECT * FROM `db_ts-2023`.lib_materiales_informaticos WHERE url LIKE '/Content/Repositorio/informaticos3/A%';
+
+UPDATE lib_materiales_informaticos SET  url = REPLACE(url, '../Repositorio/Informaticos/A', './RepositorioT/informaticos/grado1/A') WHERE url LIKE '../Repositorio/Informaticos/A%';
+UPDATE lib_materiales_informaticos SET  url = REPLACE(url, '../Repositorio/Informaticos/M', './RepositorioT/informaticos/grado1/M') WHERE url LIKE '../Repositorio/Informaticos/M%';
+UPDATE lib_materiales_informaticos SET  url = REPLACE(url, '/Content/Repositorio/informaticos2/A', './RepositorioT/informaticos/grado2/A') WHERE url LIKE '/Content/Repositorio/informaticos2/A%';
+UPDATE lib_materiales_informaticos SET  url = REPLACE(url, '/Content/Repositorio/informaticos3/A', './RepositorioT/informaticos/grado3/A') WHERE url LIKE '/Content/Repositorio/informaticos3/A%';
+
+
+SELECT * FROM `db_ts-2023`.lib_materiales_informaticos WHERE exe LIKE '../Repositorio/Informaticos/A%';
+SELECT * FROM `db_ts-2023`.lib_materiales_informaticos WHERE exe LIKE '../Repositorio/Informaticos/M%';
+SELECT * FROM `db_ts-2023`.lib_materiales_informaticos WHERE exe LIKE '/Content/Repositorio/informaticos2/A%';
+SELECT * FROM `db_ts-2023`.lib_materiales_informaticos WHERE exe LIKE '/Content/Repositorio/informaticos3/A%';
+
+UPDATE lib_materiales_informaticos SET  exe = REPLACE(exe, '../Repositorio/Informaticos/A', './RepositorioT/informaticos/grado1/A') WHERE exe LIKE '../Repositorio/Informaticos/A%';
+UPDATE lib_materiales_informaticos SET  exe = REPLACE(exe, '../Repositorio/Informaticos/M', './RepositorioT/informaticos/grado1/M') WHERE exe LIKE '../Repositorio/Informaticos/M%';
+UPDATE lib_materiales_informaticos SET  exe = REPLACE(exe, '/Content/Repositorio/informaticos2/A', './RepositorioT/informaticos/grado2/A') WHERE exe LIKE '/Content/Repositorio/informaticos2/A%';
+UPDATE lib_materiales_informaticos SET  exe = REPLACE(exe, '/Content/Repositorio/informaticos3/A', './RepositorioT/informaticos/grado3/A') WHERE exe LIKE '/Content/Repositorio/informaticos3/A%';
+
+SELECT * FROM `db_ts-2023`.lib_apuntes WHERE url_apunte LIKE '../Repositorio/%';
+UPDATE lib_apuntes SET  url_apunte = REPLACE(url_apunte, '../Repositorio/', './RepositorioT/') WHERE url_apunte LIKE '../Repositorio/%';

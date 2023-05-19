@@ -1,13 +1,27 @@
 import { Component } from '@angular/core';
 import { SwiperOptions } from 'swiper';
-import { HttpClient } from "@angular/common/http";
+import { FormGroup, FormBuilder, Validators} from '@angular/forms';
+import { InformaticosService } from '../services/informaticos.service';
 @Component({
   selector: 'app-informaticos',
   templateUrl: './informaticos.component.html',
   styleUrls: ['./informaticos.component.scss']
 })
 export class InformaticosComponent {
-  constructor(private httpClient: HttpClient) { }
+  form: FormGroup;
+  gradosSelect:number = 0;
+  asigSelect:number = 0;
+  bloqueSelect:number = 0;
+  menu: any = [];
+  Informaticos: any = [];
+
+  constructor(private _formBuilder: FormBuilder, private _informaticos:InformaticosService) { 
+    this.form = this._formBuilder.group({
+      grado  : ['', [ Validators.required]  ],
+      asignatura  : ['', [ Validators.required]  ],
+      bloque  : ['', [ Validators.required]  ],
+    });
+  }
   config: SwiperOptions = {
     slidesPerView: 3,
     spaceBetween: 20,
@@ -40,60 +54,61 @@ export class InformaticosComponent {
     
   }; 
 
-
-  options = [
-    { value: '1', label: 'Primer Grado' },
-    { value: '2', label: 'Segundo Grado' },
-    { value: '3', label: 'Tercer Grado' },
-  ];
-  asignatura = [
-    { value: '1', label: 'Español' },
-    { value: '2', label: 'Matematicas' },
-    { value: '3', label: 'Fisica' },
-    { value: '4', label: 'Historia' },
-    { value: '5', label: 'Formación Civica y Etica' },
-  ];
   bloque = [
-    { value: '1', label: '1' },
-    { value: '2', label: '2' },
-    { value: '3', label: '3' },
+    { id_bloque: '1', bloque: '1' },
+    { id_bloque: '2', bloque: '2' },
+    { id_bloque: '3', bloque: '3' },
+    { id_bloque: '999', bloque: 'Todos' }
   ];
- 
-  Images: any = [
-    {
-      src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Espanol/3_1.png',
-      name: 'Lengua Materna.español',
-      alt: 'Image 1',
-      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf',
-    }, {
-      src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Ciencias/3_3_v21.png',
-      name: 'Matematicas',
-      alt: 'Image 2',
-      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
-    }, {
-      src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Historia/3_51.png',
-      name: 'Historia',
-      alt: 'Image 3',
-      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
-    }, {
-      src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Historia/3_51.png',
-      name: 'Formación Civica y Etica',
-      alt: 'Image 4',
-      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
-    }, {
-      src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Ciencias/3_3_v21.png',
-      name: 'Ciencias',
-      alt: 'Image 5',
-      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
-    }, {
-      src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Historia/3_51.png',
-      name: 'Lengua Materna.español',
-      alt: 'Image 6',
-      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
-    }    
-  ]
+
   ngOnInit(): void {
+    this._informaticos.getMenu().subscribe(res =>{
+      this.menu = res;
+    },err =>{
+      console.log(err);
+    });
+
+    this._informaticos.getInformaticos().subscribe(res =>{
+      this.Informaticos = res;
+      //console.log(this.Informaticos);
+    },err =>{
+      console.log(err);
+    });
+  }
+
+  grado(){
+    //verifica si hay algun valor seleccionado
+    if(this.form.get('grado').value){
+      this.gradosSelect = this.form.get('grado').value;
+      if(this.form.get('grado').value != 999){
+        this.form.controls['asignatura'].enable();
+      }else{
+        this.form.controls['asignatura'].disable();
+        this.form.controls['bloque'].disable();
+      }
+    }
    
+  }
+
+  asignaturaf(){
+    //verifica si hay algun valor seleccionado
+    if(this.form.get('asignatura').value){
+      this.asigSelect = this.form.get('asignatura').value;
+      if(this.form.get('asignatura').value != 999){
+        this.form.controls['bloque'].enable();
+      }else{
+        this.form.controls['bloque'].disable();
+      }
+    }
+
+  }
+
+  bloquef(){
+    //verifica si hay algun valor seleccionado
+    if(this.form.get('bloque').value){
+      this.bloqueSelect = this.form.get('bloque').value;
+    }
+    
 
   }
 }

@@ -1,13 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SidebarService } from '../shared/sidebardos/sidebar.service';
+import { ActivatedRoute } from '@angular/router'; // Importar
 
 @Component({
   selector: 'app-materialdos',
   templateUrl: './materialdos.component.html',
   styleUrls: ['./materialdos.component.scss']
 })
-export class MaterialdosComponent {
-  constructor(public sidebarservice: SidebarService,) { }
+export class MaterialdosComponent{
+  direccion : string;
+  urls: any[] ;
+  constructor(public sidebarservice: SidebarService,private route: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
@@ -26,5 +29,12 @@ export class MaterialdosComponent {
   }
   oupen(ruta){
     self.top.location.href = ruta;
+  }
+  rutas(){
+    this.urls = this.sidebarservice.getBreadcrumbs();
+    this.route.children[0].url.subscribe(res => {
+      this.direccion = res[0].path;
+    });
+    //console.log(this.ruta);
   }
 }

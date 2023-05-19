@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class LibrosService {
 
   constructor(private http: HttpClient) { }
-  private url = 'https://telesecundaria.sep.gob.mx/php/';
+  private url = 'https://telesecundaria.sep.gob.mx/php/libros/';
 
   getMenu(){
     return this.http.get(

@@ -19,51 +19,62 @@ export class SidebarService {
       submenus: [
         {
           title: 'Libros de texto',
-          url:'Libros'
+          url:'Libros',
+          tipo: 'interno'
         },
         {
           title: 'Materiales audiovisuales',
-          url:'Audiovisuales'
+          url:'Audiovisuales',
+          tipo: 'interno'
         },
         {
           title: 'Materiales informáticos',
-          url:'Informaticos'
+          url:'Informaticos',
+          tipo: 'interno'
         }
         ,
         {
           title: 'Materiales para debilidad visual',
-          url:'DebilidadV'
+          url:'https://telesecundaria.sep.gob.mx/Content/Discapacitados/',
+          tipo: 'externo'
         }
         ,
         {
           title: 'Apuntes',
-          url:'Apuntes'
+          url:'Apuntes',
+          tipo: 'interno'
         },
         {
           title: 'Matriz de Recursos Audiovisuales',
-          url:'MatricezA'
+          url:'MatricezA',
+          tipo: 'interno'
         },
         {
           title: 'Matriz de Correspondencia',
-          url:'MatrizC'
+          url:'MatrizC',
+          tipo: 'interno'
         },
         {
           title: 'Círculos de lectura',
-          url:'CirculoLectura'
+          url:'CirculoLectura',
+          tipo: 'interno'
         },
         {
           title: 'Inglés en Telesecundaria',
-          url:'InglesTele'
+          url:'InglesTele',
+          tipo: 'interno'
         }
         ,
         {
           title: 'Programación Regular',
-          url:'Programareg'
+          url:'Programareg',
+          tipo: 'interno'
         }
         ,
         {
           title: 'Matrices',
-          url:'Matrices'
+          url:'Matrices',
+          tipo: 'interno'
         }
       ]
     },
@@ -75,12 +86,18 @@ export class SidebarService {
       submenus: [
         {
           title: 'Products',
+          url:'',
+          tipo: 'interno'
         },
         {
-          title: 'Orders'
+          title: 'Orders',
+          url:'',
+          tipo: 'interno'
         },
         {
-          title: 'Credit cart'
+          title: 'Credit cart',
+          url:'',
+          tipo: 'interno'
         }
       ]
     },
@@ -92,18 +109,28 @@ export class SidebarService {
       submenus: [
         {
           title: 'General',
+          url:'',
+          tipo: 'interno'
         },
         {
-          title: 'Panels'
+          title: 'Panels',
+          url:'',
+          tipo: 'interno'
         },
         {
-          title: 'Tables'
+          title: 'Tables',
+          url:'',
+          tipo: 'interno'
         },
         {
-          title: 'Icons'
+          title: 'Icons',
+          url:'',
+          tipo: 'interno'
         },
         {
-          title: 'Forms'
+          title: 'Forms',
+          url:'',
+          tipo: 'interno'
         }
       ]
     },
@@ -115,15 +142,23 @@ export class SidebarService {
       submenus: [
         {
           title: 'Pie chart',
+          url:'',
+          tipo: 'interno'
         },
         {
-          title: 'Line chart'
+          title: 'Line chart',
+          url:'',
+          tipo: 'interno'
         },
         {
-          title: 'Bar chart'
+          title: 'Bar chart',
+          url:'',
+          tipo: 'interno'
         },
         {
-          title: 'Histogram'
+          title: 'Histogram',
+          url:'',
+          tipo: 'interno'
         }
       ]
     },
@@ -134,6 +169,21 @@ export class SidebarService {
       type: 'simple',
       url: './assets/docs/calendario/CALENDARIO_ESCOLAR_2022-2023_v3.pdf'
     }
+  ];
+  breadcrumbs: any[] = [
+    {url: 'Home',modulo:'Material Sugerido', seccion: ''},
+    {url: 'Libros',modulo:'Materiales Educativos', seccion: 'Libros de texto'},
+    {url: 'Audiovisuales',modulo:'Materiales Educativos', seccion: 'Materiales audiovisuales'},
+    {url: 'Informaticos',modulo:'Materiales Educativos', seccion: 'Materiales informáticos'},
+    {url: 'DebilidadV',modulo:'Materiales Educativos', seccion: 'Materiales para debilidad visual'},
+    {url: 'Apuntes',modulo:'Materiales Educativos', seccion: 'Apuntes'},
+    {url: 'MatricezA',modulo:'Materiales Educativos', seccion: 'Matriz de Recursos Audiovisuales'},
+    {url: 'MatrizC',modulo:'Materiales Educativos', seccion: 'Matriz de Correspondencia'},
+    {url: 'CirculoLectura',modulo:'Materiales Educativos', seccion: 'Círculos de lectura'},
+    {url: 'InglesTele',modulo:'Materiales Educativos', seccion: 'Inglés en Telesecundaria'},
+    {url: 'Programareg',modulo:'Materiales Educativos', seccion: 'Programación Regular'},
+    {url: 'Matrices',modulo:'Materiales Educativos', seccion: 'Matrices'},
+    
   ];
   constructor() { }
 
@@ -151,6 +201,9 @@ export class SidebarService {
 
   getMenuList() {
     return this.menus;
+  }
+  getBreadcrumbs() {
+    return this.breadcrumbs;
   }
 
   get hasBackgroundImage() {

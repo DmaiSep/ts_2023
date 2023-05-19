@@ -3,3 +3,20 @@
     top: 20%;
     left: 10px;
 }
+
+
+/* Full Page Carousel itself*/
+.carousel {
+  height: 560px;
+}
+.carousel .carousel-inner {
+  height: 560px;
+}
+.carousel .carousel-inner .carousel-item,
+.carousel .carousel-inner .active {
+  height: 560px;
+}
+.video-fluid {
+  max-width: unset;
+}
+
