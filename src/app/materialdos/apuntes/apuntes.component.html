@@ -3,7 +3,7 @@
     <div class="row mt-5">
         <div class="col-md-4 col-lg-4">
             <div class="md-form">
-                <mdb-select-2 formControlName="grado" placeholder="Elige una opción" label="Seleciona un grado" [dropdownClass]="'mdb-select-dropdown-colorful mdb-select-dropdown-ins'">
+                <mdb-select-2 formControlName="grado" placeholder="Elige una opción" label="Selecciona un grado" [dropdownClass]="'mdb-select-dropdown-colorful mdb-select-dropdown-ins'">
                     <mdb-select-option *ngFor="let option of menu | menuGrado" [value]="option.id_grado" (click)="grado()">{{ option.grado }}</mdb-select-option>
                 </mdb-select-2>
             </div>

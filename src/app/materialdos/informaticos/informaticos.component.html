@@ -2,21 +2,21 @@
     <div class="row">
         <div class="col-md-4 col-lg-4">
             <div class="md-form">
-                <mdb-select-2 formControlName="grado" placeholder="Elige una opción" label="Seleciona un grado" [dropdownClass]="'mdb-select-dropdown-colorful mdb-select-dropdown-ins'">
+                <mdb-select-2 formControlName="grado" placeholder="Elige una opción" label="Selecciona un grado" [dropdownClass]="'mdb-select-dropdown-colorful mdb-select-dropdown-ins'">
                     <mdb-select-option *ngFor="let option of menu | menuGrado" [value]="option.id_grado" (click)="grado()">{{ option.grado }}</mdb-select-option>
                 </mdb-select-2>
             </div>
         </div>
         <div class="col-md-4 col-lg-4">
             <div class="md-form">
-                <mdb-select-2  formControlName="asignatura" placeholder="Elige una opción" label="Seleciona una asignatura">
+                <mdb-select-2  formControlName="asignatura" placeholder="Elige una opción" label="Selecciona una asignatura">
                     <mdb-select-option *ngFor="let asignaturas of menu | menuAsig:gradosSelect" [value]="asignaturas.id_asignatura" (click)="asignaturaf()">{{ asignaturas.asignatura }}</mdb-select-option>
                 </mdb-select-2>
             </div>
         </div>
         <div class="col-md-4 col-lg-4">
             <div class="md-form">
-                <mdb-select-2  formControlName="bloque"  placeholder="Elige una opción" label="Seleciona un Bloque">
+                <mdb-select-2  formControlName="bloque"  placeholder="Elige una opción" label="Selecciona un Bloque">
                     <mdb-select-option *ngFor="let bloques of bloque" [value]="bloques.id_bloque" (click)="bloquef()">{{ bloques.bloque}}</mdb-select-option>
                 </mdb-select-2>
             </div>
