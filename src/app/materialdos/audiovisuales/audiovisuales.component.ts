@@ -3,6 +3,7 @@ import { SwiperOptions } from 'swiper';
 import { MDBModalRef, MDBModalService } from 'ng-uikit-pro-standard';
 import { ModalvComponent } from '../modalv/modalv.component'
 import { FormGroup, FormBuilder, Validators} from '@angular/forms';
+import { AudiovisualesService } from '../services/audiovisuales.service';
 @Component({
   selector: 'app-audiovisuales',
   templateUrl: './audiovisuales.component.html',
@@ -14,9 +15,11 @@ export class AudiovisualesComponent {
   gradosSelect:number = 0;
   asigSelect:number = 0;
   bloqueSelect:number = 0;
+  menu: any = [];
+  Audiovisuales: any = [];
 
 
-  constructor( private modalService: MDBModalService, private _formBuilder: FormBuilder) { 
+  constructor( private modalService: MDBModalService, private _formBuilder: FormBuilder, private _audiovisuales:AudiovisualesService) { 
     this.form = this._formBuilder.group({
       grado  : ['', [ Validators.required]  ],
       asignatura  : ['', [ Validators.required]  ],
@@ -72,95 +75,30 @@ export class AudiovisualesComponent {
     
   }; 
 
-
-  menu = [
-    { 
-      id_grado: '2', 
-      grado: 'Segundo Grado',
-      id_asignatura: '1',
-      asignatura: 'Español',
-    },{ 
-      id_grado: '2', 
-      grado: 'Segundo Grado',
-      id_asignatura: '2',
-      asignatura: 'Matematicas',
-    },{ 
-      id_grado: '2', 
-      grado: 'Segundo Grado',
-      id_asignatura: '3',
-      asignatura: 'Fisica',
-    },{ 
-      id_grado: '2', 
-      grado: 'Segundo Grado',
-      id_asignatura: '4',
-      asignatura: 'Historia',
-    },{ 
-      id_grado: '2', 
-      grado: 'Segundo Grado',
-      id_asignatura: '5',
-      asignatura: 'Formación Civica y Etica',
-    },{ 
-      id_grado: '3', 
-      grado: 'Tercer Grado',
-      id_asignatura: '1',
-      asignatura: 'Español',
-    },{ 
-      id_grado: '3', 
-      grado: 'Tercer Grado',
-      id_asignatura: '2',
-      asignatura: 'Matematicas',
-    },{ 
-      id_grado: '3', 
-      grado: 'Tercer Grado',
-      id_asignatura: '3',
-      asignatura: 'Química',
-    },{ 
-      id_grado: '3', 
-      grado: 'Tercer Grado',
-      id_asignatura: '4',
-      asignatura: 'Historia',
-    },{ 
-      id_grado: '3', 
-      grado: 'Tercer Grado',
-      id_asignatura: '5',
-      asignatura: 'Formación Civica y Etica',
-    }
-  ];
-
   bloque = [
     { id_bloque: '1', bloque: '1' },
     { id_bloque: '2', bloque: '2' },
     { id_bloque: '3', bloque: '3' },
     { id_bloque: '999', bloque: 'Todos' }
   ];
-
-  Audiovisuales = [
-    { id_perfil: '1', id_grado: '2',grado: 'Segundo Grado', id_bloque: '1',id_asignatura:'1', asignatura: 'Español',id_audiovisual: '1', titulo_audiovisual: 'Español. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime', secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/Ciencias/TS-LPA-CIENCIA-FIS-2-V1-BAJA1.png', url:'HlO0gY836rk' },
-    { id_perfil: '1', id_grado: '2',grado: 'Segundo Grado', id_bloque: '2',id_asignatura:'2', asignatura: 'Matematicas',id_audiovisual: '2', titulo_audiovisual: 'Matematicas. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime',secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/Ciencias/TS-LPA-CIENCIA-FIS-2-V1-BAJA1.png', url:'HlO0gY836rk' },
-    { id_perfil: '1', id_grado: '2',grado: 'Segundo Grado', id_bloque: '3',id_asignatura:'3', asignatura: 'Química',id_audiovisual: '3', titulo_audiovisual: 'Fisica. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime', secuencia:'Secuencia 12. Probabilidad clásica 1', img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/Ciencias/TS-LPA-CIENCIA-FIS-2-V1-BAJA1.png', url:'HlO0gY836rk' },
-    { id_perfil: '1', id_grado: '2',grado: 'Segundo Grado', id_bloque: '1',id_asignatura:'4', asignatura: 'Historia',id_audiovisual: '4', titulo_audiovisual: 'Historia. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime',secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/Ciencias/TS-LPA-CIENCIA-FIS-2-V1-BAJA1.png', url:'HlO0gY836rk' },
-    { id_perfil: '1', id_grado: '2',grado: 'Segundo Grado', id_bloque: '2',id_asignatura:'5', asignatura: 'Formación Civica y Etica',id_audiovisual: '5', titulo_audiovisual: 'Formación Civica y Etica. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime',secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/Ciencias/TS-LPA-CIENCIA-FIS-2-V1-BAJA1.png', url:'HlO0gY836rk' },
-    { id_perfil: '1', id_grado: '3',grado: 'Tercer Grado', id_bloque: '3',id_asignatura:'1', asignatura: 'Español',id_audiovisual: '6', titulo_audiovisual: 'Español. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime', secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/7.png', url:'HlO0gY836rk' },
-    { id_perfil: '1', id_grado: '3',grado: 'Tercer Grado', id_bloque: '1',id_asignatura:'2', asignatura: 'Matematicas',id_audiovisual: '7', titulo_audiovisual: 'Matematicas. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime',secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/7.png', url:'HlO0gY836rk' },
-    { id_perfil: '1', id_grado: '3',grado: 'Tercer Grado', id_bloque: '2',id_asignatura:'3', asignatura: 'Química',id_audiovisual: '8', titulo_audiovisual: 'Química', secuencia:'Secuencia 12. Probabilidad clásica 1', img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/7.png', url:'HlO0gY836rk' },
-    { id_perfil: '1', id_grado: '3',grado: 'Tercer Grado', id_bloque: '3',id_asignatura:'4', asignatura: 'Historia',id_audiovisual: '9', titulo_audiovisual: 'Historia. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime',secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/7.png', url:'HlO0gY836rk' },
-    { id_perfil: '1', id_grado: '3',grado: 'Tercer Grado', id_bloque: '1',id_asignatura:'5', asignatura: 'Formación Civica y Etica',id_audiovisual: '10', titulo_audiovisual: 'Formación Civica y Etica. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime',secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/7.png', url:'HlO0gY836rk' },
-    { id_perfil: '2', id_grado: '2',grado: 'Segundo Grado', id_bloque: '2',id_asignatura:'1', asignatura: 'Español',id_audiovisual: '1', titulo_audiovisual: 'Español. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime', secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/6.png', url:'HlO0gY836rk' },
-    { id_perfil: '2', id_grado: '2',grado: 'Segundo Grado', id_bloque: '3',id_asignatura:'2', asignatura: 'Matematicas',id_audiovisual: '2', titulo_audiovisual: 'Matematicas. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime',secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/6.png', url:'HlO0gY836rk' },
-    { id_perfil: '2', id_grado: '2',grado: 'Segundo Grado', id_bloque: '1',id_asignatura:'3', asignatura: 'Química',id_audiovisual: '3', titulo_audiovisual: 'Fisica. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime', secuencia:'Secuencia 12. Probabilidad clásica 1', img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/6.png', url:'HlO0gY836rk' },
-    { id_perfil: '2', id_grado: '2',grado: 'Segundo Grado', id_bloque: '2',id_asignatura:'4', asignatura: 'Historia',id_audiovisual: '4', titulo_audiovisual: 'Historia. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime',secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/6.png', url:'HlO0gY836rk' },
-    { id_perfil: '2', id_grado: '2',grado: 'Segundo Grado', id_bloque: '3',id_asignatura:'5', asignatura: 'Formación Civica y Etica',id_audiovisual: '5', titulo_audiovisual: 'Formación Civica y Etica. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime',secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/2/ingles/6.png', url:'HlO0gY836rk' },
-    { id_perfil: '2', id_grado: '3',grado: 'Tercer Grado', id_bloque: '1',id_asignatura:'1', asignatura: 'Español',id_audiovisual: '6', titulo_audiovisual: 'Español. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime', secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Espanol/3_11.png', url:'HlO0gY836rk' },
-    { id_perfil: '2', id_grado: '3',grado: 'Tercer Grado', id_bloque: '2',id_asignatura:'2', asignatura: 'Matematicas',id_audiovisual: '7', titulo_audiovisual: 'Matematicas. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime',secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Espanol/3_11.png', url:'HlO0gY836rk' },
-    { id_perfil: '2', id_grado: '3',grado: 'Tercer Grado', id_bloque: '3',id_asignatura:'3', asignatura: 'Química',id_audiovisual: '8', titulo_audiovisual: 'Química', secuencia:'Secuencia 12. Probabilidad clásica 1', img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Espanol/3_11.png', url:'HlO0gY836rk' },
-    { id_perfil: '2', id_grado: '3',grado: 'Tercer Grado', id_bloque: '1',id_asignatura:'4', asignatura: 'Historia',id_audiovisual: '9', titulo_audiovisual: 'Historia. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime',secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Espanol/3_11.png', url:'HlO0gY836rk' },
-    { id_perfil: '2', id_grado: '3',grado: 'Tercer Grado', id_bloque: '2',id_asignatura:'5', asignatura: 'Formación Civica y Etica',id_audiovisual: '10', titulo_audiovisual: 'Formación Civica y Etica. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime',secuencia:'Secuencia 12. Probabilidad clásica 1',  img: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Espanol/3_11.png', url:'HlO0gY836rk' }
-  ]
- 
  
   ngOnInit(): void {
     this.form.controls['asignatura'].disable();
     this.form.controls['bloque'].disable();
+
+    this._audiovisuales.getMenu().subscribe(res =>{
+      this.menu = res;
+    },err =>{
+      console.log(err);
+    });
+
+    this._audiovisuales.getAudiovisuales().subscribe(res =>{
+      this.Audiovisuales = res;
+      //console.log(this.Audiovisuales);
+    },err =>{
+      console.log(err);
+    });
+
   }
 
   grado(){
