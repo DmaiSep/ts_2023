@@ -14,6 +14,7 @@ include '../conecta.php';
 		INNER JOIN cat_grado ON cat_grado.id_grado = lib_mat_audiovisuales.id_grado) 
 		INNER JOIN cat_bloque ON cat_bloque.id_bloque = lib_mat_audiovisuales.id_bloque) 
 		INNER JOIN cat_asignatura ON cat_asignatura.id_asignatura = lib_mat_audiovisuales.id_asignatura) 
+		WHERE lib_mat_audiovisuales.estado = 1
 		ORDER BY rand();";
 
   $conn	=	conecta_bd();
