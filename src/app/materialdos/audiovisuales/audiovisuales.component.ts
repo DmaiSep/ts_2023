@@ -94,7 +94,7 @@ export class AudiovisualesComponent {
 
     this._audiovisuales.getAudiovisuales().subscribe(res =>{
       this.Audiovisuales = res;
-      //console.log(this.Audiovisuales);
+      console.log(this.Audiovisuales);
     },err =>{
       console.log(err);
     });

@@ -8,7 +8,7 @@ include '../conecta.php';
 
 /*QUERY LISTADO GENERAL ALEATORIO DE MATERIALES AUDIOVISUALES*/
 
-  $q = "SELECT cat_perfil.id_perfil, cat_grado.id_grado, cat_grado.grado, cat_bloque.id_bloque, cat_asignatura.id_asignatura, cat_asignatura.asignatura, lib_mat_audiovisuales.id_mat_audiovisual, lib_mat_audiovisuales.nom_video, secuencia 
+  $q = "SELECT cat_perfil.id_perfil, cat_grado.id_grado, cat_grado.grado, cat_bloque.id_bloque, cat_asignatura.id_asignatura, cat_asignatura.asignatura, lib_mat_audiovisuales.id_mat_audiovisual, lib_mat_audiovisuales.nom_video, secuencia, url_zip_normal, url_video_normal 
 		FROM ((((lib_mat_audiovisuales 
 		INNER JOIN cat_perfil ON cat_perfil.id_perfil = lib_mat_audiovisuales.id_perfil) 
 		INNER JOIN cat_grado ON cat_grado.id_grado = lib_mat_audiovisuales.id_grado) 
