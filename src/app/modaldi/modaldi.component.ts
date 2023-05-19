@@ -63,7 +63,7 @@ export class ModaldiComponent {
         slidesPerGroup: 1,
       },
       320: {
-        slidesPerView: 2,
+        slidesPerView: 1,
         slidesPerGroup: 1,
         
       },
