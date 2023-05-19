@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
 import { SwiperOptions } from 'swiper';
-import { HttpClient } from "@angular/common/http";
+
+
 @Component({
   selector: 'app-libros',
   templateUrl: './libros.component.html',
   styleUrls: ['./libros.component.scss']
 })
 export class LibrosComponent {
-  constructor(private httpClient: HttpClient) { }
+
+  constructor() { 
+    
+  }
 
   config: SwiperOptions = {
     slidesPerView: 3,
@@ -40,8 +44,6 @@ export class LibrosComponent {
     },
     
   }; 
-
-
 
   options = [
     { value: '1', label: 'Primer Grado' },
@@ -90,13 +92,6 @@ export class LibrosComponent {
   ]
   ngOnInit(): void {
 
-   
-
   }
-
-
-
-
-
 
 }
