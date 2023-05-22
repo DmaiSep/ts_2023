@@ -45,6 +45,7 @@ UPDATE lib_materiales_informaticos SET  exe = REPLACE(exe, '/Content/Repositorio
 
 SELECT * FROM `db_ts-2023`.lib_apuntes WHERE url_apunte LIKE '../Repositorio/%';
 UPDATE lib_apuntes SET  url_apunte = REPLACE(url_apunte, '../Repositorio/', './RepositorioT/') WHERE url_apunte LIKE '../Repositorio/%';
+UPDATE lib_apuntes SET  img_apunte = REPLACE(img_apunte, '../Repositorio/', './RepositorioT/') WHERE img_apunte LIKE '../Repositorio/%';
 
 SELECT * FROM `db_ts-2023`.lib_mat_audiovisuales WHERE url_video_normal LIKE 'https://www.youtube.com/embed/%';
 UPDATE lib_mat_audiovisuales SET  url_video_normal = REPLACE(url_video_normal, 'https://www.youtube.com/embed/', '') WHERE url_video_normal LIKE 'https://www.youtube.com/embed/%';
