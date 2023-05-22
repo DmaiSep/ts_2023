@@ -426,7 +426,8 @@ $img-shadow-color:rgba(0, 0, 0, 0.5);
             left: 0;
             //background: linear-gradient( 356deg, rgba(37, 33, 33, 1) 0%, rgba(37, 33, 33, 1) 0%, rgba(70, 80, 86, 1) 50%);
             //background-color: $img-bg-sidebar-wrapper;
-            background-color: #1d1d1dcc;
+            background: linear-gradient(356deg, rgb(37, 33, 33) 0%, rgb(37, 33, 33) 0%, rgb(70, 80, 86) 50%);
+            background-color: #465056;
         }
         .sidebar-profile,
         .sidebar-search,
