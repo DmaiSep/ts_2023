@@ -46,7 +46,7 @@
 
 .card-header3 {
     position: relative;
-    height: 200px;
+    height: 205px;
     background-size: cover;
     background-position: top;
     -webkit-border-top-left-radius: 10px;
@@ -97,6 +97,8 @@ svg .polygon {
     text-transform: uppercase;
     margin: 0 auto;
     color: #5d5b5b;
+    background: #b1a4bf85;
+    border-radius: 5px;
 }
 
 .job-title3 {
@@ -217,13 +219,15 @@ p {
 }
 
 .fgrado2 {
-    background: rgb(103,58,143);
-    background: linear-gradient(270deg, rgba(103,58,143,1) 0%, rgba(60,39,87,1) 100%);
+    background: rgb(103, 58, 143);
+    background: linear-gradient(178deg, #673a8fb8 0%, #5a327dc7 100%);
+    padding: 5px;
 }
 
 .fgrado3 {
-    background: rgb(230,46,57);
-    background: linear-gradient(270deg, rgba(230,46,57,1) 0%, rgba(82,25,25,1) 100%);
+    background: rgb(230, 46, 57);
+    background: linear-gradient(181deg, #e62e39c4 0%, #c82932c7 100%);
+    padding: 5px;
 }
 
 .textw {
