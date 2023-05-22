@@ -42,11 +42,11 @@
                       <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4 waves-light" mdbWavesEffect>
                           <img class="img-fluid" [src]="dat.img" alt="Sample image">
                           <a>
-                              <div class="mask rgba-white-slight" (click)="openModal(dat.titulo_audiovisual, dat.url)"></div>
+                              <div class="mask rgba-white-slight" (click)="openModal(dat.nom_video, dat.url_video_normal)"></div>
                           </a>
                       </div>
                       <!--Facebook-->
-                      <a type="button" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" mdbWavesEffect (click)="openModal(dat.titulo_audiovisual, dat.url)">
+                      <a type="button" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" mdbWavesEffect (click)="openModal(dat.nom_video, dat.url_video_normal)">
                           <mdb-icon fab icon="youtube" size="2x" class="white-text"></mdb-icon>
                       </a>
                       <!--Twitter-->
@@ -61,11 +61,11 @@
                       <!-- Category -->
                       <mdb-badge pill="true" default="true">Audiovisual</mdb-badge>
                       <!-- Post title -->
-                      <p>{{dat.titulo_audiovisual}}</p><br>
+                      <p>{{dat.nom_video}}</p><br>
                       <p>{{dat.secuencia}}</p>
                       <hr>
                       <!-- Post data -->
-                      <p>{{dat.grado}}/{{dat.asignatura}}/Bloque {{dat.bloque}}</p>
+                      <p>{{dat.grado}}/{{dat.asignatura}}/Bloque {{dat.id_bloque}}</p>
 
 
                   </div>
@@ -87,56 +87,55 @@
 </blockquote>
 
 <swiper [config]="config">
-  <div class="swiper-wrapper">
-      <mdb-card class="cardu swiper-slide color-block white-text fgrado{{dat.id_grado}}" *ngFor="let dat of Audiovisuales | filterT2:1:gradosSelect:asigSelect:bloqueSelect | slice:0:50">
-          <mdb-card-body>
-              <!-- Grid row -->
-              <div class="row">
-
-                  <!-- Grid column -->
-                  <div class="col-lg-5 text-center">
-
-                      <!-- Featured image -->
-                      <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4 waves-light" mdbWavesEffect>
-                          <img class="img-fluid" [src]="dat.img" alt="Sample image" >
-
-                          <a>
-                              <div class="mask rgba-white-slight" (click)="openModal(dat.titulo_audiovisual, dat.url)"></div>
-                          </a>
-                      </div>
-                      <!--Facebook-->
-                      <a type="button" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" mdbWavesEffect (click)="openModal(dat.titulo_audiovisual, dat.url)">
-                          <mdb-icon fab icon="youtube" size="2x" class="white-text"></mdb-icon>
-                      </a>
-                      <!--Twitter-->
-                      <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3"><mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon></a>
-
-                  </div>
-                  <!-- Grid column -->
-
-                  <!-- Grid column -->
-                  <div class="col-lg-7">
-
-                      <!-- Category -->
-                      <mdb-badge pill="true" default="true">Audiovisual</mdb-badge>
-                      <!-- Post title -->
-                      <p>{{dat.titulo_audiovisual}}</p><br>
-                      <p>{{dat.secuencia}}</p>
-                      <hr>
-                      <!-- Post data -->
-                      <p>{{dat.grado}}/{{dat.asignatura}}/Bloque {{dat.bloque}}</p>
-
-
-                  </div>
-                  <!-- Grid column -->
-
-              </div>
-              <!-- Grid row -->
-
-          </mdb-card-body>
-      </mdb-card>
-  </div>
-  <div class="swiper-pagination"></div>
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-</swiper>
+    <div class="swiper-wrapper">
+        <mdb-card class="cardu swiper-slide color-block white-text fgrado{{dat.id_grado}}" *ngFor="let dat of Audiovisuales | filterT2:1:gradosSelect:asigSelect:bloqueSelect | slice:0:50">
+            <mdb-card-body>
+                <!-- Grid row -->
+                <div class="row">
+  
+                    <!-- Grid column -->
+                    <div class="col-lg-5 text-center">
+  
+                        <!-- Featured image -->
+                        <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4 waves-light" mdbWavesEffect>
+                            <img class="img-fluid" [src]="dat.img" alt="Sample image">
+                            <a>
+                                <div class="mask rgba-white-slight" (click)="openModal(dat.nom_video, dat.url_video_normal)"></div>
+                            </a>
+                        </div>
+                        <!--Facebook-->
+                        <a type="button" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" mdbWavesEffect (click)="openModal(dat.nom_video, dat.url_video_normal)">
+                            <mdb-icon fab icon="youtube" size="2x" class="white-text"></mdb-icon>
+                        </a>
+                        <!--Twitter-->
+                        <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3"><mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon></a>
+  
+                    </div>
+                    <!-- Grid column -->
+  
+                    <!-- Grid column -->
+                    <div class="col-lg-7">
+  
+                        <!-- Category -->
+                        <mdb-badge pill="true" default="true">Audiovisual</mdb-badge>
+                        <!-- Post title -->
+                        <p>{{dat.nom_video}}</p><br>
+                        <p>{{dat.secuencia}}</p>
+                        <hr>
+                        <!-- Post data -->
+                        <p>{{dat.grado}}/{{dat.asignatura}}/Bloque {{dat.id_bloque}}</p>
+  
+  
+                    </div>
+                    <!-- Grid column -->
+  
+                </div>
+                <!-- Grid row -->
+  
+            </mdb-card-body>
+        </mdb-card>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </swiper>
