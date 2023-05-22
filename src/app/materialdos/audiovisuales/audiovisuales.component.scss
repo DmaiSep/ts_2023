@@ -98,6 +98,15 @@
 .cardu{
     margin-bottom: 8px;
     margin-top: 5px;
+    height: 300px;
+}
+
+.fon1{
+    background: rgb(210 204 215 / 32%);
+    border-radius: 5px;
+    text-align: center;
+    padding: 1px;
+    margin-top: 5px;
 }
 
 .card-body {
@@ -109,8 +118,8 @@
     background: linear-gradient(270deg, rgba(0,164,181,1) 0%, rgba(55,117,127,1) 100%);
 }
 .fgrado2 {
-    background: rgb(103,58,143);
-    background: linear-gradient(270deg, rgba(103,58,143,1) 0%, rgba(60,39,87,1) 100%);
+    background: rgb(103, 58, 143);
+    background: linear-gradient(178deg, #673a8fb8 0%, #5a327dc7 100%);
 }
 
 .fgrado3 {
