@@ -40,17 +40,17 @@
 
                       <!-- Featured image -->
                       <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4 waves-light" mdbWavesEffect>
-                          <img class="img-fluid" [src]="dat.img" alt="Sample image">
+                          <img class="img-fluid" src="./RepositorioT/audiovisuales/img/G{{dat.id_grado}}/T{{dat.id_perfil}}/A{{dat.id_asignatura}}/B{{dat.id_bloque}}/{{dat.orden}}.jpg" alt="Sample image">
                           <a>
                               <div class="mask rgba-white-slight" (click)="openModal(dat.nom_video, dat.url_video_normal)"></div>
                           </a>
                       </div>
                       <!--Facebook-->
-                      <a type="button" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" mdbWavesEffect (click)="openModal(dat.nom_video, dat.url_video_normal)">
+                      <a *ngIf="dat.url_video_audiovisual" type="button" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" mdbWavesEffect (click)="openModal(dat.nom_video, dat.url_video_audiovisual)">
                           <mdb-icon fab icon="youtube" size="2x" class="white-text"></mdb-icon>
                       </a>
                       <!--Twitter-->
-                      <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3"><mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon></a>
+                      <a *ngIf="dat.url_zip_audiovisual" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" href="dat.url_zip_audiovisual"><mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon></a>
 
                   </div>
                   <!-- Grid column -->
@@ -98,17 +98,17 @@
   
                         <!-- Featured image -->
                         <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4 waves-light" mdbWavesEffect>
-                            <img class="img-fluid" [src]="dat.img" alt="Sample image">
+                            <img class="img-fluid" src="./RepositorioT/audiovisuales/img/G{{dat.id_grado}}/T{{dat.id_perfil}}/A{{dat.id_asignatura}}/B{{dat.id_bloque}}/{{dat.orden}}.jpg" alt="Sample image">
                             <a>
                                 <div class="mask rgba-white-slight" (click)="openModal(dat.nom_video, dat.url_video_normal)"></div>
                             </a>
                         </div>
                         <!--Facebook-->
-                        <a type="button" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" mdbWavesEffect (click)="openModal(dat.nom_video, dat.url_video_normal)">
+                        <a *ngIf="dat.url_video_audiovisual" type="button" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" mdbWavesEffect (click)="openModal(dat.nom_video, dat.url_video_audiovisual)">
                             <mdb-icon fab icon="youtube" size="2x" class="white-text"></mdb-icon>
                         </a>
                         <!--Twitter-->
-                        <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3"><mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon></a>
+                        <a *ngIf="dat.url_zip_audiovisual" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" href="dat.url_zip_audiovisual"><mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon></a>
   
                     </div>
                     <!-- Grid column -->

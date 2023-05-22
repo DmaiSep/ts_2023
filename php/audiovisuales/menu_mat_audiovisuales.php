@@ -11,11 +11,10 @@ include '../conecta.php';
 		/*MENÚ MATERIALES AUDIOVISUALES*/
 
 $q = "SELECT DISTINCT cat_grado.id_grado, cat_grado.grado, cat_asignatura.id_asignatura, cat_asignatura.asignatura 
-FROM ((lib_mat_audiovisuales 
-INNER JOIN cat_grado ON cat_grado.id_grado = lib_mat_audiovisuales.id_grado) 
-INNER JOIN cat_asignatura ON cat_asignatura.id_asignatura = lib_mat_audiovisuales.id_asignatura) 
-WHERE lib_mat_audiovisuales.estado = 1
-ORDER BY `id_grado` ASC, `asignatura` ASC;";
+		FROM ((lib_mat_audiovisuales 
+		INNER JOIN cat_grado ON cat_grado.id_grado = lib_mat_audiovisuales.id_grado) 
+		INNER JOIN cat_asignatura ON cat_asignatura.id_asignatura = lib_mat_audiovisuales.id_asignatura) 
+		WHERE estado =1 ORDER BY `id_grado` ASC, `asignatura` ASC;";
 
 
 $conn	=	conecta_bd();

@@ -28,7 +28,7 @@ export class AudiovisualesComponent {
   }
   
   openModal( tit, dir ) {
-    console.log(tit, dir);
+    //console.log(tit, dir);
     this.modalRef = this.modalService.show(ModalvComponent, {
       data: { title: tit, url: 'https://www.youtube.com/embed/'+dir },
       backdrop: true,
@@ -88,13 +88,14 @@ export class AudiovisualesComponent {
 
     this._audiovisuales.getMenu().subscribe(res =>{
       this.menu = res;
+      console.log(this.menu);
     },err =>{
       console.log(err);
     });
 
     this._audiovisuales.getAudiovisuales().subscribe(res =>{
       this.Audiovisuales = res;
-      console.log(this.Audiovisuales);
+      //console.log(this.Audiovisuales);
     },err =>{
       console.log(err);
     });
