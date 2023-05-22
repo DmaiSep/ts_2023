@@ -12,7 +12,7 @@ export class ModalvComponent implements OnInit {
   constructor(public modalRef: MDBModalRef) { }
 
   ngOnInit(): void {
-    console.log(this.url);
+    //console.log(this.url);
   }
 
 }
