@@ -7,9 +7,11 @@ header('content-type: application/json; charset=utf-8');
 
 include '../conecta.php';
 
-  $q = "SELECT cat_grado.id_grado, lib_apuntes.tipo_apunte AS id_perfil, lib_apuntes.img_apunte, lib_apuntes.nombre_apunte, lib_apuntes.url_apunte 
-  FROM ( lib_apuntes 
+  $q = "SELECT cat_grado.id_grado, lib_apuntes.tipo_apunte AS id_perfil, lib_apuntes.img_apunte,
+  cat_asignatura.asignatura AS titulo_apunte, lib_apuntes.url_apunte 
+  FROM ( (lib_apuntes 
   INNER JOIN cat_grado ON cat_grado.id_grado = lib_apuntes.id_grado) 
+  INNER JOIN cat_asignatura ON cat_asignatura.id_asignatura = lib_apuntes.id_asignatura) 
   WHERE estado = 1 ORDER BY rand();";
   
   $conn	=	conecta_bd();
