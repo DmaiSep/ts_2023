@@ -34,8 +34,8 @@ export class SidebarService {
         }
         ,
         {
-          title: 'Materiales para debilidad visual',
-          url:'https://telesecundaria.sep.gob.mx/Content/Discapacitados/',
+          title: 'Materiales para capacidades diferentes',
+          url:'./RepositorioT/Capacidades_diferentes/',
           tipo: 'externo'
         }
         ,
@@ -175,7 +175,7 @@ export class SidebarService {
     {url: 'Libros',modulo:'Materiales Educativos', seccion: 'Libros de texto'},
     {url: 'Audiovisuales',modulo:'Materiales Educativos', seccion: 'Materiales audiovisuales'},
     {url: 'Informaticos',modulo:'Materiales Educativos', seccion: 'Materiales informáticos'},
-    {url: 'DebilidadV',modulo:'Materiales Educativos', seccion: 'Materiales para debilidad visual'},
+    {url: 'DebilidadV',modulo:'Materiales Educativos', seccion: 'Materiales para capacidades diferentes'},
     {url: 'Apuntes',modulo:'Materiales Educativos', seccion: 'Apuntes'},
     {url: 'MatricezA',modulo:'Materiales Educativos', seccion: 'Matriz de Recursos Audiovisuales'},
     {url: 'MatrizC',modulo:'Materiales Educativos', seccion: 'Matriz de Correspondencia'},
