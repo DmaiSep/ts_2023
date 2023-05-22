@@ -88,7 +88,7 @@ export class AudiovisualesComponent {
 
     this._audiovisuales.getMenu().subscribe(res =>{
       this.menu = res;
-      console.log(this.menu);
+      //console.log(this.menu);
     },err =>{
       console.log(err);
     });
