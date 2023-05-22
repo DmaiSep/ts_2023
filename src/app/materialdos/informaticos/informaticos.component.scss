@@ -10,8 +10,8 @@
 
 .card3 {
     position: relative;
-    width: 315px;
-    height: 350px;
+    width: 300px!important;
+    height: 365px;
     //margin: 30px auto;
     box-shadow: 0 0 5px rgb(0 0 0 / 40%);
     
@@ -68,7 +68,9 @@ svg .polygon {
 
 .card-body3 {
     text-align: center;
-    padding-left: 10px;
+    padding: 5px;
+    background: #eae7ed59;
+    border-radius: 5px;
 }
 
 .name3 {
@@ -124,20 +126,22 @@ svg .polygon {
     background: linear-gradient(181deg, rgb(111 207 221) 0%, rgb(55, 117, 127) 100%);
 }
 .fgrado2 {
-    background: rgb(103,58,143);
-    background: linear-gradient(181deg, rgba(103,58,143,1) 0%, rgba(60,39,87,1) 100%);
+    background: rgb(103, 58, 143);
+    background: linear-gradient(178deg, #673a8fb8 0%, #5a327dc7 100%);
+    padding: 5px;
 }
 
 .fgrado3 {
-    background: rgb(230,46,57);
-    background: linear-gradient(181deg, rgba(230,46,57,1) 0%, rgba(82,25,25,1) 100%);
+    background: rgb(230, 46, 57);
+    background: linear-gradient(181deg, #e62e39c4 0%, #c82932c7 100%);
+    padding: 5px;
 }
 svg .polygon1 {
     fill: #40a0ac;
 }
 svg .polygon2 {
-    fill: rgba(86,50,113,1);
+    fill: rgb(133 101 161);
 }
 svg .polygon3 {
-    fill: rgba(145,47,47,1);
+    fill: rgb(216 89 96);
 }
