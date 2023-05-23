@@ -7,29 +7,29 @@
     </thead>
     <tbody>
       <tr mdbTableCol *ngFor="let el of elements">
-        <th scope="row">{{ el.uno }}</th>
-        <td>{{ el.dos }}</td>
-        <td>{{ el.tres }}</td>
-        <td>{{ el.cuatro }}</td>
-        <td>{{ el.cinco }}</td>
-        <td>{{ el.seis }}</td>
+        <th scope="row"><a *ngIf="el.uno_url" href="{{ruta}}{{el.uno_url}}" target="_blank">{{ el.uno }}</a></th>
+        <td><a *ngIf="el.dos_url" href="{{ruta}}{{el.dos_url}}" target="_blank">{{ el.dos }}</a></td>
+        <td><a *ngIf="el.tres_url" href="{{ruta}}{{el.tres_url}}" target="_blank">{{ el.tres }}</a></td>
+        <td><a *ngIf="el.cuatro_url" href="{{ruta}}{{el.cuatro_url}}" target="_blank">{{ el.cuatro }}</a></td>
+        <td><a *ngIf="el.cinco_url" href="{{ruta}}{{el.cinco_url}}" target="_blank">{{ el.cinco }}</a></td>
+        <td><a *ngIf="el.seis_url" href="{{ruta}}{{el.seis_url}}" target="_blank">{{ el.seis }}</a></td>
       </tr>
     </tbody>
   </table>
   <table mdbTable>
     <thead class="black white-text">
       <tr>
-        <th *ngFor="let head of headElements" scope="col">{{ head }} </th>
+        <th *ngFor="let head of headElements2" scope="col">{{ head }} </th>
       </tr>
     </thead>
     <tbody>
-      <tr mdbTableCol *ngFor="let el of elements">
-        <th scope="row">{{ el.uno }}</th>
-        <td>{{ el.dos }}</td>
-        <td>{{ el.tres }}</td>
-        <td>{{ el.cuatro }}</td>
-        <td>{{ el.cinco }}</td>
-        <td>{{ el.seis }}</td>
+      <tr mdbTableCol *ngFor="let el of elements2">
+        <th scope="row"><a *ngIf="el.uno_url" href="{{ruta}}{{el.uno_url}}" target="_blank">{{ el.uno }}</a></th>
+        <td><a *ngIf="el.dos_url" href="{{ruta}}{{el.dos_url}}" target="_blank">{{ el.dos }}</a></td>
+        <td><a *ngIf="el.tres_url" href="{{ruta}}{{el.tres_url}}" target="_blank">{{ el.tres }}</a></td>
+        <td><a *ngIf="el.cuatro_url" href="{{ruta}}{{el.cuatro_url}}" target="_blank">{{ el.cuatro }}</a></td>
+        <td><a *ngIf="el.cinco_url" href="{{ruta}}{{el.cinco_url}}" target="_blank">{{ el.cinco }}</a></td>
+        <td><a *ngIf="el.seis_url" href="{{ruta}}{{el.seis_url}}" target="_blank">{{ el.seis }}</a></td>
       </tr>
     </tbody>
   </table>
