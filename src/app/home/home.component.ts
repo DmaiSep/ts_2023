@@ -14,8 +14,9 @@ export class HomeComponent {
 
   constructor(private modalService: MDBModalService, private _carousel:CarouselService) { }
 
-  openModal() {
+  openModal(id_grado, id_perfil) {
     this.modalRef = this.modalService.show(ModaldiComponent, {
+        data:{grado:id_grado, perfil:id_perfil},
         backdrop: true,
         keyboard: true,
         focus: true,
@@ -30,7 +31,7 @@ export class HomeComponent {
 
     this._carousel.getCarousel().subscribe(res =>{
       this.Carousel = res;
-      console.log(this.Carousel);
+      //console.log(this.Carousel);
     },err =>{
       console.log(err);
     });
