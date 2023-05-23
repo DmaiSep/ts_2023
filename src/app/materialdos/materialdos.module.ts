@@ -26,6 +26,7 @@ import { DomseguroPipe } from './pipes/domseguro.pipe';
 import { FilterT2Pipe } from './pipes/filter-t2.pipe';
 import { RutaPipe } from './pipes/ruta.pipe';
 import { PefilContentPipe } from './pipes/pefil-content.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import { PefilContentPipe } from './pipes/pefil-content.pipe';
     SharedModule,
     MDBBootstrapModulesPro.forRoot(),
     NgxUsefulSwiperModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   entryComponents: [ ModalvComponent ]
 })
