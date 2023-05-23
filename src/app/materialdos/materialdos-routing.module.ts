@@ -19,7 +19,7 @@ const routes: Routes = [
     path:'Inicio', component: MaterialdosComponent,
     children:[
       { path:'Home', component: InicioComponent,outlet: "Secc"}, 
-      { path:'Libros', component: LibrosComponent,outlet: "Secc"}, 
+      { path:'Libros', component: LibrosComponent,outlet: "Secc", data: {state: 'libros'}}, 
       {path:'Audiovisuales', component: AudiovisualesComponent, outlet: "Secc"},
       {path:'Informaticos', component: InformaticosComponent, outlet: "Secc"},
       {path:'Apuntes', component: ApuntesComponent, outlet: "Secc"},

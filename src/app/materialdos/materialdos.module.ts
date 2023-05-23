@@ -57,7 +57,7 @@ import { PefilContentPipe } from './pipes/pefil-content.pipe';
     SharedModule,
     MDBBootstrapModulesPro.forRoot(),
     NgxUsefulSwiperModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   entryComponents: [ ModalvComponent ]
 })
