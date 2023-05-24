@@ -1,11 +1,11 @@
 
 <app-buscar (messageEvent)="receiveMessage($event)"></app-buscar>
-<h1 class="text-center font-weight-bold mb-5">Libros de Texto</h1>
-<h3 class="font-weight-bold">Colección Ximhai</h3>
+<h1 class="text-center font-weight-bold mb-5">Colección Ximhai</h1>
+<h3 class="font-weight-bold">Saberes disciplinares</h3>
 <hr>
 <swiper [config]="config">
     <div class="swiper-wrapper">
-        <div class="card3 swiper-slide" *ngFor="let dat of Libros | busqueda: Ibusqueda">
+        <div class="card3 swiper-slide" *ngFor="let dat of Libros | categoria:1  | busqueda: Ibusqueda">
             <div class="card-header3" style="background-image: url({{dat.src}})">
 
 
@@ -51,10 +51,11 @@
     <div class="swiper-button-prev"></div>
 </swiper>
 
-<hr class="mt-5">
+<h3 class="font-weight-bold mt-5">Proyectos</h3>
+<hr>
 <div class="row mt-5 mb-5">
     
-  <div class="col-md-4" *ngFor="let dat of OtrosLibros | busqueda: Ibusqueda">
+  <div class="col-md-4" *ngFor="let dat of Libros | categoria:2 | busqueda: Ibusqueda">
     <!--Card-->
     <mdb-card cascade="true">
 
@@ -79,4 +80,66 @@
     </mdb-card>
     <!--/.Card-->
   </div>
+</div>
+
+<h3 class="font-weight-bold mt-5">Multiples lenguajes</h3>
+<hr>
+<div class="row mt-5 mb-5">
+    
+  <div class="col-md-4" *ngFor="let dat of Libros | categoria:3 | busqueda: Ibusqueda">
+    <!--Card-->
+    <mdb-card cascade="true">
+
+      <!--Card image-->
+      <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+        <mdb-card-img src="https://mdbootstrap.com/img/Photos/Others/men.webp"></mdb-card-img>
+        <a>
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+      <!--/Card image-->
+
+      <mdb-card-body cascade="true" class="text-center">
+        <!--Card content-->
+        <h4 class="card-title">
+          <strong>{{dat.titulo_material}}</strong>
+        </h4>
+       
+      </mdb-card-body>
+      <!--/.Card content-->
+
+    </mdb-card>
+    <!--/.Card-->
   </div>
+</div>
+
+<h3 class="font-weight-bold mt-5">Docente</h3>
+<hr>
+<div class="row mt-5 mb-5">
+    
+  <div class="col-md-4" *ngFor="let dat of Libros | categoria:4 | busqueda: Ibusqueda">
+    <!--Card-->
+    <mdb-card cascade="true">
+
+      <!--Card image-->
+      <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+        <mdb-card-img src="https://mdbootstrap.com/img/Photos/Others/men.webp"></mdb-card-img>
+        <a>
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+      <!--/Card image-->
+
+      <mdb-card-body cascade="true" class="text-center">
+        <!--Card content-->
+        <h4 class="card-title">
+          <strong>{{dat.titulo_material}}</strong>
+        </h4>
+       
+      </mdb-card-body>
+      <!--/.Card content-->
+
+    </mdb-card>
+    <!--/.Card-->
+  </div>
+</div>

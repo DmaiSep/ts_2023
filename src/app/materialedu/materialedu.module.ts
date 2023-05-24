@@ -13,6 +13,7 @@ import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BusquedaPipe } from './pipes/busqueda.pipe';
 import { BuscarComponent } from './buscar/buscar.component';
+import { CategoriaPipe } from './pipes/categoria.pipe';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { BuscarComponent } from './buscar/buscar.component';
     InformaticoComponent,
     BusquedaPipe,
     BuscarComponent,
+    CategoriaPipe,
   ],
   imports: [
     CommonModule,
