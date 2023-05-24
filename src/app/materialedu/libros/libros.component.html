@@ -7,11 +7,11 @@
     <div class="swiper-wrapper">
         <div class="card3 swiper-slide" *ngFor="let dat of Libros | categoria:1  | busqueda: Ibusqueda">
             <div class="card-header3" style="background-image: url({{dat.src}})">
-
+                <mdb-badge  pill="true" default="true" class="tit_tipo">Libro</mdb-badge>
 
                 <div class="card-header-slanted-edge3">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200"><path class="polygon" d="M-20,200,1000,0V200Z" /></svg>
-
+                   
                 </div>
             </div>
 
@@ -54,7 +54,7 @@
       <div class="card3 swiper-slide" *ngFor="let dat of Libros | categoria:2 | busqueda: Ibusqueda">
           <div class="card-header3" style="background-image: url({{dat.src}})">
 
-
+            <mdb-badge  pill="true" default="true" class="tit_tipo">Libro</mdb-badge>
               <div class="card-header-slanted-edge3">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200"><path class="polygon" d="M-20,200,1000,0V200Z" /></svg>
 
@@ -90,12 +90,13 @@
     <hr>
     <!--Card-->
     <div class="card3 swiper-slide" style="width: 100%!important;">
+        <mdb-badge  pill="true" default="true" class="tit_tipo" style="z-index: 1;">Libro</mdb-badge>
       <div class="card-header3" style="background-image: url({{dat.src}})">
 
 
           <div class="card-header-slanted-edge3">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200"><path class="polygon" d="M-20,200,1000,0V200Z" /></svg>
-
+            
           </div>
       </div>
 
@@ -121,6 +122,7 @@
     <h3 class="font-weight-bold mt-5">Docente</h3>
     <hr>
     <div class="card3 swiper-slide" style="width: 100%!important;">
+        <mdb-badge  pill="true" default="true" class="tit_tipo" style="z-index: 1;">Libro</mdb-badge>
       <div class="card-header3" style="background-image: url({{dat.src}})">
 
 

@@ -204,3 +204,9 @@ svg .polygon {
     border-bottom:1px solid rgba(255,255,255,.5);
     transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
   }
+
+  .tit_tipo{
+    position: absolute!important;
+    top: 5px;
+    left: 5px;
+  }
