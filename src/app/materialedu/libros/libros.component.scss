@@ -33,7 +33,7 @@
     height: 350px;
     //margin: 30px auto;
     box-shadow: 0 0 5px rgb(0 0 0 / 40%);
-    background-color: #f2e7f8bf;
+    background-color: #4CA2B2;
     border-radius: 10px;
     -webkit-border-bottom-right-radius: 10px;
     -webkit-border-bottom-left-radius: 10px;
@@ -74,7 +74,7 @@
 }
 
 svg .polygon {
-    fill: #f5edfa;
+    fill: #4ca2b2;
 }
 
 .card-header-slanted-edge3 {
@@ -92,17 +92,17 @@ svg .polygon {
 }
 
 .name3 {
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 500;
     text-transform: uppercase;
     margin: 0 auto;
-    color: #5d5b5b;
+    color: #fff;
 }
 
 .job-title3 {
     font-size: 14px;
     margin-top: 5px;
-    color: #af7fc9;
+    color: #fff;
 }
 
 .card-footer3 {
