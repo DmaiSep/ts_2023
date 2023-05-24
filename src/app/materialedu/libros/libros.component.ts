@@ -8,11 +8,10 @@ import { SwiperOptions } from 'swiper';
   styleUrls: ['./libros.component.scss']
 })
 export class LibrosComponent {
-
+  Ibusqueda: string;
   constructor() { 
     
   }
-
   config: SwiperOptions = {
     slidesPerView: 3,
     spaceBetween: 20,
@@ -44,54 +43,102 @@ export class LibrosComponent {
     },
     
   }; 
-
-  options = [
-    { value: '1', label: 'Primer Grado' },
-    { value: '2', label: 'Segundo Grado' },
-    { value: '3', label: 'Tercer Grado' },
-  ];
-  asignatura = [
-    { value: '1', label: 'Español' },
-    { value: '2', label: 'Matematicas' },
-    { value: '3', label: 'Fisica' },
-    { value: '4', label: 'Historia' },
-    { value: '5', label: 'Formación Civica y Etica' },
-  ];
-  bloque = [
-    { value: '1', label: '1' },
-    { value: '2', label: '2' },
-    { value: '3', label: '3' },
-  ];
-  Images: Array<object> = [
+  
+  Libros: Array<object> = [
     {
       src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Espanol/3_1.png',
-      name: 'Lengua Materna.español',
-      alt: 'Image 1',
+      id_material:'1',
+      material: 'Libro',
+      id_asignatura: '1',
+      asignatura: 'Lengua Materna.español',
+      id_grado:'1',
+      grado: 'Primer grado',
+      titulo_material: 'Lengua Materna.español',
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf',
     }, {
       src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Ciencias/3_3_v21.png',
-      name: 'Matematicas',
-      alt: 'Image 2',
+      id_material:'1',
+      material: 'Libro',
+      id_asignatura: '2',
+      asignatura: 'Matematicas',
+      id_grado:'1',
+      grado: 'Primer grado',
+      titulo_material: 'Matematicas',
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
     }, {
       src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Historia/3_51.png',
-      name: 'Historia',
-      alt: 'Image 3',
+      id_material:'1',
+      material: 'Libro',
+      id_asignatura: '5',
+      asignatura: 'Historia',
+      id_grado:'1',
+      grado: 'Primer grado',
+      titulo_material: 'Historia',
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
     }, {
       src: 'https://loremflickr.com/600/400/brazil,rio',
-      name: 'Formación Civica y Etica',
-      alt: 'Image 4',
+      id_material:'1',
+      material: 'Libro',
+      id_asignatura: '6',
+      asignatura: 'Formación Civica y Etica',
+      id_grado:'1',
+      grado: 'Primer grado',
+      titulo_material: 'Formación Civica y Etica',
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
     }, {
       src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Ciencias/3_3_v21.png',
-      name: 'Ciencias',
-      alt: 'Image 5',
+      id_material:'1',
+      material: 'Libro',
+      id_asignatura: '3',
+      asignatura: 'Ciencias. Biología',
+      id_grado:'1',
+      grado: 'Primer grado',
+      titulo_material: 'Ciencias obscuras',
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
     }  
   ]
-  ngOnInit(): void {
 
+  OtrosLibros: Array<object> = [
+    {
+      src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Espanol/3_1.png',
+      id_material:'1',
+      material: 'Libro',
+      id_asignatura: '1',
+      asignatura: 'Lengua Materna.español, Matemáticas',
+      id_grado:'1',
+      grado: 'Primer grado',
+      titulo_material: 'Nuestro libro de proyectos',
+      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf',
+    },
+    {
+      src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Espanol/3_1.png',
+      id_material:'1',
+      material: 'Libro',
+      id_asignatura: '1',
+      asignatura: 'Lengua Materna.español, Inglés, Nahuatl',
+      id_grado:'1',
+      grado: 'Primer grado',
+      titulo_material: 'Libro de Multiple Lenguajes',
+      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf',
+    },
+    {
+      src: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Imagenes/3/Espanol/3_1.png',
+      id_material:'1',
+      material: 'Libro',
+      id_asignatura: '1',
+      asignatura: 'Lengua Materna.español',
+      id_grado:'1',
+      grado: 'Primer grado',
+      titulo_material: 'Libro para el y la docente de Telesecundaria',
+      url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf',
+    },
+  ]
+
+  ngOnInit(): void {
+  }
+
+  receiveMessage($event) {
+    this.Ibusqueda = $event;
   }
 
 }

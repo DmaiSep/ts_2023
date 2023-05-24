@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SidebarService } from '../shared/sidebar/sidebar.service';
-import { FormGroup, FormBuilder, Validators} from '@angular/forms';
+
 
 @Component({
   selector: 'app-materialedu',
@@ -8,14 +8,11 @@ import { FormGroup, FormBuilder, Validators} from '@angular/forms';
   styleUrls: ['./materialedu.component.scss']
 })
 export class MaterialeduComponent {
-  form: FormGroup;
+  
   busquedaDat: String; 
+  recibidoDePadre: string;
 
-  constructor(public sidebarservice: SidebarService, private _formBuilder: FormBuilder) {
-    this.form = this._formBuilder.group({
-      Ibusqueda  : ['', [ Validators.required]  ],
-    });
-   }
+  constructor(public sidebarservice: SidebarService) {}
 
   ngOnInit(): void {
   }
@@ -36,12 +33,4 @@ export class MaterialeduComponent {
     self.top.location.href = ruta;
   }
 
-  buscardato(){
-    //verifica si hay algun valor seleccionado
-    if(this.form.get('Ibusqueda').value){
-      
-    }
-    
-
-  }
 }
