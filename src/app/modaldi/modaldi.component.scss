@@ -1,7 +1,8 @@
-
+/*
 .swiper-container {
     padding: 15px!important;
 }
+*/
 
 //flechas de carrusell
 .swiper-button-next {
@@ -16,3 +17,29 @@
     padding: 20px;
 }
 
+/*ESTILOS DE TARJETAS MODAL*/
+
+.bloque1 {
+    background-image: linear-gradient(to bottom, #136a8a, #006e86, #007280, #127579, #267871);
+    border-radius: 10px;
+}
+
+.bloque2 {
+    background-image: linear-gradient(to bottom, #add100, #a0c104, #94b106, #87a108, #7b920a);
+    border-radius: 10px;
+}
+
+.bloque3 {
+    background-image: linear-gradient(to bottom, #e43a15, #e54024, #e64630, #e64c3b, #e65245);
+    border-radius: 10px;
+}
+
+.bloquemaestro {
+    background-image: linear-gradient(to bottom, #ffffff, #faf9fa, #f6f4f4, #f2eeed, #ece9e6);
+    border-radius: 10px;
+}
+
+.ldih {
+    min-height: 420px;
+    max-height: auto;
+}
