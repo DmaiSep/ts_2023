@@ -20,7 +20,7 @@ export class LibrosComponent {
     loopFillGroupWithBlank: false,
     breakpoints: {
       1368: {
-        slidesPerView: 5,
+        slidesPerView: 4,
         slidesPerGroup: 3,
       },
       1023: {
