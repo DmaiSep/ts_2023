@@ -32,7 +32,7 @@
     
     <swiper [config]="config">
       <div class="swiper-wrapper">
-          <mdb-card class="cardu swiper-slide color-block white-text fgrado{{dat.id_grado}}" *ngFor="let dat of Audiovisuales | filterT2:2:gradosSelect:asigSelect:bloqueSelect | slice:0:50">
+          <mdb-card class="cardu swiper-slide color-block white-text fgrado{{dat.id_grado}}" *ngFor="let dat of Audiovisuales | filterT2:2:gradosSelect:asigSelect:bloqueSelect | slice:0:30">
               <mdb-card-body>
                   <!-- Grid row -->
                   <div class="row">
@@ -95,7 +95,7 @@
     
     <swiper [config]="config">
         <div class="swiper-wrapper">
-            <mdb-card class="cardu swiper-slide color-block white-text fgrado{{dat.id_grado}}" *ngFor="let dat of Audiovisuales | filterT2:1:gradosSelect:asigSelect:bloqueSelect | slice:0:50">
+            <mdb-card class="cardu swiper-slide color-block white-text fgrado{{dat.id_grado}}" *ngFor="let dat of Audiovisuales | filterT2:1:gradosSelect:asigSelect:bloqueSelect | slice:0:30">
                 <mdb-card-body>
                     <!-- Grid row -->
                     <div class="row">
