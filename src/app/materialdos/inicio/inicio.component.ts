@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { SwiperOptions } from 'swiper';
-import { HttpClient } from "@angular/common/http";
 import { MaterialSugeridoService } from '../services/material-sugerido.service';
+import { MDBModalRef, MDBModalService } from 'ng-uikit-pro-standard';
+import { ModalvComponent } from '../modalv/modalv.component'
+
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
@@ -9,7 +11,9 @@ import { MaterialSugeridoService } from '../services/material-sugerido.service';
 })
 export class InicioComponent {
   Material: any = [];
-  constructor(private httpClient: HttpClient, private _material:MaterialSugeridoService) { }
+  modalRef: MDBModalRef | null = null;
+  
+  constructor( private _material:MaterialSugeridoService, private modalService: MDBModalService) { }
   config: SwiperOptions = {
     slidesPerView: 3,
     spaceBetween: 20,
@@ -102,6 +106,21 @@ export class InicioComponent {
       console.log(err);
     });
 
+  }
+
+  openModal( tit, dir ) {
+    //console.log(tit, dir);
+    this.modalRef = this.modalService.show(ModalvComponent, {
+      data: { title: tit, url: 'https://www.youtube.com/embed/'+dir },
+      backdrop: true,
+      keyboard: true,
+      focus: true,
+      show: false,
+      ignoreBackdropClick: false,
+      class: 'modal-lg modal-top modal-dialog-centered',
+      containerClass: 'top',
+      animated: true
+    });
   }
 
 
