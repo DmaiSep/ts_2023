@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 import { SwiperOptions } from 'swiper';
 import { HttpClient } from "@angular/common/http";
+import { MaterialSugeridoService } from '../services/material-sugerido.service';
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.scss']
 })
 export class InicioComponent {
-
-  constructor(private httpClient: HttpClient) { }
+  Material: any = [];
+  constructor(private httpClient: HttpClient, private _material:MaterialSugeridoService) { }
   config: SwiperOptions = {
     slidesPerView: 3,
     spaceBetween: 20,
@@ -92,8 +93,14 @@ export class InicioComponent {
       url: 'https://telesecundaria.sep.gob.mx/Content/Repositorio/Alumno/Libros/3/Matematicas/TS-LPA-MATE-3-BAJA.pdf'
     }   
   ]
+
   ngOnInit(): void {
-   
+   this._material.getMaterial_sugerido().subscribe(res =>{
+      this.Material = res;
+      console.log(this.Material);
+    },err =>{
+      console.log(err);
+    });
 
   }
 
