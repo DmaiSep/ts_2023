@@ -13,6 +13,7 @@
             <div class="info">
                 <p>{{uno.name}}</p>
                 <a href="{{uno.url}}" target="_blank"><button>Ver mas</button></a>
+                <a href="{{uno.zip}}" target="_blank" download="{{uno.zip}}"><button class="btn-download">Descargar</button></a>
             </div>
         </div>
     </div>
@@ -26,11 +27,12 @@
 </blockquote>
 <swiper [config]="config">
     <div class="swiper-wrapper">
-        <div class="card2 swiper-slide" *ngFor="let uno of Images">
+        <div class="card2 swiper-slide" *ngFor="let uno of vinculacion">
             <img [src]="uno.src" />
             <div class="info">
                 <p>{{uno.name}}</p>
                 <a href="{{uno.url}}" target="_blank"><button>Ver mas</button></a>
+                <a href="{{uno.zip}}" target="_blank" download="{{uno.zip}}"><button class="btn-download">Descargar</button></a>
             </div>
         </div>
     </div>
