@@ -14,7 +14,8 @@ include '../conecta.php';
 	FROM ((lib_materiales_informaticos 
 	INNER JOIN cat_grado ON cat_grado.id_grado = lib_materiales_informaticos.id_grado) 
 	INNER JOIN cat_asignatura ON cat_asignatura.id_asignatura = lib_materiales_informaticos.id_asignatura) 
-	WHERE lib_materiales_informaticos.estado= 1 ORDER BY `id_grado` ASC, `asignatura` ASC;";
+	ORDER BY `id_grado` ASC, `asignatura` ASC;";
+	//WHERE lib_materiales_informaticos.estado= 1 
 	
   $conn	=	conecta_bd();
   $result = mysqli_query($conn,$q);

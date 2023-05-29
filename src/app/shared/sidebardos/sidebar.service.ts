@@ -70,12 +70,6 @@ export class SidebarService {
           url:'Programareg',
           tipo: 'interno'
         }
-        ,
-        {
-          title: 'Matrices',
-          url:'Matrices',
-          tipo: 'interno'
-        }
       ]
     },
     {
@@ -182,7 +176,6 @@ export class SidebarService {
     {url: 'CirculoLectura',modulo:'Materiales Educativos', seccion: 'Círculos de lectura'},
     {url: 'InglesTele',modulo:'Materiales Educativos', seccion: 'Inglés en Telesecundaria'},
     {url: 'Programareg',modulo:'Materiales Educativos', seccion: 'Programación Regular'},
-    {url: 'Matrices',modulo:'Materiales Educativos', seccion: 'Matrices'},
     
   ];
   constructor() { }

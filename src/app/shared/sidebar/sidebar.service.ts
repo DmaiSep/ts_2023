@@ -28,6 +28,10 @@ export class SidebarService {
         {
           title: 'Materiales informáticos',
           url:'Informatico'
+        },
+        {
+          title: 'Cortometrajes',
+          url:'Cortometraje'
         }
         
       ]
