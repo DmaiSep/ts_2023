@@ -20,7 +20,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MenuAsigPipe } from './pipes/menu-asig.pipe';
 import { MenuGradoPipe } from './pipes/menu-grado.pipe';
 import { ProgramacionrComponent } from './programacionr/programacionr.component';
-import { MatricesComponent } from './matrices/matrices.component';
 import { ModalvComponent } from './modalv/modalv.component';
 import { DomseguroPipe } from './pipes/domseguro.pipe';
 import { FilterT2Pipe } from './pipes/filter-t2.pipe';
@@ -44,7 +43,6 @@ import { PefilContentPipe } from './pipes/pefil-content.pipe';
     MenuAsigPipe,
     MenuGradoPipe,
     ProgramacionrComponent,
-    MatricesComponent,
     ModalvComponent,
     DomseguroPipe,
     FilterT2Pipe,
