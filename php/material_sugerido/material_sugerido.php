@@ -21,7 +21,7 @@ include '../conecta.php';
 UNION
 
 (
-	SELECT   lib_materiales_informaticos.id_asignatura, lib_materiales_informaticos.id_grado, lib_materiales_informaticos.id_perfil, null AS orden, cat_grado.grado,  cat_asignatura.asignatura, cat_bloque.id_bloque AS id_bloque,  null AS secuencia, 'Informatico' AS tipo_material, 2 AS id_material, lib_materiales_informaticos.nom_material AS titulo, lib_materiales_informaticos.img AS img , lib_materiales_informaticos.url AS url, lib_materiales_informaticos.exe AS exe, null AS orden
+	SELECT   lib_materiales_informaticos.id_asignatura, lib_materiales_informaticos.id_grado, lib_materiales_informaticos.id_perfil, null AS orden, cat_grado.grado,  cat_asignatura.asignatura, cat_bloque.id_bloque AS id_bloque,  null AS secuencia, 'Informático' AS tipo_material, 2 AS id_material, lib_materiales_informaticos.nom_material AS titulo, lib_materiales_informaticos.img AS img , lib_materiales_informaticos.url AS url, lib_materiales_informaticos.exe AS exe, null AS orden
 		FROM  (  
 						(  
 							( lib_materiales_informaticos LEFT JOIN cat_grado ON cat_grado.id_grado = lib_materiales_informaticos.id_grado) 

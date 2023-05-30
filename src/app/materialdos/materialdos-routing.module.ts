@@ -12,7 +12,6 @@ import { MatrizcComponent } from './matrizc/matrizc.component';
 import { CirculolComponent } from './circulol/circulol.component';
 import { InglestComponent } from './inglest/inglest.component';
 import { ProgramacionrComponent } from './programacionr/programacionr.component';
-import { MatricesComponent } from './matrices/matrices.component';
 
 const routes: Routes = [
   {
@@ -29,7 +28,6 @@ const routes: Routes = [
       {path:'CirculoLectura', component: CirculolComponent, outlet: "Secc"},
       {path:'InglesTele', component: InglestComponent, outlet: "Secc"},
       {path:'Programareg', component: ProgramacionrComponent, outlet: "Secc"},
-      {path:'Matrices', component: MatricesComponent, outlet: "Secc"},
     ]
   
   }

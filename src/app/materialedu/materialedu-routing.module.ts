@@ -5,6 +5,7 @@ import { LibrosComponent } from './libros/libros.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { AudiovisualComponent } from './audiovisual/audiovisual.component';
 import { InformaticoComponent } from './informatico/informatico.component';
+import { CortometrajeComponent } from './cortometraje/cortometraje.component';
 const routes: Routes = [
   {
     path:'Inicio', component: MaterialeduComponent,
@@ -13,6 +14,7 @@ const routes: Routes = [
       { path:'Libros', component: LibrosComponent,outlet: "Secc"}, 
       {path:'Audiovisual', component: AudiovisualComponent, outlet: "Secc"},
       {path:'Informatico', component: InformaticoComponent, outlet: "Secc"},
+      {path:'Cortometraje', component: CortometrajeComponent, outlet: "Secc"},
     ]
   
   }
