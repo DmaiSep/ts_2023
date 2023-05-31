@@ -18,13 +18,27 @@
 
 <swiper [config]="config">
     <div class="swiper-wrapper">
-        <div class="card2 swiper-slide" *ngFor="let dat of Apuntes | filterT2:1:gradosSelect:0:0 | slice:0:50">
-            <img [src]="dat.img_apunte" />
-            <div class="info">
-                <p>{{dat.nombre_apunte}}</p>
-                <a href="{{dat.url_apunte}}" target="_blank"><button>Ver más</button></a>
-            </div>
+         <!--Card-->
+      <mdb-card cascade="true" narrower="true" class="swiper-slide card2" *ngFor="let dat of Apuntes | filterT2:1:gradosSelect:0:0 | slice:0:50">
+  
+        <!--Card image-->
+        <div class="view view-cascade overlay waves-light " mdbWavesEffect>
+          <mdb-card-img [src]="dat.img_apunte"></mdb-card-img>
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
         </div>
+        <!--/Card image-->
+  
+        <mdb-card-body cascade="true" class="text-center pb-0 px-0">
+          <!--Card content--> 
+          <a href="{{dat.url_apunte}}" target="_blank" mdbBtn color="unique" class="waves-light"block="true" mdbWavesEffect>Ver más</a>
+      
+        </mdb-card-body>
+        <!--/.Card content-->
+  
+      </mdb-card>
+      <!--/.Card-->
     </div>
     <div class="swiper-pagination"></div>
     <div class="swiper-button-next"></div>
@@ -36,16 +50,38 @@
 </blockquote>
 <swiper [config]="config">
     <div class="swiper-wrapper">
-        <div class="card2 swiper-slide" *ngFor="let dat of Apuntes | filterT2:2:gradosSelect:0:0 | slice:0:50">
-            <img [src]="dat.img_apunte" />
-            <div class="info">
-                <p>{{dat.nombre_apunte}}</p>
-                <a href="{{dat.url_apunte}}" target="_blank"><button>Ver más</button></a>
-            </div>
+       
+            <!--Card-->
+      <mdb-card cascade="true" narrower="true" class="swiper-slide card2" *ngFor="let dat of Apuntes | filterT2:2:gradosSelect:0:0 | slice:0:50">
+  
+        <!--Card image-->
+        <div class="view view-cascade overlay waves-light " mdbWavesEffect>
+          <mdb-card-img [src]="dat.img_apunte"></mdb-card-img>
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
         </div>
+        <!--/Card image-->
+  
+        <mdb-card-body cascade="true" class="text-center pb-0 px-0">
+          <!--Card content--> 
+          <a href="{{dat.url_apunte}}" target="_blank" mdbBtn color="unique" class="waves-light"block="true" mdbWavesEffect>Ver más</a>
+      
+        </mdb-card-body>
+        <!--/.Card content-->
+  
+      </mdb-card>
+      <!--/.Card-->
     </div>
     <div class="swiper-pagination"></div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
 </swiper>
 </div>
+
+
+
+
+
+
+
