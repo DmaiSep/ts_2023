@@ -1,11 +1,23 @@
-<h1 class="text-center mb-5">Programación Regular</h1>
-<table mdbTable>
-    <thead class="black white-text">
+
+<mdb-card cascade="true" narrower="true">
+  <!--Card image-->
+  <div class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3  justify-content-between align-items-center text-center ">
+  <h1 class="text-center">Programación Regular </h1>
+  </div>
+  <!--/Card image-->
+
+  <div class="px-4">
+
+
+
+
+<table mdbTable striped="true" hover="true" >
+    <thead class="colot white-text">
       <tr>
         <th *ngFor="let head of headElements" scope="col">{{ head }} </th>
       </tr>
     </thead>
-    <tbody>
+    <tbody >
       <tr mdbTableCol *ngFor="let el of elements">
         <th scope="row"><a *ngIf="el.uno_url" href="{{ruta}}{{el.uno_url}}" target="_blank">{{ el.uno }}</a></th>
         <td><a *ngIf="el.dos_url" href="{{ruta}}{{el.dos_url}}" target="_blank">{{ el.dos }}</a></td>
@@ -16,8 +28,10 @@
       </tr>
     </tbody>
   </table>
-  <table mdbTable>
-    <thead class="black white-text">
+
+
+  <table mdbTable striped="true" hover="true">
+    <thead class="colot white-text">
       <tr>
         <th *ngFor="let head of headElements2" scope="col">{{ head }} </th>
       </tr>
@@ -33,3 +47,6 @@
       </tr>
     </tbody>
   </table>
+
+</div>
+</mdb-card>
