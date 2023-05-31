@@ -27,7 +27,9 @@ export class AudiovisualesComponent {
     });
   }
   
-  openModal( tit, dir ) {
+  openModal( tit, dir, id_mat_audiovisual, id_tipo_material, id_accion ) {
+
+    this.visita(id_mat_audiovisual, id_tipo_material, id_accion);
     //console.log(tit, dir);
     this.modalRef = this.modalService.show(ModalvComponent, {
       data: { title: tit, url: 'https://www.youtube.com/embed/'+dir },
@@ -134,8 +136,10 @@ export class AudiovisualesComponent {
     if(this.form.get('bloque').value){
       this.bloqueSelect = this.form.get('bloque').value;
     }
-    
+  }
 
+  visita(id_material, id_tipo_material, accion){
+    console.log(id_material, id_tipo_material, accion);
   }
 
 }
