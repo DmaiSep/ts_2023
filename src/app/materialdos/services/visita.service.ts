@@ -8,11 +8,11 @@ export class VisitaService {
   private url = 'https://telesecundaria.sep.gob.mx/php/visitas/';
 
   constructor(private http: HttpClient) {}
-  postvisitas(){
+  postvisitas(id_m, id_t_m, id_a){
     let dat = {
-      id_material:'',
-      id_tipo_material:'',
-      id_accion:'',
+      id_material: id_m,
+      id_tipo_material: id_t_m,
+      id_accion: id_a,
       zona:''
     }
     return this.http.post(

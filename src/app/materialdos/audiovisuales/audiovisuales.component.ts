@@ -4,6 +4,8 @@ import { MDBModalRef, MDBModalService } from 'ng-uikit-pro-standard';
 import { ModalvComponent } from '../modalv/modalv.component'
 import { FormGroup, FormBuilder, Validators} from '@angular/forms';
 import { AudiovisualesService } from '../services/audiovisuales.service';
+import { VisitaService } from '../services/visita.service';
+
 @Component({
   selector: 'app-audiovisuales',
   templateUrl: './audiovisuales.component.html',
@@ -19,7 +21,7 @@ export class AudiovisualesComponent {
   Audiovisuales: any = [];
 
 
-  constructor( private modalService: MDBModalService, private _formBuilder: FormBuilder, private _audiovisuales:AudiovisualesService) { 
+  constructor( private modalService: MDBModalService, private _formBuilder: FormBuilder, private _audiovisuales:AudiovisualesService, private _visitas:VisitaService) { 
     this.form = this._formBuilder.group({
       grado  : ['', [ Validators.required]  ],
       asignatura  : ['', [ Validators.required]  ],
@@ -139,7 +141,12 @@ export class AudiovisualesComponent {
   }
 
   visita(id_material, id_tipo_material, accion){
-    console.log(id_material, id_tipo_material, accion);
+    //console.log(id_material, id_tipo_material, accion);
+    this._visitas.postvisitas(id_material, id_tipo_material, accion).subscribe( res =>{
+      console.log(res[0].message);
+    },err =>{
+      console.log(err);
+    });
   }
 
 }

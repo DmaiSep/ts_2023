@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SwiperOptions } from 'swiper';
 import { FormGroup, FormBuilder, Validators} from '@angular/forms';
 import { LibrosService } from '../services/libros.service';
+import { VisitaService } from '../services/visita.service';
 
 @Component({
   selector: 'app-libros',
@@ -15,7 +16,7 @@ export class LibrosComponent implements OnInit{
   menu: any = [];
   libros: any = [];
   
-  constructor( private _formBuilder: FormBuilder, private _libros:LibrosService) {
+  constructor( private _formBuilder: FormBuilder, private _libros:LibrosService, private _visitas:VisitaService) {
     this.form = this._formBuilder.group({
       grado  : ['', [ Validators.required]  ],
       asignatura  : ['', [ Validators.required]  ],
@@ -94,6 +95,11 @@ export class LibrosComponent implements OnInit{
   }
 
   visita(id_material, id_tipo_material, accion){
-    console.log(id_material, id_tipo_material, accion);
+    //console.log(id_material, id_tipo_material, accion);
+    this._visitas.postvisitas(id_material, id_tipo_material, accion).subscribe( res =>{
+      console.log(res[0].message);
+    },err =>{
+      console.log(err);
+    });
   }
 }
