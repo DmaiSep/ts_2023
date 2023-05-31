@@ -3,6 +3,7 @@ import { SwiperOptions } from 'swiper';
 import { MaterialSugeridoService } from '../services/material-sugerido.service';
 import { MDBModalRef, MDBModalService } from 'ng-uikit-pro-standard';
 import { ModalvComponent } from '../modalv/modalv.component'
+import { VisitaService } from '../services/visita.service';
 
 @Component({
   selector: 'app-inicio',
@@ -13,7 +14,7 @@ export class InicioComponent {
   Material: any = [];
   modalRef: MDBModalRef | null = null;
   
-  constructor( private _material:MaterialSugeridoService, private modalService: MDBModalService) { }
+  constructor( private _material:MaterialSugeridoService, private modalService: MDBModalService, private _visitas:VisitaService) { }
   config: SwiperOptions = {
     slidesPerView: 3,
     spaceBetween: 20,
@@ -101,14 +102,15 @@ export class InicioComponent {
   ngOnInit(): void {
    this._material.getMaterial_sugerido().subscribe(res =>{
       this.Material = res;
-      console.log(this.Material);
+      //console.log(this.Material);
     },err =>{
       console.log(err);
     });
 
   }
 
-  openModal( tit, dir ) {
+  openModal( tit, dir,id_material, id_tipo_material, accion ) {
+    this.visita(id_material, id_tipo_material, accion)
     //console.log(tit, dir);
     this.modalRef = this.modalService.show(ModalvComponent, {
       data: { title: tit, url: 'https://www.youtube.com/embed/'+dir },
@@ -123,6 +125,15 @@ export class InicioComponent {
     });
   }
 
+  visita(id_material, id_tipo_material, accion){
+    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    //console.log(id_material, id_tipo_material, accion, timeZone);
+    this._visitas.postvisitas(id_material, id_tipo_material, accion, timeZone).subscribe( res =>{
+      console.log(res[0].message);
+    },err =>{
+      console.log(err);
+    });
+  }
 
 
 

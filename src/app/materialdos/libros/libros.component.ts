@@ -95,8 +95,8 @@ export class LibrosComponent implements OnInit{
   }
 
   visita(id_material, id_tipo_material, accion){
-    //console.log(id_material, id_tipo_material, accion);
-    this._visitas.postvisitas(id_material, id_tipo_material, accion).subscribe( res =>{
+    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    this._visitas.postvisitas(id_material, id_tipo_material, accion, timeZone).subscribe( res =>{
       console.log(res[0].message);
     },err =>{
       console.log(err);

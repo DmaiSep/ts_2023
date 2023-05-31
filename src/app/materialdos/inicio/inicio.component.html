@@ -69,8 +69,8 @@
           <!--Text-->
           <p class="text-default">{{dat.grado}}/{{dat.asignatura}} </p>
          
-          <a *ngIf="dat.id_material != 3" mdbBtn color="unique" rounded="true" mdbWavesEffect href="{{dat.url}}" target="_blank">Ver</a>
-          <a *ngIf="dat.id_material == 3" mdbBtn color="unique" rounded="true" mdbWavesEffect (click)="openModal(dat.titulo, dat.url)">Ver</a>
+          <a *ngIf="dat.id_material != 3" mdbBtn color="unique" rounded="true" mdbWavesEffect (click)="visita(dat.id_material, dat.id_tipo_material, 1)" href="{{dat.url}}" target="_blank">Ver</a>
+          <a *ngIf="dat.id_material == 3" mdbBtn color="unique" rounded="true" mdbWavesEffect (click)="openModal(dat.titulo, dat.url, dat.id_material, dat.id_tipo_material, 1)">Ver</a>
   
         </mdb-card-body>
         <!--/.Card content-->
