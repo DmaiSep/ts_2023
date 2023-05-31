@@ -61,7 +61,7 @@ export class ApuntesComponent {
 
     this._apuntes.getApuntes().subscribe(res =>{
       this.Apuntes = res;
-      console.log(this.Apuntes);
+      //console.log(this.Apuntes);
     },err =>{
       console.log(err);
     });

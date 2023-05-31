@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { SwiperOptions } from 'swiper';
 import { FormGroup, FormBuilder, Validators} from '@angular/forms';
 import { InformaticosService } from '../services/informaticos.service';
+import { VisitaService } from '../services/visita.service';
+
 @Component({
   selector: 'app-informaticos',
   templateUrl: './informaticos.component.html',
@@ -15,7 +17,7 @@ export class InformaticosComponent {
   menu: any = [];
   Informaticos: any = [];
 
-  constructor(private _formBuilder: FormBuilder, private _informaticos:InformaticosService) { 
+  constructor(private _formBuilder: FormBuilder, private _informaticos:InformaticosService, private _visitas:VisitaService) { 
     this.form = this._formBuilder.group({
       grado  : ['', [ Validators.required]  ],
       asignatura  : ['', [ Validators.required]  ],
@@ -113,6 +115,11 @@ export class InformaticosComponent {
   }
 
   visita(id_material, id_tipo_material, accion){
-    console.log(id_material, id_tipo_material, accion);
+    //console.log(id_material, id_tipo_material, accion);
+    this._visitas.postvisitas(id_material, id_tipo_material, accion).subscribe( res =>{
+      console.log(res[0].message);
+    },err =>{
+      console.log(err);
+    });
   }
 }
