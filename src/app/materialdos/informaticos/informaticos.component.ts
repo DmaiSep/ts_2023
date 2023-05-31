@@ -111,4 +111,8 @@ export class InformaticosComponent {
     
 
   }
+
+  visita(id_material, id_tipo_material, accion){
+    console.log(id_material, id_tipo_material, accion);
+  }
 }

@@ -8,11 +8,13 @@ header('content-type: application/json; charset=utf-8');
 include '../conecta.php';
 
 $q = "SELECT cat_perfil.id_perfil, cat_grado.id_grado, cat_asignatura.id_asignatura, lib_libros.id_libro, lib_libros.titulo_libro, lib_libros.ver_libro, 
-      lib_libros.img_libro, lib_libros.zip_libro , lib_libros.estado 
-	  FROM (((lib_libros 
-	  INNER JOIN cat_perfil ON cat_perfil.id_perfil = lib_libros.id_perfil) 
-	  INNER JOIN cat_grado ON cat_grado.id_grado = lib_libros.id_grado) 
-	  INNER JOIN cat_asignatura ON cat_asignatura.id_asignatura = lib_libros.id_asignatura) WHERE estado=1 ORDER BY rand();";
+lib_libros.img_libro, lib_libros.zip_libro , lib_libros.estado, cat_material.* 
+FROM ((((lib_libros 
+INNER JOIN cat_perfil ON cat_perfil.id_perfil = lib_libros.id_perfil) 
+INNER JOIN cat_grado ON cat_grado.id_grado = lib_libros.id_grado) 
+LEFT JOIN cat_material ON cat_material.id_tipo_material = 1) 
+
+INNER JOIN cat_asignatura ON cat_asignatura.id_asignatura = lib_libros.id_asignatura) WHERE estado=1 ORDER BY rand();";
 
 $conn	=	conecta_bd();
 $result = mysqli_query($conn,$q);

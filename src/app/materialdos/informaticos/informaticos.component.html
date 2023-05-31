@@ -54,14 +54,14 @@
                     <div class="">
                         <div class="stat3">
                             <span class="">
-                                <a *ngIf="dat.url" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" href="{{dat.url}}" target="_blank">
+                                <a *ngIf="dat.url" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" (click)="visita(dat.id_mat_inform, dat.id_tipo_material, 1)" href="{{dat.url}}" target="_blank">
                                     <mdb-icon fas icon="atlas" size="2x" class="white-text"></mdb-icon>
                                   </a>
                             </span>
                         </div>
                         <div class="stat3">
                             <span class="">
-                                <a *ngIf="dat.exe" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" href="{{dat.exe}}" target="_blank">
+                                <a *ngIf="dat.exe" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" (click)="visita(dat.id_mat_inform, dat.id_tipo_material, 2)" href="{{dat.exe}}" target="_blank">
                                     <mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon>
                                 </a>
                             </span>
@@ -106,14 +106,14 @@
                     <div class="">
                         <div class="stat3">
                             <span class="">
-                                <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" href="{{dat.url}}" target="_blank">
+                                <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" (click)="visita(dat.id_mat_inform, dat.id_tipo_material, 1)" href="{{dat.url}}" target="_blank">
                                     <mdb-icon fas icon="atlas" size="2x" class="white-text"></mdb-icon>
                                   </a>
                             </span>
                         </div>
                         <div class="stat3">
                             <span class="">
-                                <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" href="{{dat.exe}}" target="_blank">
+                                <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" (click)="visita(dat.id_mat_inform, dat.id_tipo_material, 2)" href="{{dat.exe}}" target="_blank">
                                     <mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon>
                                 </a>
                             </span>

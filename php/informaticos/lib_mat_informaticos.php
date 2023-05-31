@@ -8,13 +8,14 @@ include '../conecta.php';
 
   $q = "SELECT cat_perfil.id_perfil, cat_grado.id_grado, cat_grado.grado, cat_bloque.id_bloque, cat_asignatura.id_asignatura, cat_asignatura.asignatura, 
        lib_materiales_informaticos.id_mat_inform, lib_materiales_informaticos.nom_material, lib_materiales_informaticos.img, lib_materiales_informaticos.url, 
-	   lib_materiales_informaticos.exe
-	   FROM (((( lib_materiales_informaticos 
+	   lib_materiales_informaticos.exe, cat_material.*
+	   FROM ((((( lib_materiales_informaticos 
 	   INNER JOIN cat_perfil ON cat_perfil.id_perfil = lib_materiales_informaticos.id_perfil) 
 	   INNER JOIN cat_grado ON cat_grado.id_grado = lib_materiales_informaticos.id_grado) 
-	   INNER JOIN cat_bloque ON cat_bloque.id_bloque = lib_materiales_informaticos.id_bloque) 
+	   INNER JOIN cat_bloque ON cat_bloque.id_bloque = lib_materiales_informaticos.id_bloque)
+	   LEFT JOIN cat_material ON cat_material.id_tipo_material = 2) 
 	   INNER JOIN cat_asignatura ON cat_asignatura.id_asignatura = lib_materiales_informaticos.id_asignatura)
-	   ORDER BY rand();";
+	   WHERE estado=1 ORDER BY rand();";
 	   //WHERE estado = 1
 
   $conn	=	conecta_bd();
