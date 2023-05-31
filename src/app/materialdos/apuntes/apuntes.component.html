@@ -22,7 +22,7 @@
       <mdb-card cascade="true" narrower="true" class="swiper-slide card2" *ngFor="let dat of Apuntes | filterT2:1:gradosSelect:0:0 | slice:0:50">
   
         <!--Card image-->
-        <div class="view view-cascade overlay waves-light " mdbWavesEffect>
+        <div class="view view-cascade overlay waves-light " style="border-radius: 30px;" mdbWavesEffect>
           <mdb-card-img [src]="dat.img_apunte"></mdb-card-img>
           <a>
             <div class="mask rgba-white-slight"></div>
@@ -55,7 +55,7 @@
       <mdb-card cascade="true" narrower="true" class="swiper-slide card2" *ngFor="let dat of Apuntes | filterT2:2:gradosSelect:0:0 | slice:0:50">
   
         <!--Card image-->
-        <div class="view view-cascade overlay waves-light " mdbWavesEffect>
+        <div class="view view-cascade overlay waves-light " style="border-radius: 30px;" mdbWavesEffect>
           <mdb-card-img [src]="dat.img_apunte"></mdb-card-img>
           <a>
             <div class="mask rgba-white-slight"></div>
