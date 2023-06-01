@@ -14,8 +14,8 @@ $q = "SELECT DISTINCT cat_grado.id_grado, cat_grado.grado, cat_asignatura.id_asi
 		FROM ((lib_mat_audiovisuales 
 		INNER JOIN cat_grado ON cat_grado.id_grado = lib_mat_audiovisuales.id_grado) 
 		INNER JOIN cat_asignatura ON cat_asignatura.id_asignatura = lib_mat_audiovisuales.id_asignatura) 
-		WHERE estado =1 ORDER BY `id_grado` ASC, `asignatura` ASC;";
-
+	  ORDER BY `id_grado` ASC, `asignatura` ASC;";
+  //WHERE estado =1
 
 $conn	=	conecta_bd();
 $result = mysqli_query($conn,$q);
