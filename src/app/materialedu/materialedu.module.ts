@@ -16,6 +16,9 @@ import { BuscarComponent } from './buscar/buscar.component';
 import { CategoriaPipe } from './pipes/categoria.pipe';
 import { CortometrajeComponent } from './cortometraje/cortometraje.component';
 import { RutaPipe } from './pipes/ruta.pipe';
+import { Informatico2Component } from './informatico2/informatico2.component';
+import { Audiovisual2Component } from './audiovisual2/audiovisual2.component';
+import { XimhaiComponent } from './ximhai/ximhai.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { RutaPipe } from './pipes/ruta.pipe';
     CategoriaPipe,
     CortometrajeComponent,
     RutaPipe,
+    Informatico2Component,
+    Audiovisual2Component,
+    XimhaiComponent,
   ],
   imports: [
     CommonModule,
