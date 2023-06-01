@@ -25,13 +25,26 @@ export class SidebarService {
           tipo: 'interno'
         },
         {
-          title: 'Materiales audiovisuales',
-          url:'Audiovisual',
+          title: 'Coleccíon Ximhai',
+          url:'Ximhai',
           tipo: 'interno'
         },
         {
-          title: 'Materiales informáticos',
-          url:'Informatico',
+          title: 'Videos para proyectos academicos',
+          url:'VideoPA',
+          tipo: 'interno'
+        },{
+          title: 'Videos para proyectos de integración comunitaria',
+          url:'VideoPI',
+          tipo: 'interno'
+        },
+        {
+          title: 'Informáticos para proyectos academicos',
+          url:'InformaticoPA',
+          tipo: 'interno'
+        },{
+          title: 'Informáticos para proyectos de integración comunitaria',
+          url:'InformaticoPI',
           tipo: 'interno'
         },
         {
