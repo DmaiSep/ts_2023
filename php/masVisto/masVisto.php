@@ -15,6 +15,7 @@ $q = "SELECT id_material, lib_visitas.id_tipo_material, cat_material.material,
 
 $conn	=	conecta_bd();
 $result = mysqli_query($conn,$q);
+$i = 0;
 
 if ($result->num_rows) {
 	 
@@ -39,7 +40,10 @@ if ($result->num_rows) {
 			
 			if ($result_libro->num_rows) {
 				while($rowLibro = $result_libro->fetch_array(MYSQLI_ASSOC)){
-					array_push($myArray,$rowLibro);
+					//array_push($myArray[$i],$rowLibro);
+					$rest = array_merge($myArray[$i],$rowLibro);
+					$myArray[$i] = $rest;
+					
 				}
 			}else {echo 'No existen datos para ese ID';}
 		}
@@ -58,14 +62,16 @@ if ($result->num_rows) {
 			
 			if ($result_inform->num_rows) {
 				while($rowInform = $result_inform->fetch_array(MYSQLI_ASSOC)){
-					array_push($myArray,$rowInform);
+					//array_push($myArray[$i],$rowInform);
+					$rest = array_merge($myArray[$i],$rowInform);
+					$myArray[$i] = $rest;
 				}
 			}else {echo 'No existen datos para ese ID';}
 		}
 		elseif($row["id_tipo_material"] == 3)
 		{
 			$audioVisual = " SELECT  cat_grado.id_grado, cat_grado.grado, cat_asignatura.id_asignatura, cat_asignatura.asignatura, cat_bloque.id_bloque,
-                                     nom_video AS titulo, url_video_normal AS url, orden, cat_perfil.id_perfil AS id_tipo
+                                     nom_video AS titulo, url_video_normal AS url, orden, cat_perfil.id_perfil AS id_tipo, CONCAT('./RepositorioT/audiovisuales/img/G',lib_mat_audiovisuales.id_grado,'/T',lib_mat_audiovisuales.id_perfil,'/A',lib_mat_audiovisuales.id_asignatura,'/B',lib_mat_audiovisuales.id_bloque,'/',lib_mat_audiovisuales.orden,'.jpg') as img
                              FROM (
 							        (
 									   ( 
@@ -79,13 +85,14 @@ if ($result->num_rows) {
 			
 			if ($result_audioVisual->num_rows) {
 				while($row_aVisual = $result_audioVisual->fetch_array(MYSQLI_ASSOC)){
-					array_push($myArray,$row_aVisual);
+					$rest = array_merge($myArray[$i],$row_aVisual);
+					$myArray[$i] = $rest;
+					//var_dump($myArray[$i]);
+
 				}
 			}else {echo 'No existen datos para ese ID';}			
 		}
-		else{
-			echo 'El material no existe';
-		}
+		$i++;
 		//var_dump($row);
 	  }
 	  desconectar_bd($conn);
