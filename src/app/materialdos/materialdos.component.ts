@@ -37,4 +37,8 @@ export class MaterialdosComponent{
     });
     //console.log(this.ruta);
   }
+  onActive(){
+    window.scroll(0,0);
+  }
+  
 }
