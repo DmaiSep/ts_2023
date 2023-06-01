@@ -1,1 +1,121 @@
-<p>audiovisual works!</p>
+<app-buscar (messageEvent)="receiveMessage($event)"></app-buscar>
+<h1 class="text-center font-weight-bold mb-5">Videos para proyectos académicos</h1>
+<h3 class="font-weight-bold">Proyectos parciales de aula</h3>
+<hr>
+<swiper [config]="config">
+    <div class="swiper-wrapper">
+        <div class="card3 swiper-slide" *ngFor="let dat of Libros | categoria:1  | busqueda: Ibusqueda">
+            <!--Card-->
+    <mdb-card cascade="true" narrower="true">
+
+        <!--Card image-->
+        <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+          <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).webp"></mdb-card-img>
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <!--/Card image-->
+  
+        <mdb-card-body cascade="true" class="text-center">
+        
+          <h4 class="card-title">Cheat day insp</h4>
+          <!--Text-->
+  
+          <mdb-card-text>
+            Sed ut perspiciatis unde omnis 
+          </mdb-card-text>
+  
+          <a mdbBtn color="unique" class="waves-light" mdbWavesEffect>Button</a>
+  
+        </mdb-card-body>
+        <!--/.Card content-->
+  
+      </mdb-card>
+      <!--/.Card-->
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</swiper>
+
+<h3 class="font-weight-bold mt-5">Estrategias detonadoras</h3>
+<hr>
+<swiper [config]="config">
+    <div class="swiper-wrapper">
+        <div class="card3 swiper-slide" *ngFor="let dat of Libros | categoria:1  | busqueda: Ibusqueda">
+            <!--Card-->
+    <mdb-card cascade="true" narrower="true">
+
+        <!--Card image-->
+        <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+          <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).webp"></mdb-card-img>
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <!--/Card image-->
+  
+        <mdb-card-body cascade="true" class="text-center">
+        
+          <h4 class="card-title">Cheat day insp</h4>
+          <!--Text-->
+  
+          <mdb-card-text>
+            Sed ut perspiciatis unde omnis 
+          </mdb-card-text>
+  
+          <a mdbBtn color="unique" class="waves-light" mdbWavesEffect>Button</a>
+  
+        </mdb-card-body>
+        <!--/.Card content-->
+  
+      </mdb-card>
+      <!--/.Card-->
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</swiper>
+
+<h3 class="font-weight-bold mt-5">Videos académicos</h3>
+<hr>
+<swiper [config]="config">
+    <div class="swiper-wrapper">
+        <div class="card3 swiper-slide" *ngFor="let dat of Libros | categoria:1  | busqueda: Ibusqueda">
+            <!--Card-->
+    <mdb-card cascade="true" narrower="true">
+
+        <!--Card image-->
+        <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+          <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).webp"></mdb-card-img>
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <!--/Card image-->
+  
+        <mdb-card-body cascade="true" class="text-center">
+        
+          <h4 class="card-title">Cheat day insp</h4>
+          <!--Text-->
+  
+          <mdb-card-text>
+            Sed ut perspiciatis unde omnis 
+          </mdb-card-text>
+  
+          <a mdbBtn color="unique" class="waves-light" mdbWavesEffect>Button</a>
+  
+        </mdb-card-body>
+        <!--/.Card content-->
+  
+      </mdb-card>
+      <!--/.Card-->
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</swiper>
