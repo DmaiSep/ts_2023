@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { SwiperOptions } from 'swiper';
 
 @Component({
-  selector: 'app-audiovisual',
-  templateUrl: './audiovisual.component.html',
-  styleUrls: ['./audiovisual.component.scss']
+  selector: 'app-audiovisual2',
+  templateUrl: './audiovisual2.component.html',
+  styleUrls: ['./audiovisual2.component.scss']
 })
-export class AudiovisualComponent {
+export class Audiovisual2Component {
   Ibusqueda: string;
   constructor() { 
     

@@ -42,5 +42,8 @@ export class MaterialeduComponent {
     });
     //console.log(this.ruta);
   }
-
+  onActive(){
+    window.scroll(0,0);
+  }
+  
 }
