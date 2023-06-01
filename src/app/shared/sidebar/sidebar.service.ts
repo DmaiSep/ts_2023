@@ -67,8 +67,11 @@ export class SidebarService {
   breadcrumbs: any[] = [
     {url: 'Home',modulo:'Material Sugerido', seccion: ''},
     {url: 'Libros',modulo:'Materiales Educativos', seccion: 'Libros de texto'},
-    {url: 'Audiovisual',modulo:'Materiales Educativos', seccion: 'Materiales audiovisuales'},
-    {url: 'Informatico',modulo:'Materiales Educativos', seccion: 'Materiales informáticos'},
+    {url: 'Ximhai',modulo:'Materiales Educativos', seccion: 'Colección Ximhai'},
+    {url: 'VideoPA',modulo:'Materiales Educativos', seccion: 'Videos para proyectos académicos'},
+    {url: 'VideoPI',modulo:'Materiales Educativos', seccion: 'Videos para proyectos de integración comunitaria'},
+    {url: 'InformaticoPA',modulo:'Materiales Educativos', seccion: 'Informaticos integradores PPA'},
+    {url: 'InformaticoPI',modulo:'Materiales Educativos', seccion: 'Informaticos integradores comunitarios'},
     {url: 'Cortometraje',modulo:'Materiales Educativos', seccion: 'Cortometrajes'},
     
   ];

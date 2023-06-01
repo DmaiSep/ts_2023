@@ -5,12 +5,12 @@
 <swiper [config]="config">
   <div class="swiper-wrapper">
       <!--Card-->
-       <mdb-card cascade="true" narrower="true" class=" swiper-slide bajar" *ngFor="let uno of Images" >
+       <mdb-card cascade="true" narrower="true" class=" swiper-slide bajar" *ngFor="let dat of MasVistos" >
     
         <!--Card image-->
         <div class="view view-cascade overlay waves-light" mdbWavesEffect>
-          <mdb-badge pill="true" primary="true" style="position: absolute;top: 10px;left: 10px;z-index: 10;">Informatico</mdb-badge>
-          <mdb-card-img src="https://mdbootstrap.com/img/Photos/Others/men.webp"></mdb-card-img>
+          <mdb-badge pill="true" primary="true" style="position: absolute;top: 10px;left: 10px;z-index: 10;">{{dat.material}}</mdb-badge>
+          <mdb-card-img src="{{dat.img}}"></mdb-card-img>
           <a>
           
             <div class="mask rgba-white-slight"></div>
@@ -22,11 +22,12 @@
           <!--Card content-->
          
           <!--Title-->
-          <h6 class="card-title">La multiplicación y división con números enteros, fracciones y decimales positivos y negativos</h6>
+          <h6 class="card-title">{{dat.titulo}}</h6>
           <!--Text-->
-          <p class="text-default">Segundo grado/Matematicas </p>
+          <p class="text-default">{{dat.grado}}/{{dat.asignatura}} </p>
          
-          <a mdbBtn color="unique" rounded="true" mdbWavesEffect>Ver</a>
+          <a *ngIf="dat.id_tipo_material != 3" mdbBtn color="unique" rounded="true" mdbWavesEffect (click)="visita(dat.id_material, dat.id_tipo_material, 1)" href="{{dat.url}}" target="_blank">Ver</a>
+          <a *ngIf="dat.id_tipo_material == 3" mdbBtn color="unique" rounded="true" mdbWavesEffect (click)="openModal(dat.titulo, dat.url, dat.id_material, dat.id_tipo_material, 1)">Ver</a>
   
         </mdb-card-body>
         <!--/.Card content-->

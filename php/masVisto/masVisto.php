@@ -30,7 +30,7 @@ if ($result->num_rows) {
 		if($row["id_tipo_material"] == 1){
 			
 			$libro = " SELECT cat_grado.id_grado, cat_grado.grado, cat_asignatura.id_asignatura, cat_asignatura.asignatura, lib_libros.titulo_libro AS titulo,
-                              lib_libros.img_libro AS img, lib_libros.ver_libro AS urlMaterial
+                              lib_libros.img_libro AS img, lib_libros.ver_libro AS url
 	                   FROM (
 					           (lib_libros INNER JOIN cat_grado ON cat_grado.id_grado = lib_libros.id_grado) 
 	                         INNER JOIN cat_asignatura ON cat_asignatura.id_asignatura = lib_libros.id_asignatura) 

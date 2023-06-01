@@ -4,6 +4,7 @@ import { MaterialSugeridoService } from '../services/material-sugerido.service';
 import { MDBModalRef, MDBModalService } from 'ng-uikit-pro-standard';
 import { ModalvComponent } from '../modalv/modalv.component'
 import { VisitaService } from '../services/visita.service';
+import { MasVisitadosService } from '../services/mas-visitados.service';
 
 @Component({
   selector: 'app-inicio',
@@ -12,9 +13,10 @@ import { VisitaService } from '../services/visita.service';
 })
 export class InicioComponent {
   Material: any = [];
+  MasVistos: any = [];
   modalRef: MDBModalRef | null = null;
   
-  constructor( private _material:MaterialSugeridoService, private modalService: MDBModalService, private _visitas:VisitaService) { }
+  constructor( private _material:MaterialSugeridoService, private modalService: MDBModalService, private _visitas:VisitaService, private _masVistos:MasVisitadosService) { }
   config: SwiperOptions = {
     slidesPerView: 3,
     spaceBetween: 20,
@@ -103,6 +105,13 @@ export class InicioComponent {
    this._material.getMaterial_sugerido().subscribe(res =>{
       this.Material = res;
       //console.log(this.Material);
+    },err =>{
+      console.log(err);
+    });
+
+    this._masVistos.getMateriales().subscribe(res =>{
+      this.MasVistos = res;
+      //console.log(this.MasVistos);
     },err =>{
       console.log(err);
     });
