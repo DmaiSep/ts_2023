@@ -1,11 +1,15 @@
 import { Injectable } from '@angular/core';
+import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SidebarService {
   toggled = false;
+  onemore = false;
   _hasBackgroundImage = true;
+  public sizeDisplay: string = 'phone' || 'web';
+
   menus = [
     {
       title: '',
@@ -178,7 +182,18 @@ export class SidebarService {
     {url: 'Programareg',modulo:'Materiales Educativos', seccion: 'Programación Regular'},
     
   ];
-  constructor() { }
+  constructor(public breakpointObserver: BreakpointObserver) { 
+    //verifica la resolucion de la pantalla
+    this.mediaQuery();
+    if(this.sizeDisplay === 'phone'){
+      //esconde el sidebar
+      this.toggled = true;
+    }else{
+      //visualiza el siedbar
+      this.toggled = false;
+    }
+    //console.log(this.toggled, this.sizeDisplay);
+  }
 
   toggle() {
     this.toggled = ! this.toggled;
@@ -206,4 +221,30 @@ export class SidebarService {
   set hasBackgroundImage(hasBackgroundImage) {
     this._hasBackgroundImage = hasBackgroundImage;
   }
+
+  //funcion que ayuda a detectar si es phone o web
+  public mediaQuery() {
+
+    this.breakpointObserver
+      .observe(Breakpoints.Small)
+        .subscribe((state: BreakpointState) => {
+          if (state.matches) {
+            //AQUI SERA TRUE SOLO SI ESTA EN RESOLUCION DE CELULAR
+            this.sizeDisplay = 'phone';
+          }
+        });
+
+    this.breakpointObserver
+      .observe(Breakpoints.Web)
+        .subscribe((state: BreakpointState) => {
+          if (state.matches) {
+            //AQUI SERA TRUE SOLO SI ES RESOLUCION PARA WEB
+            this.sizeDisplay = 'web';
+          }
+        });
+
+    return this.sizeDisplay;
+  }
+
+
 }

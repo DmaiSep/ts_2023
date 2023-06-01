@@ -52,4 +52,10 @@ export class SidebardosComponent {
   hasBackgroundImage() {
     return this.sidebarservice.hasBackgroundImage;
   }
+  //funcion para cerrar el sidebar cuando se da click a un submenu, solo si esta en modo movil
+  toggleSidebarclose() {
+    if(this.sidebarservice.mediaQuery() === 'phone'){
+      this.sidebarservice.setSidebarState(true);
+    }
+  }
 }

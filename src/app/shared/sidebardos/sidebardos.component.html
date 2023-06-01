@@ -17,8 +17,8 @@
                         <div *ngIf="menu.type === 'dropdown'" class="sidebar-submenu" [@slide]="getState(menu)">
                             <ul>
                                 <li *ngFor="let submenu of menu.submenus">
-                                    <a *ngIf="submenu.tipo == 'interno'" [routerLink]="[{ outlets: { Secc: [submenu.url] }}]"> {{submenu.title}}</a>
-                                    <a *ngIf="submenu.tipo == 'externo'" href="{{submenu.url}}" target="_blank"> {{submenu.title}}</a>
+                                    <a *ngIf="submenu.tipo == 'interno'" [routerLink]="[{ outlets: { Secc: [submenu.url] }}]" (click)="toggleSidebarclose()"> {{submenu.title}}</a>
+                                    <a *ngIf="submenu.tipo == 'externo'" href="{{submenu.url}}" target="_blank" > {{submenu.title}}</a>
                                 </li>
                             </ul>
                         </div>
