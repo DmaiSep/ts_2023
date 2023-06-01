@@ -15,6 +15,7 @@ import { BusquedaPipe } from './pipes/busqueda.pipe';
 import { BuscarComponent } from './buscar/buscar.component';
 import { CategoriaPipe } from './pipes/categoria.pipe';
 import { CortometrajeComponent } from './cortometraje/cortometraje.component';
+import { RutaPipe } from './pipes/ruta.pipe';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { CortometrajeComponent } from './cortometraje/cortometraje.component';
     BuscarComponent,
     CategoriaPipe,
     CortometrajeComponent,
+    RutaPipe,
   ],
   imports: [
     CommonModule,

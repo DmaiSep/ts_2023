@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 
 @Injectable({
   providedIn: 'root'
@@ -6,6 +7,7 @@ import { Injectable } from '@angular/core';
 export class SidebarService {
   toggled = false;
   _hasBackgroundImage = true;
+  public sizeDisplay: string = 'phone' || 'web';
   menus = [
     {
       title: '',
@@ -19,19 +21,23 @@ export class SidebarService {
       submenus: [
         {
           title: 'Libros de texto',
-          url:'Libros'
+          url:'Libros',
+          tipo: 'interno'
         },
         {
           title: 'Materiales audiovisuales',
-          url:'Audiovisual'
+          url:'Audiovisual',
+          tipo: 'interno'
         },
         {
           title: 'Materiales informáticos',
-          url:'Informatico'
+          url:'Informatico',
+          tipo: 'interno'
         },
         {
           title: 'Cortometrajes',
-          url:'Cortometraje'
+          url:'Cortometraje',
+          tipo: 'interno'
         }
         
       ]
@@ -43,95 +49,29 @@ export class SidebarService {
       type: 'simple',
       url: './assets/docs/calendario/CALENDARIO_ESCOLAR_2022-2023_v3.pdf'
     }
-    /*{
-      title: 'Fortalecimiento de capacidades técnicas',
-      icon: 'fas fa-edit',
-      active: false,
-      type: 'dropdown',
-      submenus: [
-        {
-          title: 'Products',
-        },
-        {
-          title: 'Orders'
-        },
-        {
-          title: 'Credit cart'
-        }
-      ]
-    },
-    {
-      title: 'Innovación, estadística y evaluación',
-      icon: 'fas fa-chart-area',
-      active: false,
-      type: 'dropdown',
-      submenus: [
-        {
-          title: 'General',
-        },
-        {
-          title: 'Panels'
-        },
-        {
-          title: 'Tables'
-        },
-        {
-          title: 'Icons'
-        },
-        {
-          title: 'Forms'
-        }
-      ]
-    },
-    {
-      title: 'Normatividad',
-      icon: 'fas fa-list-alt',
-      active: false,
-      type: 'dropdown',
-      submenus: [
-        {
-          title: 'Pie chart',
-        },
-        {
-          title: 'Line chart'
-        },
-        {
-          title: 'Bar chart'
-        },
-        {
-          title: 'Histogram'
-        }
-      ]
-    },
-    
-    {
-      title: '',
-      type: 'header'
-    },
- {
-      title: 'Documentation',
-      icon: 'fa fa-book',
-      active: false,
-      type: 'simple',
-      badge: {
-        text: 'Beta',
-        class: 'badge-primary'
-      },
-    },
-    {
-      title: 'Calendario',
-      icon: 'fa fa-calendar',
-      active: false,
-      type: 'simple'
-    }/*,
-    {
-      title: 'Examples',
-      icon: 'fa fa-folder',
-      active: false,
-      type: 'simple'
-    }*/
+   
   ];
-  constructor() { }
+  breadcrumbs: any[] = [
+    {url: 'Home',modulo:'Material Sugerido', seccion: ''},
+    {url: 'Libros',modulo:'Materiales Educativos', seccion: 'Libros de texto'},
+    {url: 'Audiovisual',modulo:'Materiales Educativos', seccion: 'Materiales audiovisuales'},
+    {url: 'Informatico',modulo:'Materiales Educativos', seccion: 'Materiales informáticos'},
+    {url: 'Cortometraje',modulo:'Materiales Educativos', seccion: 'Cortometrajes'},
+    
+  ];
+
+  constructor(public breakpointObserver: BreakpointObserver) {
+    //verifica la resolucion de la pantalla
+    this.mediaQuery();
+    if(this.sizeDisplay === 'phone'){
+      //esconde el sidebar
+      this.toggled = true;
+    }else{
+      //visualiza el siedbar
+      this.toggled = false;
+    }
+    //console.log(this.toggled, this.sizeDisplay);
+   }
 
   toggle() {
     this.toggled = ! this.toggled;
@@ -148,6 +88,9 @@ export class SidebarService {
   getMenuList() {
     return this.menus;
   }
+  getBreadcrumbs() {
+    return this.breadcrumbs;
+  }
 
   get hasBackgroundImage() {
     return this._hasBackgroundImage;
@@ -155,5 +98,29 @@ export class SidebarService {
 
   set hasBackgroundImage(hasBackgroundImage) {
     this._hasBackgroundImage = hasBackgroundImage;
+  }
+
+  //funcion que ayuda a detectar si es phone o web
+  public mediaQuery() {
+
+    this.breakpointObserver
+      .observe(Breakpoints.Small)
+        .subscribe((state: BreakpointState) => {
+          if (state.matches) {
+            //AQUI SERA TRUE SOLO SI ESTA EN RESOLUCION DE CELULAR
+            this.sizeDisplay = 'phone';
+          }
+        });
+
+    this.breakpointObserver
+      .observe(Breakpoints.Web)
+        .subscribe((state: BreakpointState) => {
+          if (state.matches) {
+            //AQUI SERA TRUE SOLO SI ES RESOLUCION PARA WEB
+            this.sizeDisplay = 'web';
+          }
+        });
+
+    return this.sizeDisplay;
   }
 }

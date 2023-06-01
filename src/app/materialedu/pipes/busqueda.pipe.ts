@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class BusquedaPipe implements PipeTransform {
 
   transform(value: any [], termino: String) {
-    console.log(termino);
+    //console.log(termino);
     if(termino === undefined || termino === ''){
       return value;
     }

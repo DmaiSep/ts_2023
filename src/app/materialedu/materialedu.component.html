@@ -1,3 +1,4 @@
+<div [ngClass]="rutas()"></div>
 <div class="page-wrapper" [ngClass]="{'toggled' : getSideBarState()}">
     <app-sidebar></app-sidebar>
     <main class="page-content">
@@ -11,9 +12,9 @@
                            
                             <p class="d-inline-block p-3 font-weight-bold  text-default " style="font-size: 20px;">Inicio</p>
                         </a> /
-                        <p class="d-inline-block p-3 " style="font-size: 20px;color: #66615b;font-weight: 400;">1er Grado</p>
+                        <p class="d-inline-block p-3 " style="font-size: 20px;color: #66615b;font-weight: 400;">{{urls | ruta:direccion:'modulo'}}</p>
                         /
-                        <p class="d-inline-block p-3 " style="font-size: 20px;color: #66615b;font-weight: 400;">Material Educativo</p>
+                        <p class="d-inline-block p-3 " style="font-size: 20px;color: #66615b;font-weight: 400;">{{urls | ruta:direccion:'seccion'}}</p>
                        
                     </div>
                   
