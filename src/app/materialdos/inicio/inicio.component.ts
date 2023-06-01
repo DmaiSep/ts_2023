@@ -119,7 +119,9 @@ export class InicioComponent {
   }
 
   openModal( tit, dir,id_material, id_tipo_material, accion ) {
-    this.visita(id_material, id_tipo_material, accion)
+    if(accion){
+      this.visita(id_material, id_tipo_material, accion)
+    }
     //console.log(tit, dir);
     this.modalRef = this.modalService.show(ModalvComponent, {
       data: { title: tit, url: 'https://www.youtube.com/embed/'+dir },
