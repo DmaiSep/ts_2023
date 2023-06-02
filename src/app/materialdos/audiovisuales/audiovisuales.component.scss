@@ -157,12 +157,9 @@
     width: 60%;
 }
 
-.imgh {
-    height: 100%;
-}
-
 @media (min-width: 320px) and (max-width: 480px) {
-    .imgh {
-        height: 50%;
+    .img-fluid {
+        height: 50% !important;
+        object-fit: cover !important;
     }
 }
