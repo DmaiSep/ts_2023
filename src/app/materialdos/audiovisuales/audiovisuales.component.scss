@@ -156,3 +156,13 @@
     border: 0.5px solid #ffffff;
     width: 60%;
 }
+
+.imgh {
+    height: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .imgh {
+        height: 50%;
+    }
+}
