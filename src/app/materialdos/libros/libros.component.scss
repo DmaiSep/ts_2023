@@ -290,3 +290,39 @@ p {
     top: 0;
     right: 0;
 }
+
+//flechas de carrusel
+
+.swiper-button-next {
+    background-image: url(../../../assets/img/flechaderecha.png) !important;
+    background-repeat: no-repeat;
+    color: transparent !important;
+    background-color: transparent !important;
+    padding-right: 12px !important;
+    position: absolute !important;
+    top: 88% !important;
+    
+}
+
+.swiper-button-prev {
+    background-image: url(../../../assets/img/flechaizquierda.png) !important;
+    background-repeat: no-repeat;
+    color: transparent !important;
+    background-color: transparent !important;
+    padding-left: 12px !important;
+    position: absolute !important;
+    top: 88% !important;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .swiper-button-next {
+        padding-right: 15px !important;
+        top: 88% !important;
+        
+    }
+    
+    .swiper-button-prev {
+        padding-left: 15px !important;
+        top: 88% !important;
+    }
+}

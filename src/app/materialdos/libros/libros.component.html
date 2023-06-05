@@ -36,7 +36,7 @@
                     <h3 class="name3 textw mt-3 mb-3">{{dat.titulo_libro}}</h3>
                 </div>
                 <div class="card-footer3">
-                    <div class="mb-3">
+                    <div class="text-center mb-3">
                         <a *ngIf="dat.ver_libro" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 " (click)="visita(dat.id_libro, dat.id_tipo_material, 1)" href="{{dat.ver_libro}}" target="_blank"><mdb-icon fas icon="book" size="2x" class="white-text"></mdb-icon></a>
                         <a *ngIf="dat.zip_libro" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 " (click)="visita(dat.id_libro, dat.id_tipo_material, 2)" href="{{dat.zip_libro}}"><mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon></a>
                     </div>

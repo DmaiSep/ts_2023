@@ -88,25 +88,6 @@
     color: white;
 }
 
-//flechas de carrusell
-.swiper-button-next {
-    background-color: #7d79dc6e;
-    border-radius: 10px;
-    padding: 20px;
-}
-
-.cardu{
-    margin-bottom: 8px;
-    margin-top: 5px;
-    height: 300px;
-}
-
-@media (min-width: 320px) and (max-width: 480px) {
-    .cardu{
-        height: 500px;
-    }
-}
-
 .fon1{
     /*background: rgb(210 204 215 / 32%);*/
     border-radius: 5px;
@@ -157,9 +138,60 @@
     width: 60%;
 }
 
+.cardu{
+    margin-bottom: 8px;
+    margin-top: 5px;
+    height: 330px;
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
-    .img-fluid {
-        height: 50% !important;
-        object-fit: cover !important;
+    .cardu{
+        height: 600px;
+        padding-top: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .avimgfluid {
+        height: 200px;
+        object-fit: cover;
+    }
+}
+
+//flechas de carrusel
+
+.swiper-button-next {
+    background-image: url(../../../assets/img/flechaderecha.png) !important;
+    background-repeat: no-repeat;
+    color: transparent !important;
+    background-color: transparent !important;
+    padding-right: 35px !important;
+    position: absolute !important;
+    top: 88% !important;
+    
+}
+
+.swiper-button-prev {
+    background-image: url(../../../assets/img/flechaizquierda.png) !important;
+    background-repeat: no-repeat;
+    color: transparent !important;
+    background-color: transparent !important;
+    padding-left: 32px !important;
+    position: absolute !important;
+    top: 88% !important;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .swiper-button-next {
+        padding-right: 32px !important;
+        top: 93% !important;
+        
+    }
+    
+    .swiper-button-prev {
+        padding-left: 32px !important;
+        top: 93% !important;
     }
 }
