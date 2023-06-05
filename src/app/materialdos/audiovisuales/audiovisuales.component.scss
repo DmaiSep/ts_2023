@@ -156,10 +156,3 @@
     border: 0.5px solid #ffffff;
     width: 60%;
 }
-
-@media (min-width: 320px) and (max-width: 480px) {
-    .img-fluid {
-        height: 50% !important;
-        object-fit: cover !important;
-    }
-}
