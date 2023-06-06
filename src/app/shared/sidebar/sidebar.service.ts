@@ -14,6 +14,13 @@ export class SidebarService {
       type: 'header'
     },
     {
+      title: 'Conoce tu libro',
+      icon: 'fa fa-book-open',
+      active: false,
+      type: 'interno',
+      url: 'Home'
+    },
+    {
       title: 'Materiales educativos',
       icon: 'fas fa-book',
       active: true,
@@ -65,7 +72,7 @@ export class SidebarService {
    
   ];
   breadcrumbs: any[] = [
-    {url: 'Home',modulo:'Material Sugerido', seccion: ''},
+    {url: 'Home',modulo:'Conoce tu libro', seccion: ''},
     {url: 'Libros',modulo:'Materiales Educativos', seccion: 'Libros de texto'},
     {url: 'Ximhai',modulo:'Materiales Educativos', seccion: 'Colección Ximhai'},
     {url: 'VideoPA',modulo:'Materiales Educativos', seccion: 'Videos para proyectos académicos'},
