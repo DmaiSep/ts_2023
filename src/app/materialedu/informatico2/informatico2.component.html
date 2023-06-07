@@ -2,38 +2,39 @@
 <h1 class="text-center font-weight-bold mb-5">Informaticos integradores comunitarios</h1>
 <hr>
 <swiper [config]="config">
-    <div class="swiper-wrapper">
-        <div class="card3 swiper-slide" *ngFor="let dat of Libros | categoria:1  | busqueda: Ibusqueda">
-            <!--Card-->
-    <mdb-card cascade="true" narrower="true">
+  <div class="swiper-wrapper">
+    <div class=" swiper-slide" *ngFor="let dat of Libros | categoria:1  | busqueda: Ibusqueda">   
+        <!--Card-->
+       <mdb-card cascade="true" class="card_new" narrower="true">
 
-        <!--Card image-->
-        <div class="view view-cascade overlay waves-light" mdbWavesEffect>
-          <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).webp"></mdb-card-img>
-          <a>
-            <div class="mask rgba-white-slight"></div>
-          </a>
-        </div>
-        <!--/Card image-->
-  
-        <mdb-card-body cascade="true" class="text-center">
-        
-          <h4 class="card-title">Cheat day insp</h4>
-          <!--Text-->
-  
-          <mdb-card-text>
-            Sed ut perspiciatis unde omnis 
-          </mdb-card-text>
-  
-          <a mdbBtn color="unique" class="waves-light" mdbWavesEffect>Button</a>
-  
-        </mdb-card-body>
-        <!--/.Card content-->
-  
-      </mdb-card>
-      <!--/.Card-->
-        </div>
+    <!--Card image-->
+    <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+     
+      <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).webp"></mdb-card-img>
+      <!--<mdb-card-img src=" {{dat.src}}"></mdb-card-img>-->
+      <a>
+        <div class="mask rgba-white-slight"></div>
+      </a>
+      <mdb-badge  pill="true" default="true" class="tit_tipo">Informático</mdb-badge>
     </div>
+    <!--/Card image-->
+    <mdb-card-body cascade="true" class="text-center" class="card_new_body">
+     <h5 class="card-title2">{{dat.grado}}</h5>
+      <!--Text-->
+        <mdb-card-text >
+           <p class="font-weight-normal text-dark" style="font-size: 1.1rem!important;">
+            {{dat.titulo_material}}
+           </p>
+            
+       </mdb-card-text >
+        <a mdbBtn floating="true" size="4x" gradient="blue" mdbWavesEffect class="boton_d"><mdb-icon fas icon="play"></mdb-icon></a>
+      </mdb-card-body>
+    <!--/.Card content-->
+
+       </mdb-card>
+       <!--/.Card-->
+    </div>
+</div>
     <div class="swiper-pagination"></div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
