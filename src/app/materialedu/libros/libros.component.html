@@ -5,41 +5,33 @@
 <hr>
 <swiper [config]="config">
     <div class="swiper-wrapper">
-        <div class="card3 swiper-slide" *ngFor="let dat of Libros | categoria:1  | busqueda: Ibusqueda">
-            <div class="card-header3" style="background-image: url({{dat.src}})">
-                <mdb-badge  pill="true" default="true" class="tit_tipo">Libro</mdb-badge>
+        <div class=" swiper-slide" *ngFor="let dat of Libros | categoria:1  | busqueda: Ibusqueda">   
+            <!--Card-->
+           <mdb-card cascade="true" class="card_new" narrower="true">
 
-                <div class="card-header-slanted-edge3">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200"><path class="polygon" d="M-20,200,1000,0V200Z" /></svg>
-                   
-                </div>
-            </div>
-
-            <div class="card-body3">
-                <h4 class="job-title3"> {{dat.grado}} </h4>
-                <h2 class="name3">{{dat.titulo_material}}</h2>
-            </div>
-
-            <div class="card-footer3">
+        <!--Card image-->
+        <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+          <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).webp"></mdb-card-img>
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <!--/Card image-->
+        <mdb-card-body cascade="true" class="text-center" class="card_new_body">
+         <h5 class="card-title2">Primer grado</h5>
+          <!--Text-->
+            <mdb-card-text >
+               <p class="font-weight-normal text-dark" style="font-size: 1.1rem!important;">
+                libro Ximhai - las espeices ljcñacmñza hiygweg
+               </p>
                 
-                    <div>
-                                       
-                        <a *ngIf="dat.url" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 " href="{{dat.url}}" target="_blank"><mdb-icon fas icon="book" size="2x" class="white-text"></mdb-icon></a>
-
-                        </div>
-                     <!-- <div >
-                        <span class="label">Descargar</span>
-                        <span class="">
-                            <a *ngIf="dat.url" mdbBtn floating="true"  class="night-fade-gradient" size="2x" gradient="" href="{{dat.url}}" target="_blank">
-                                <mdb-icon fas icon="arrow-alt-circle-down"></mdb-icon>
-                              </a>
-                        </span>
-                    </div>
-                  <div class="stat">
-                        <span class="label">Likes</span>
-                        <span class="value">320</span>
-                    </div>-->
-                </div>
+           </mdb-card-text >
+            <a mdbBtn floating="true" size="4x" gradient="blue" mdbWavesEffect class="boton_d"><mdb-icon fas icon="play"></mdb-icon></a>
+          </mdb-card-body>
+        <!--/.Card content-->
+  
+           </mdb-card>
+           <!--/.Card-->
         </div>
     </div>
     <div class="swiper-pagination"></div>
