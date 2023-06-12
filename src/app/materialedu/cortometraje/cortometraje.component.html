@@ -1,5 +1,7 @@
-<h1 class="text-center">Cortometrajes</h1>
-<hr>
+<app-buscar (messageEvent)="receiveMessage($event)"></app-buscar>
+
+<h1 class="text-center font-weight-bold ">Cortometrajes</h1>
+<hr class="sunny-morning-gradient pt-1 mb-5">
 <div class="row mb-5">
  <!-- Grid column -->
  <div class="col-lg-4 col-md-6">
@@ -9,7 +11,7 @@
 
       <!-- Image -->
       <div class="view overlay rounded z-depth-1-half mb-4">
-        <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Slides/1.webp" alt="Sample image">
+        <img class="img-fluid" src="../../../assets/img/cortometraje/smuack.png" alt="Sample image">
         <a>
           <div class="mask rgba-white-slight waves-light" mdbWavesEffect></div>
         </a>
@@ -17,8 +19,12 @@
 
       <!-- Data -->
       <div class="news-data d-flex justify-content-between">
-         <p class="font-weight-bold deep-orange-text">
-          <mdb-icon far icon="clock" class="pr-2"></mdb-icon>Alejandra Sánchez · 2015 · 23min </p>
+        <a href="#!" class="deep-orange-text">
+          <h6 class="font-weight-bold">
+           Alejandra Sánchez · 2015</h6>
+        </a>
+         <p class="font-weight-bold deep-orange-text">   
+          <mdb-icon far icon="clock" class="pr-2"></mdb-icon> 23min </p>
       </div>
 
       <!-- Excerpt -->
