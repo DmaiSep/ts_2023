@@ -10,7 +10,7 @@ function conecta_bd(){
 	//$bd = "querylibrosr";
 	//$usuario = "tsieteco_dUCKSTE";  //usario de la base de datos
 	//$clave = "pc8PN@^MI*"; // passwoord de la base de datos
-	$bd = "db_tsg1_2023";
+	$bd = "db_ts_nf";
 
 	$conn=mysqli_connect($servidor,$usuario,$clave, $bd);
 

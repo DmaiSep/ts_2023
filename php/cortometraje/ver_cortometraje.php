@@ -4,7 +4,7 @@ header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
 header('content-type: application/json; charset=utf-8');
 
-include 'conecta.php';
+include '../conecta_nf.php';
 
 /*QUERY LISTADO GENERAL ALEATORIO DE MATERIALES AUDIOVISUALES*/
 
