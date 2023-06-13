@@ -1,0 +1,147 @@
+
+//flechas de carrusell
+.swiper-button-next {
+    background-color: #7d79dc6e;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+
+.card3 {
+    position: relative;
+    width: 300px!important;
+    height: 365px;
+    //margin: 30px auto;
+    box-shadow: 0 0 5px rgb(0 0 0 / 40%);
+    
+    border-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.card-header3 {
+    position: relative;
+    height: 200px;
+    background-size: cover;
+    background-position: top;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-header3:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+   // background: linear-gradient(to top, rgb(5 85 134 / 30%), rgba(181, 181, 181, 0.1));
+}
+
+.card-header-bar3 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    width: 100%;
+}
+
+svg .polygon {
+    fill: #40a0ac;
+}
+
+.card-header-slanted-edge3 {
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+    width: 100%;
+    right: 0;
+    left: 0;
+}
+
+.card-body3 {
+    text-align: center;
+    padding: 5px;
+    background: #eae7ed59;
+    border-radius: 5px;
+}
+
+.name3 {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 auto;
+    color: #ffff;
+}
+
+.job-title3 {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #ffff;
+}
+
+.card-footer3 {
+    // position: absolute;
+    left: 0;
+    width: 100%;
+    //bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.stat3 {
+    box-sizing: border-box;
+    text-align: center;
+   float: left;
+  
+}
+
+
+
+.stat3 .value {
+    font-weight: 700;
+    font-size: 20px;
+    
+}
+
+.btn-floating i {
+    line-height: 41px !important;
+}
+
+.btn-floating {
+    box-shadow: 0 5px 6px #0000002e, 0 0px 6px #00000026;
+    width: 40px;
+    height: 40px;
+}
+
+.fgrado1 {
+    background: rgb(0,164,181);
+    background: linear-gradient(181deg, rgb(111 207 221) 0%, rgb(55, 117, 127) 100%);
+}
+.fgrado2 {
+    background: rgb(103, 58, 143);
+    background: linear-gradient(178deg, #673a8fb8 0%, #5a327dc7 100%);
+    padding: 5px;
+}
+
+.fgrado3 {
+    background: rgb(230, 46, 57);
+    background: linear-gradient(181deg, #e62e39c4 0%, #c82932c7 100%);
+    padding: 5px;
+}
+svg .polygon1 {
+    fill: #40a0ac;
+}
+svg .polygon2 {
+    fill: rgb(133 101 161);
+}
+svg .polygon3 {
+    fill: rgb(216 89 96);
+}

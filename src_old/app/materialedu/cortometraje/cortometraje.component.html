@@ -1,0 +1,41 @@
+<app-buscar (messageEvent)="receiveMessage($event)"></app-buscar>
+
+<h1 class="text-center font-weight-bold ">Cortometrajes</h1>
+<hr class="sunny-morning-gradient pt-1 mb-5">
+<div class="row mb-5">
+ <!-- Grid column -->
+ <div class="col-lg-4 col-md-6 mt-3" *ngFor="let item of Cortometraje">
+
+    <!-- Featured news -->
+    <div class="single-news mb-lg-0 mb-4">
+
+      <!-- Image -->
+      <div class="view overlay rounded z-depth-1-half mb-4">
+        <img class="img-fluid" src="{{item.img}}" alt="{{item.img}}">
+        <a href="{{item.url}}" target="_blank">
+          <div class="mask rgba-white-slight waves-light" mdbWavesEffect></div>
+        </a>
+      </div>
+
+      <!-- Data -->
+      <div class="news-data d-flex justify-content-between">
+        <a href="#!" class="deep-orange-text">
+          <h6 class="font-weight-bold">{{item.autor}}  {{item.anio}}</h6>
+        </a>
+         <p class="font-weight-bold deep-orange-text">   
+          <mdb-icon far icon="clock" class="pr-2"></mdb-icon>{{item.duracion}}</p>
+      </div>
+
+      <!-- Excerpt -->
+      <h3 class="font-weight-bold dark-grey-text mb-3">
+        <a>{{item.titulo}}</a>
+      </h3>
+      <p class="dark-grey-text mb-lg-0 mb-md-5 mb-4 text-justify">{{item.descripcion}} </p>
+
+    </div>
+    <!-- Featured news -->
+
+  </div>
+  <!-- Grid column -->
+   <!-- Grid column -->
+</div>

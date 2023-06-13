@@ -1,0 +1,131 @@
+<form autocomplete="off" [formGroup]="form" class="mt-5">
+    <div class="row">
+        <div class="col-md-4 col-lg-4">
+            <div class="md-form">
+                <mdb-select-2 formControlName="grado" placeholder="Elige una opción" label="Selecciona un grado" [dropdownClass]="'mdb-select-dropdown-colorful mdb-select-dropdown-ins'">
+                    <mdb-select-option *ngFor="let option of menu | menuGrado" [value]="option.id_grado" (click)="grado()">{{ option.grado }}</mdb-select-option>
+                </mdb-select-2>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-4">
+            <div class="md-form">
+                <mdb-select-2  formControlName="asignatura" placeholder="Elige una opción" label="Selecciona una asignatura">
+                    <mdb-select-option *ngFor="let asignaturas of menu | menuAsig:gradosSelect" [value]="asignaturas.id_asignatura" (click)="asignaturaf()">{{ asignaturas.asignatura }}</mdb-select-option>
+                </mdb-select-2>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-4">
+            <div class="md-form">
+                <mdb-select-2  formControlName="bloque"  placeholder="Elige una opción" label="Selecciona un Bloque">
+                    <mdb-select-option *ngFor="let bloques of bloque" [value]="bloques.id_bloque" (click)="bloquef()">{{ bloques.bloque}}</mdb-select-option>
+                </mdb-select-2>
+            </div>
+        </div>
+    </div>
+  
+  </form>
+
+<section *ngIf="Informaticos | pefilContent:2">
+
+    <blockquote class="blockquote bq-warning">
+        <p class="bq-title">Informaticos para el Alumno</p>
+    </blockquote>
+    
+    <swiper [config]="config">
+        <div class="swiper-wrapper">
+           
+            <div class="card3 swiper-slide fgrado{{dat.id_grado}}" *ngFor="let dat of Informaticos | filterT2:2:gradosSelect:asigSelect:bloqueSelect | slice:0:50">
+                <div class="card-header3" style="background-image: url({{dat.img}})">
+    
+    
+                    <div class="card-header-slanted-edge3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200"><path class="polygon{{dat.id_grado}}" d="M-20,200,1000,0V200Z" /></svg>
+    
+                    </div> <mdb-badge  pill="true" default="true">Informático</mdb-badge>
+                </div>
+    
+                <div class="card-body3">
+                    
+                    <h3 class="name3">{{dat.nom_material}}</h3>
+                    <h4 class="job-title3">{{dat.grado}}/{{dat.asignatura}}/Bloque {{dat.id_bloque}} </h4>
+                </div>
+    
+                <div class="card-footer3">
+                    <div class="">
+                        <div class="stat3">
+                            <span class="">
+                                <a *ngIf="dat.url" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" (click)="visita(dat.id_mat_inform, dat.id_tipo_material, 1)" href="{{dat.url}}" target="_blank">
+                                    <mdb-icon fas icon="atlas" size="2x" class="white-text"></mdb-icon>
+                                  </a>
+                            </span>
+                        </div>
+                        <div class="stat3">
+                            <span class="">
+                                <a *ngIf="dat.exe" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" (click)="visita(dat.id_mat_inform, dat.id_tipo_material, 2)" href="{{dat.exe}}" target="_blank">
+                                    <mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon>
+                                </a>
+                            </span>
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </swiper>
+</section>
+
+<section *ngIf="Informaticos | pefilContent:1">
+    
+    <blockquote class="blockquote bq-warning mt-5 mb-5" *ngIf="Informaticos | filterT2:1:gradosSelect:asigSelect:bloqueSelect">
+        <p class="bq-title">Informaticos para el Maestro</p>
+    </blockquote>
+    
+    <swiper [config]="config">
+        <div class="swiper-wrapper">
+           
+            <div class="card3 swiper-slide fgrado{{dat.id_grado}}" *ngFor="let dat of Informaticos | filterT2:1:gradosSelect:asigSelect:bloqueSelect | slice:0:50">
+                <div class="card-header3" style="background-image: url({{dat.img}})">
+    
+    
+                    <div class="card-header-slanted-edge3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200"><path class="polygon{{dat.id_grado}}" d="M-20,200,1000,0V200Z" /></svg>
+    
+                    </div> <mdb-badge  pill="true" default="true">Informático</mdb-badge>
+                </div>
+    
+                <div class="card-body3">
+                    
+                    <h3 class="name3">{{dat.nom_material}}</h3>
+                    <h4 class="job-title3">{{dat.id_grado}}/{{dat.asignatura}}/Bloque {{dat.id_bloque}}</h4>
+                </div>
+    
+                <div class="card-footer3">
+                    <div class="">
+                        <div class="stat3">
+                            <span class="">
+                                <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" (click)="visita(dat.id_mat_inform, dat.id_tipo_material, 1)" href="{{dat.url}}" target="_blank">
+                                    <mdb-icon fas icon="atlas" size="2x" class="white-text"></mdb-icon>
+                                  </a>
+                            </span>
+                        </div>
+                        <div class="stat3">
+                            <span class="">
+                                <a mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" (click)="visita(dat.id_mat_inform, dat.id_tipo_material, 2)" href="{{dat.exe}}" target="_blank">
+                                    <mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon>
+                                </a>
+                            </span>
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </swiper>
+</section>
+

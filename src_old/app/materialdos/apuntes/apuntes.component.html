@@ -1,0 +1,88 @@
+<div class="container"> 
+<form autocomplete="off" [formGroup]="form" class="mt-5">
+    <div class="row mt-5">
+        <div class="col-md-4 col-lg-4">
+            <div class="md-form">
+                <mdb-select-2 formControlName="grado" placeholder="Elige una opción" label="Selecciona un grado" [dropdownClass]="'mdb-select-dropdown-colorful mdb-select-dropdown-ins'">
+                    <mdb-select-option *ngFor="let option of menu | menuGrado" [value]="option.id_grado" (click)="grado()">{{ option.grado }}</mdb-select-option>
+                </mdb-select-2>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+<blockquote class="blockquote bq-warning">
+    <p class="bq-title">Apuntes</p>
+</blockquote>
+
+<swiper [config]="config">
+    <div class="swiper-wrapper">
+         <!--Card-->
+      <mdb-card cascade="true" narrower="true" class="swiper-slide card2" *ngFor="let dat of Apuntes | filterT2:1:gradosSelect:0:0 | slice:0:50">
+  
+        <!--Card image-->
+        <div class="view view-cascade overlay waves-light " style="border-radius: 30px;" mdbWavesEffect>
+          <mdb-card-img [src]="dat.img_apunte"></mdb-card-img>
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <!--/Card image-->
+  
+        <mdb-card-body cascade="true" class="text-center pb-0 px-0">
+          <!--Card content--> 
+          <a href="{{dat.url_apunte}}" target="_blank" mdbBtn color="unique" class="waves-light btn_11" block="true" mdbWavesEffect>Ver más</a>
+      
+        </mdb-card-body>
+        <!--/.Card content-->
+  
+      </mdb-card>
+      <!--/.Card-->
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</swiper>
+
+<blockquote class="blockquote bq-warning mt-5 mb-5">
+    <p class="bq-title">Especialidades tecnología</p>
+</blockquote>
+<swiper [config]="config">
+    <div class="swiper-wrapper">
+       
+            <!--Card-->
+      <mdb-card cascade="true" narrower="true" class="swiper-slide card2" *ngFor="let dat of Apuntes | filterT2:2:gradosSelect:0:0 | slice:0:50">
+  
+        <!--Card image-->
+        <div class="view view-cascade overlay waves-light " style="border-radius: 30px;" mdbWavesEffect>
+          <mdb-card-img [src]="dat.img_apunte"></mdb-card-img>
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <!--/Card image-->
+  
+        <mdb-card-body cascade="true" class="text-center pb-0 px-0">
+           
+          <!--Card content--> 
+          <a href="{{dat.url_apunte}}" target="_blank" mdbBtn color="unique" class="waves-light btn_11" block="true" mdbWavesEffect>Ver más</a>
+      
+        </mdb-card-body>
+        <!--/.Card content-->
+  
+      </mdb-card>
+      <!--/.Card-->
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</swiper>
+</div>
+
+
+
+
+
+
+
