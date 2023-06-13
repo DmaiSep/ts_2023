@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CortometrajesService } from '../../services/cortometrajes.service';
+import { CortometrajesService } from '../services/cortometrajes.service';
 
 @Component({
   selector: 'app-cortometraje',

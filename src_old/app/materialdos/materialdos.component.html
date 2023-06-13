@@ -1,0 +1,36 @@
+
+<div [ngClass]="rutas()"></div>
+<div class="page-wrapper" [ngClass]="{'toggled' : getSideBarState()}">
+    <app-sidebardos></app-sidebardos>
+    <main class="page-content">
+        <div class="container-fluid ">
+            <div class="bordeabajo">
+                <div class="row">
+                    <div class="col-xs-12 col-md-12">
+                        <mdb-icon fas icon="bars" size="2x" style="color: #465056;" (click)="toggleSidebar()"></mdb-icon>
+                        
+                        <a [routerLink]="['/']">
+                           
+                            <p class="d-inline-block p-2 font-weight-bold  text-default " style="font-size: 20px;">Inicio</p>
+                        </a>
+                        /
+                        <p class="d-inline-block p-2 " style="font-size: 20px;color: #66615b;font-weight: 400;">{{urls | ruta:direccion:'modulo'}}</p>
+                        /
+                        <p class="d-inline-block p-2 " style="font-size: 20px;color: #66615b;font-weight: 400;" >{{urls | ruta:direccion:'seccion'}}</p>
+                       
+                    </div>
+                  
+                </div>
+                <hr>
+               
+            </div>
+            <div class="my-5" >
+                <router-outlet name="Secc"  #o="outlet" (activate)="onActive()"></router-outlet>
+            </div>
+          
+        </div>
+        <div class="overlay" (click)="toggleSidebar()" [ngClass]="{'show' : !getSideBarState() }"></div>
+
+    </main>
+
+</div>

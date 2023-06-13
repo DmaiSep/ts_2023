@@ -1,0 +1,140 @@
+<app-buscar (messageEvent)="receiveMessage($event)"></app-buscar>
+<h1 class="text-center font-weight-bold">Videos para proyectos académicos</h1>
+<hr class="sunny-morning-gradient pt-1 mb-5">
+<h3 class="font-weight-bold">Proyectos parciales de aula</h3>
+<hr>
+<swiper [config]="config">
+    <div class="swiper-wrapper">
+        <div class="card_new swiper-slide" *ngFor="let dat of Libros | categoria:1  | busqueda: Ibusqueda">
+         <!--Card-->
+         <mdb-card cascade="true" narrower="true">
+
+      <!--Card image-->
+      <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+        <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).webp"></mdb-card-img>
+        <a>
+          <div class="mask rgba-white-slight"></div>
+        </a>
+        <mdb-badge  pill="true" default="true" class="tit_tipo">Audiovisual</mdb-badge>
+      </div>
+      <!--/Card image-->
+
+      <mdb-card-body cascade="true" class="text-center pb-0 px-0">
+        <h5 class="card-title2">{{dat.grado}}</h5>
+        <!--Text-->
+          <mdb-card-text >
+             <p class="font-weight-normal text-dark" style="font-size: 1.1rem!important;">
+              {{dat.titulo_material}}
+             </p>
+              
+         </mdb-card-text >
+          <a mdbBtn floating="true" size="4x" gradient="blue" mdbWavesEffect class="boton_d"><mdb-icon fas icon="play"></mdb-icon></a>
+
+        <!-- Card footer -->
+        <div class="card-footer text-center mt-2 back_footer">
+         
+        </div>
+
+      </mdb-card-body>
+      <!--/.Card content-->
+
+         </mdb-card>
+        <!--/.Card-->
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</swiper>
+
+<h3 class="font-weight-bold mt-5">Estrategias detonadoras</h3>
+<hr>
+<swiper [config]="config">
+    <div class="swiper-wrapper">
+      <div class="card_new swiper-slide" *ngFor="let dat of Libros | categoria:1  | busqueda: Ibusqueda">
+        <!--Card-->
+        <mdb-card cascade="true" narrower="true">
+
+     <!--Card image-->
+     <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+       <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).webp"></mdb-card-img>
+       <a>
+         <div class="mask rgba-white-slight"></div>
+       </a>
+       <mdb-badge  pill="true" default="true" class="tit_tipo">Audiovisual</mdb-badge>
+     </div>
+     <!--/Card image-->
+
+     <mdb-card-body cascade="true" class="text-center pb-0 px-0">
+       <h5 class="card-title2">{{dat.grado}}</h5>
+       <!--Text-->
+         <mdb-card-text >
+            <p class="font-weight-normal text-dark" style="font-size: 1.1rem!important;">
+             {{dat.titulo_material}}
+            </p>
+             
+        </mdb-card-text >
+         <a mdbBtn floating="true" size="4x" gradient="blue" mdbWavesEffect class="boton_d"><mdb-icon fas icon="play"></mdb-icon></a>
+
+       <!-- Card footer -->
+       <div class="card-footer text-center mt-2 back_footer">
+        
+       </div>
+
+     </mdb-card-body>
+     <!--/.Card content-->
+
+        </mdb-card>
+       <!--/.Card-->
+       </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</swiper>
+
+<h3 class="font-weight-bold mt-5">Videos académicos</h3>
+<hr>
+<swiper [config]="config">
+    <div class="swiper-wrapper">
+      <div class="card_new swiper-slide" *ngFor="let dat of Libros | categoria:1  | busqueda: Ibusqueda">
+        <!--Card-->
+        <mdb-card cascade="true" narrower="true">
+
+     <!--Card image-->
+     <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+       <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).webp"></mdb-card-img>
+       <a>
+         <div class="mask rgba-white-slight"></div>
+       </a>
+       <mdb-badge  pill="true" default="true" class="tit_tipo">Audiovisual</mdb-badge>
+     </div>
+     <!--/Card image-->
+
+     <mdb-card-body cascade="true" class="text-center pb-0 px-0">
+       <h5 class="card-title2">{{dat.grado}}</h5>
+       <!--Text-->
+         <mdb-card-text >
+            <p class="font-weight-normal text-dark" style="font-size: 1.1rem!important;">
+             {{dat.titulo_material}}
+            </p>
+             
+        </mdb-card-text >
+         <a mdbBtn floating="true" size="4x" gradient="blue" mdbWavesEffect class="boton_d"><mdb-icon fas icon="play"></mdb-icon></a>
+
+       <!-- Card footer -->
+       <div class="card-footer text-center mt-2 back_footer">
+        
+       </div>
+
+     </mdb-card-body>
+     <!--/.Card content-->
+
+        </mdb-card>
+       <!--/.Card-->
+       </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</swiper>

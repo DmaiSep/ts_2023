@@ -1,0 +1,256 @@
+<div class="container">
+
+
+<section class="my-5">
+    <h2 class="h1-responsive font-weight-bold text-center my-5">Alternativa 2017
+    </h2><hr>
+    <!-- Section description -->
+    <p class="text-justify w-responsive mx-auto mb-5">Esta alternativa cuenta con una matriz para cada grado que permite a los docentes de Telesecundaria de manera sencilla y práctica, la fácil localización de las 10 prácticas sociales del lenguaje en los diversos libros de texto con que cuentan las y los estudiantes. Además, Videos con orientaciones didácticas para cada una de las prácticas sociales del lenguaje de Lengua Extranjera. Inglés, presentadas por docentes de Telesecundaria en servicio, en las que nos comparten sus experiencias de trabajo con estas prácticas sociales.</p>
+   
+    <div class="row">
+        <div class="col-md-4">
+          <mdb-card cascade="true" narrower="true">
+              <div  class="view overlay rounded z-depth-2 mb-lg-0 mb-4 waves-light" mdbWavesEffect>
+                <img class="img-fluid" src="./RepositorioT/M_Ingles/img/ingles_1_Mesa_de_trabajo.jpg" >             
+                <a><div class="mask rgba-white-slight"></div></a>
+              </div>
+
+            <mdb-card-body cascade="true" class="text-center pb-0 px-0">
+                <h4 class="card-title">Materiales Educativos 2017</h4>
+               
+                <mdb-card-text>
+                    Grado: 1°
+                </mdb-card-text>
+        
+               <!--Visualización-->
+               <a type="button" mdbBtn floating="true" size="sm" color="fb" class="waves-light" mdbWavesEffect href="./RepositorioT/M_Ingles/PDF/MATRIZ_INGLES_PRIMER_GRADO.pdf" target="_blank" >
+                <mdb-icon fas icon="book" size="2x" class="white-text"></mdb-icon>
+              </a>
+              <!--Descarga-->
+              <a type="button" mdbBtn floating="true" size="sm" color="tw" class="waves-light" mdbWavesEffect href="./RepositorioT/M_Ingles/zip/MATRIZ_INGLES_PRIMER_GRADO.zip" target="_blank">
+                <mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon>
+              </a>
+
+            </mdb-card-body>
+          </mdb-card>
+        </div>
+        
+        <div class="col-md-4">
+          <mdb-card cascade="true" narrower="true">
+              <div  class="view overlay rounded z-depth-2 mb-lg-0 mb-4 waves-light" mdbWavesEffect>
+                <img class="img-fluid" src="./RepositorioT/M_Ingles/img/ingles_2_Mesa_de_trabajo.jpg" >
+                <a>
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+      
+            <mdb-card-body cascade="true" class="text-center pb-0 px-0">
+                <h4 class="card-title">Materiales Educativos 2017</h4>
+                <mdb-card-text>
+                    Grado: 2°
+                </mdb-card-text>
+                <!--Visualización-->
+                <a type="button" mdbBtn floating="true" size="sm" color="fb" class="waves-light" mdbWavesEffect href="./RepositorioT/M_Ingles/PDF/MATRIZ_INGLES_SEGUNDO_GRADO.pdf" target="_blank">
+                  <mdb-icon fas icon="book" size="2x" class="white-text"></mdb-icon>
+                </a>
+                <!--Descarga-->
+                <a type="button" mdbBtn floating="true" size="sm" color="tw" class="waves-light" mdbWavesEffect href="./RepositorioT/M_Ingles/zip/MATRIZ_INGLES_SEGUNDO_GRADO.zip" target="_blank">
+                  <mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon>
+                </a>
+            </mdb-card-body>     
+          </mdb-card>
+        </div>
+      
+        <div class="col-md-4">
+          <mdb-card cascade="true" narrower="true">
+              <div  class="view overlay rounded z-depth-2 mb-lg-0 mb-4 waves-light" mdbWavesEffect>
+                <img class="img-fluid" src="./RepositorioT/M_Ingles/img/ingles_3_Mesa_de_trabajo.jpg" >
+                <a>
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+      
+            <mdb-card-body cascade="true" class="text-center pb-0 px-0">
+              <h4 class="card-title">Materiales Educativos 2017</h4>
+              <mdb-card-text>
+                  Grado: 3°
+              </mdb-card-text>
+      
+              <!--Visualización-->
+              <a type="button" mdbBtn floating="true" size="sm" color="fb" class="waves-light" mdbWavesEffect href="./RepositorioT/M_Ingles/PDF/MATRIZ_INGLES_TERCER_GRADO.pdf" target="_blank">
+                <mdb-icon fas icon="book" size="2x" class="white-text"></mdb-icon>
+              </a>
+              <!--Descarga-->
+              <a type="button" mdbBtn floating="true" size="sm" color="tw" class="waves-light" mdbWavesEffect href="./RepositorioT/M_Ingles/zip/MATRIZ_INGLES_TERCER_GRADO.zip" target="_blank">
+                <mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon>
+              </a>
+            </mdb-card-body>
+          </mdb-card>
+        </div>        
+    </div>
+
+  <!-- Bloque Primer Grado-->
+  <blockquote class="blockquote bq-warning mt-5">
+      <p class="bq-title">Primer Grado</p>
+  </blockquote>
+  
+  <swiper [config]="config">
+      <div class="swiper-wrapper">
+         <!--Card-->
+            <mdb-card cascade="true" narrower="true" class=" swiper-slide bajar" narrower="true" *ngFor="let uno of ImagesG1">
+
+      <!--Card image-->
+      <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+        <mdb-card-img [src]="uno.src"></mdb-card-img>
+        <a>
+          <div class="mask rgba-white-slight" (click)="openModal(uno.name, uno.url)"></div>
+        </a>
+      </div>
+      <!--/Card image-->
+
+      <mdb-card-body cascade="true" class="text-center pb-0 px-0" style="height: 176px!important;">
+       
+        <!--Title-->
+        <h5 class="card-title">{{uno.name}}</h5>
+        <!--Text-->
+   
+
+        <a mdbBtn color="unique" class="waves-light" mdbWavesEffect  (click)="openModal(uno.name, uno.url)">Ver</a>
+
+       
+
+      </mdb-card-body>
+      <!--/.Card content-->
+
+            </mdb-card>
+          <!--/.Card-->
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+  </swiper>
+
+ <!-- Bloque Segundo Grado -->
+  <blockquote class="blockquote bq-warning mt-5">
+      <p class="bq-title">Segundo Grado</p>
+  </blockquote>
+
+  <swiper [config]="config">
+    <div class="swiper-wrapper">
+         <!--Card-->
+         <mdb-card cascade="true" narrower="true" class=" swiper-slide bajar" narrower="true" *ngFor="let uno of ImagesG2">
+
+          <!--Card image-->
+          <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+            <mdb-card-img [src]="uno.src"></mdb-card-img>
+            <a>
+              <div class="mask rgba-white-slight" (click)="openModal(uno.name, uno.url)"></div>
+            </a>
+          </div>
+          <!--/Card image-->
+    
+          <mdb-card-body cascade="true" class="text-center pb-0 px-0" style="height: 190px!important;">
+           
+            <!--Title-->
+            <h5 class="card-title">{{uno.name}}</h5>
+            <!--Text-->
+       
+    
+            <a mdbBtn color="unique" class="waves-light" mdbWavesEffect  (click)="openModal(uno.name, uno.url)">Ver</a>
+    
+           
+    
+          </mdb-card-body>
+          <!--/.Card content-->
+    
+                </mdb-card>
+              <!--/.Card-->
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </swiper>
+
+ <!-- Bloque Tercer Grado -->
+  <blockquote class="blockquote bq-warning mt-5">
+    <p class="bq-title">Tercer Grado</p>
+  </blockquote>
+
+  <swiper [config]="config">
+    <div class="swiper-wrapper">
+         <!--Card-->
+         <mdb-card cascade="true" narrower="true" class=" swiper-slide bajar" narrower="true" *ngFor="let uno of ImagesG3">
+
+          <!--Card image-->
+          <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+            <mdb-card-img [src]="uno.src"></mdb-card-img>
+            <a>
+              <div class="mask rgba-white-slight" (click)="openModal(uno.name, uno.url)"></div>
+            </a>
+          </div>
+          <!--/Card image-->
+    
+          <mdb-card-body cascade="true" class="text-center pb-0 px-0" style="height: 190px!important;">
+           
+            <!--Title-->
+            <h5 class="card-title">{{uno.name}}</h5>
+            <!--Text-->
+       
+    
+            <a mdbBtn color="unique" class="waves-light" mdbWavesEffect  (click)="openModal(uno.name, uno.url)">Ver</a>
+    
+           
+    
+          </mdb-card-body>
+          <!--/.Card content-->
+    
+                </mdb-card>
+              <!--/.Card-->
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </swiper>
+</section>  
+
+
+<!--Alternativa 2006-->
+<section class="mt-5">
+  <h2 class="h1-responsive font-weight-bold text-center my-5">Alternativa 2006
+  </h2><hr>
+  <!-- Section description -->
+  <p class="text-justify w-responsive mx-auto mb-5">
+    Los docentes pueden seleccionar secuencias didácticas con apoyo de los materiales educativos llamados Apuntes, de sus videos y audios. Estos materiales se encuentran integrados en este apartado.
+    Materiales educativos 2006
+  </p>
+  <div class="row">
+    <div class="col-md-4">
+        <!--Card-->
+        <mdb-card cascade="true" narrower="true">
+    
+          <!--Card image-->
+          <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4 waves-light" mdbWavesEffect>
+            <img class="img-fluid" src="./RepositorioT/M_Ingles/img/ingles_1_2006.jpg">
+            <a>
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+          <!--/Card image-->
+    
+          <mdb-card-body cascade="true" class="text-center pb-0 px-0">
+            <!--Card content-->
+            <h4 class="card-title">Materiales educativos 2006</h4>
+            <!--Text-->
+
+          <!--Visualización-->
+          <a type="button" mdbBtn floating="true" size="sm" color="fb" class="waves-light" mdbWavesEffect href="./RepositorioT/ts_ingles/" target="_blank" >
+            <mdb-icon fas icon="play" size="2x" class="white-text"></mdb-icon>
+          </a>
+
+          </mdb-card-body>
+        </mdb-card>
+      </div>
+  </div>
+</section>
+
+</div>
