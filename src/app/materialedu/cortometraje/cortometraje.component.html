@@ -1,5 +1,7 @@
-<h1 class="text-center">Cortometrajes</h1>
-<hr>
+<app-buscar (messageEvent)="receiveMessage($event)"></app-buscar>
+
+<h1 class="text-center font-weight-bold ">Cortometrajes</h1>
+<hr class="sunny-morning-gradient pt-1 mb-5">
 <div class="row mb-5">
  <!-- Grid column -->
  <div class="col-lg-4 col-md-6">
@@ -9,7 +11,7 @@
 
       <!-- Image -->
       <div class="view overlay rounded z-depth-1-half mb-4">
-        <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Slides/1.webp" alt="Sample image">
+        <img class="img-fluid" src="../../../assets/img/cortometraje/smuack.png" alt="Sample image">
         <a>
           <div class="mask rgba-white-slight waves-light" mdbWavesEffect></div>
         </a>
@@ -19,18 +21,19 @@
       <div class="news-data d-flex justify-content-between">
         <a href="#!" class="deep-orange-text">
           <h6 class="font-weight-bold">
-            <mdb-icon fas icon="utensils" class="pr-2"></mdb-icon>Culinary</h6>
+           Alejandra Sánchez · 2015</h6>
         </a>
-        <p class="font-weight-bold dark-grey-text">
-          <mdb-icon far icon="clock" class="pr-2"></mdb-icon>27/02/2018</p>
+         <p class="font-weight-bold deep-orange-text">   
+          <mdb-icon far icon="clock" class="pr-2"></mdb-icon> 23min </p>
       </div>
 
       <!-- Excerpt -->
       <h3 class="font-weight-bold dark-grey-text mb-3">
-        <a>Title of the news</a>
+        <a>¡Smuack!</a>
       </h3>
-      <p class="dark-grey-text mb-lg-0 mb-md-5 mb-4">Sed ut perspiciatis unde voluptatem omnis iste natus
-        error sit voluptatem accusantium doloremque laudantium</p>
+      <p class="dark-grey-text mb-lg-0 mb-md-5 mb-4 text-justify">Luisa es una mujer cuya vida gira en torno a su trabajo en un
+        bar gay. El encuentro con su sobrina de 8 años la hará asumir una inesperada maternidad al tiempo que tendrá que confrontar su identidad sexual.
+        </p>
 
     </div>
     <!-- Featured news -->

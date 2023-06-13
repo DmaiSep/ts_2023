@@ -1,6 +1,6 @@
 <app-buscar (messageEvent)="receiveMessage($event)"></app-buscar>
-<h1 class="text-center font-weight-bold mb-5">Informaticos integradores comunitarios</h1>
-<hr>
+<h1 class="text-center font-weight-bold">Informaticos integradores comunitarios</h1>
+<hr class="sunny-morning-gradient pt-1 mb-5">
 <swiper [config]="config">
   <div class="swiper-wrapper">
     <div class=" swiper-slide" *ngFor="let dat of Libros | categoria:1  | busqueda: Ibusqueda">   

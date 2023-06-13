@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./cortometraje.component.scss']
 })
 export class CortometrajeComponent {
-
+  Ibusqueda: string;
+  
+  receiveMessage($event) {
+    this.Ibusqueda = $event;
+  }
 }
