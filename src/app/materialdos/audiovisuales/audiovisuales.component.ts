@@ -19,7 +19,6 @@ export class AudiovisualesComponent {
   bloqueSelect:number = 0;
   menu: any = [];
   Audiovisuales: any = [];
-  Audiovisuales_aletorio: any = [];
 
 
   constructor( private modalService: MDBModalService, private _formBuilder: FormBuilder, private _audiovisuales:AudiovisualesService, private _visitas:VisitaService) { 
@@ -105,12 +104,6 @@ export class AudiovisualesComponent {
       console.log(err);
     });
 
-    this._audiovisuales.getAudiovisuales_aleatorio().subscribe(res =>{
-      this.Audiovisuales_aletorio = res;
-    },err =>{
-      console.log(err);
-    });
-
   }
 
   grado(){
@@ -135,7 +128,6 @@ export class AudiovisualesComponent {
         this.form.controls['bloque'].enable();
       }else{
         this.form.controls['bloque'].disable();
-
       }
     }
 

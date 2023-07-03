@@ -26,8 +26,6 @@ import { FilterT2Pipe } from './pipes/filter-t2.pipe';
 import { RutaPipe } from './pipes/ruta.pipe';
 import { PefilContentPipe } from './pipes/pefil-content.pipe';
 import { ModalbComponent } from './modalb/modalb.component';
-import { FilterT2AudioPipe } from './pipes/filter-t2-audio.pipe';
-import { FilterT2AudioAlePipe } from './pipes/filter-t2-audio-ale.pipe';
 
 
 @NgModule({
@@ -52,8 +50,6 @@ import { FilterT2AudioAlePipe } from './pipes/filter-t2-audio-ale.pipe';
     RutaPipe,
     PefilContentPipe,
     ModalbComponent,
-    FilterT2AudioPipe,
-    FilterT2AudioAlePipe,
   ],
   imports: [
     CommonModule,
