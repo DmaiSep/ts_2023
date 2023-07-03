@@ -17,7 +17,7 @@ include '../conecta.php';
   INNER JOIN cat_bloque ON cat_bloque.id_bloque = lib_mat_audiovisuales.id_bloque) 
   INNER JOIN cat_asignatura ON cat_asignatura.id_asignatura = lib_mat_audiovisuales.id_asignatura)
   LEFT JOIN cat_material ON cat_material.id_tipo_material = 3)  
-  WHERE lib_mat_audiovisuales.estado =1 ORDER BY rand();";
+  WHERE lib_mat_audiovisuales.estado =1 ORDER BY rand() LIMIT 50;";
   //WHERE lib_mat_audiovisuales.estado =1
   $conn	=	conecta_bd();
   $result = mysqli_query($conn,$q);
