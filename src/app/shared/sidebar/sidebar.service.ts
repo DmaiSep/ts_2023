@@ -72,7 +72,7 @@ export class SidebarService {
       icon: 'fa fa-calendar',
       active: false,
       type: 'simple',
-      target: false,
+      target: true,
       url: './RepositorioT/calendario/CALENDARIO_ESCOLAR_2022-2023_v3.pdf'
     }
    
