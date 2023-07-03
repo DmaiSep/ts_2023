@@ -28,6 +28,7 @@ import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { ModaldiComponent } from './modaldi/modaldi.component';
 import { LidpipePipe } from './pipes/lidpipe.pipe';
+import {CookieService} from 'ngx-cookie-service';
 
 
 
@@ -69,6 +70,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     ],
     entryComponents: [ ModaldiComponent ],
   providers: [
+    CookieService,
     MDBSpinningPreloader,{
     provide: PERFECT_SCROLLBAR_CONFIG,
     useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG

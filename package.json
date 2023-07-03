@@ -33,6 +33,7 @@
     "mdb-wysiwyg": "file:mdb-wysiwyg-15.0.0.tgz",
     "ng-uikit-pro-standard": "file:ng-uikit-pro-standard-15.0.0.tgz",
     "ngx-bootstrap": "^10.2.0",
+    "ngx-cookie-service": "^16.0.0",
     "ngx-perfect-scrollbar": "^10.1.1",
     "ngx-swiper-wrapper": "^10.0.0",
     "ngx-useful-swiper": "^10.0.1",
