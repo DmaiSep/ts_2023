@@ -25,6 +25,7 @@ import { DomseguroPipe } from './pipes/domseguro.pipe';
 import { FilterT2Pipe } from './pipes/filter-t2.pipe';
 import { RutaPipe } from './pipes/ruta.pipe';
 import { PefilContentPipe } from './pipes/pefil-content.pipe';
+import { ModalbComponent } from './modalb/modalb.component';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { PefilContentPipe } from './pipes/pefil-content.pipe';
     FilterT2Pipe,
     RutaPipe,
     PefilContentPipe,
+    ModalbComponent,
   ],
   imports: [
     CommonModule,
