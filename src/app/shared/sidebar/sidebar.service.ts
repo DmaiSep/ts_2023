@@ -18,22 +18,19 @@ export class SidebarService {
       icon: 'fa fa-book-open',
       active: false,
       type: 'interno',
-      url: 'Home'
+      url: 'Home',
+      target: false,
     },
     {
       title: 'Materiales educativos',
       icon: 'fas fa-book',
       active: true,
       type: 'dropdown',
+      target: false,
       submenus: [
         {
           title: 'Libros de texto',
           url:'Libros',
-          tipo: 'interno'
-        },
-        {
-          title: 'Coleccíon Ximhai',
-          url:'Ximhai',
           tipo: 'interno'
         },
         {
@@ -63,10 +60,19 @@ export class SidebarService {
       ]
     },
     {
+      title: 'Materiales 2º y 3º grado',
+      icon: 'fa fa-book',
+      active: false,
+      type: 'simple',
+      url: './#/Materiales/Inicio/(Secc:Home)',
+      target: false,
+    },
+    {
       title: 'Calendario',
       icon: 'fa fa-calendar',
       active: false,
       type: 'simple',
+      target: false,
       url: './RepositorioT/calendario/CALENDARIO_ESCOLAR_2022-2023_v3.pdf'
     }
    

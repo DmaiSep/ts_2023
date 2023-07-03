@@ -21,7 +21,7 @@ const routes: Routes = [
       { path:'Libros', component: LibrosComponent,outlet: "Secc", data: {state: 'libros'}}, 
       {path:'Audiovisuales', component: AudiovisualesComponent, outlet: "Secc"},
       {path:'Informaticos', component: InformaticosComponent, outlet: "Secc"},
-      {path:'Apuntes', component: ApuntesComponent, outlet: "Secc"},
+      //{path:'Apuntes', component: ApuntesComponent, outlet: "Secc"},
       {path:'DebilidadV', component: DebilidadvComponent, outlet: "Secc"},
       {path:'MatricezA', component: MatricesaComponent, outlet: "Secc"},
       {path:'MatrizC', component: MatrizcComponent, outlet: "Secc"},

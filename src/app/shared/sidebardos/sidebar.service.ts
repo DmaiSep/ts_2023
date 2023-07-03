@@ -20,6 +20,7 @@ export class SidebarService {
       icon: 'fas fa-book',
       active: true,
       type: 'dropdown',
+      target: false,
       submenus: [
         {
           title: 'Libros de texto',
@@ -43,11 +44,6 @@ export class SidebarService {
           tipo: 'externo'
         }
         ,
-        {
-          title: 'Apuntes',
-          url:'Apuntes',
-          tipo: 'interno'
-        },
         {
           title: 'Matriz de Recursos Audiovisuales',
           url:'MatricezA',
@@ -81,6 +77,7 @@ export class SidebarService {
       icon: 'fas fa-edit',
       active: false,
       type: 'dropdown',
+      target: false,
       submenus: [
         {
           title: 'Products',
@@ -104,6 +101,7 @@ export class SidebarService {
       icon: 'fas fa-chart-area',
       active: false,
       type: 'dropdown',
+      target: false,
       submenus: [
         {
           title: 'General',
@@ -137,6 +135,7 @@ export class SidebarService {
       icon: 'fas fa-list-alt',
       active: false,
       type: 'dropdown',
+      target: false,
       submenus: [
         {
           title: 'Pie chart',
@@ -161,11 +160,21 @@ export class SidebarService {
       ]
     },
     {
+      title: 'Material 1º grado',
+      icon: 'fas fa-book',
+      active: false,
+      type: 'simple',
+      url: './#/MaterialesE/Inicio/(Secc:Home)',
+      target: false,
+    }
+    ,
+    {
       title: 'Calendario',
       icon: 'fa fa-calendar',
       active: false,
       type: 'simple',
-      url: './RepositorioT/calendario/CALENDARIO_ESCOLAR_2022-2023_v3.pdf'
+      url: './RepositorioT/calendario/CALENDARIO_ESCOLAR_2022-2023_v3.pdf',
+      target: false,
     }
   ];
   breadcrumbs: any[] = [
@@ -174,7 +183,6 @@ export class SidebarService {
     {url: 'Audiovisuales',modulo:'Materiales Educativos', seccion: 'Materiales audiovisuales'},
     {url: 'Informaticos',modulo:'Materiales Educativos', seccion: 'Materiales informáticos'},
     {url: 'DebilidadV',modulo:'Materiales Educativos', seccion: 'Materiales para capacidades diferentes'},
-    {url: 'Apuntes',modulo:'Materiales Educativos', seccion: 'Apuntes'},
     {url: 'MatricezA',modulo:'Materiales Educativos', seccion: 'Matriz de Recursos Audiovisuales'},
     {url: 'MatrizC',modulo:'Materiales Educativos', seccion: 'Matriz de Correspondencia'},
     {url: 'CirculoLectura',modulo:'Materiales Educativos', seccion: 'Círculos de lectura'},
