@@ -9,7 +9,7 @@ export class FilterT2AudioPipe implements PipeTransform {
   //filtra el objeto de los materiales por perfil, grado, asignatura
   transform(value: any[], perfil: Number, grado:Number , asig: Number, bloque: Number) {
     let datos = [];
-    console.log(perfil, grado, asig, bloque);
+    //console.log(perfil, grado, asig, bloque);
     if(perfil ===  0 || perfil === undefined) {
       return null;
     }
@@ -34,7 +34,8 @@ export class FilterT2AudioPipe implements PipeTransform {
               return datos.filter(material => Number(material.id_grado) == Number(grado));
             }
           }
-        return value.filter(material => Number(material.id_perfil) == Number(perfil));
+          datos = value.filter(material => Number(material.id_perfil) == Number(perfil));
+          return datos.filter(material => Number(material.id_grado) == Number(grado));
       }
 
       
