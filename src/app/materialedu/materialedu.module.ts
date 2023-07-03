@@ -19,6 +19,10 @@ import { RutaPipe } from './pipes/ruta.pipe';
 import { Informatico2Component } from './informatico2/informatico2.component';
 import { Audiovisual2Component } from './audiovisual2/audiovisual2.component';
 import { XimhaiComponent } from './ximhai/ximhai.component';
+import { ModalbComponent } from './modalb/modalb.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -35,6 +39,7 @@ import { XimhaiComponent } from './ximhai/ximhai.component';
     Informatico2Component,
     Audiovisual2Component,
     XimhaiComponent,
+    ModalbComponent,
   ],
   imports: [
     CommonModule,
