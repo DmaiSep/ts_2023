@@ -174,7 +174,7 @@ export class SidebarService {
       active: false,
       type: 'simple',
       url: './RepositorioT/calendario/CALENDARIO_ESCOLAR_2022-2023_v3.pdf',
-      target: false,
+      target: true,
     }
   ];
   breadcrumbs: any[] = [
