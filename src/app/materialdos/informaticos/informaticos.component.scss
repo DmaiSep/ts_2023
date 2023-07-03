@@ -69,7 +69,7 @@ svg .polygon {
 .card-body3 {
     text-align: center;
     padding: 5px;
-    background: #eae7ed59;
+    //background: #eae7ed59;
     border-radius: 5px;
 }
 
@@ -144,4 +144,41 @@ svg .polygon2 {
 }
 svg .polygon3 {
     fill: rgb(216 89 96);
+}
+
+
+//flechas de carrusel
+
+.swiper-button-next {
+    background-image: url(../../../assets/img/flechaderecha.png) !important;
+    background-repeat: no-repeat;
+    color: transparent !important;
+    background-color: transparent !important;
+    padding-right: 35px !important;
+    position: absolute !important;
+    top: 88% !important;
+    
+}
+
+.swiper-button-prev {
+    background-image: url(../../../assets/img/flechaizquierda.png) !important;
+    background-repeat: no-repeat;
+    color: transparent !important;
+    background-color: transparent !important;
+    padding-left: 32px !important;
+    position: absolute !important;
+    top: 88% !important;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .swiper-button-next {
+        padding-right: 32px !important;
+        top: 93% !important;
+        
+    }
+    
+    .swiper-button-prev {
+        padding-left: 32px !important;
+        top: 93% !important;
+    }
 }
