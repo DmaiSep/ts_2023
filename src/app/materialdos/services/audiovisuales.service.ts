@@ -21,4 +21,10 @@ export class AudiovisualesService {
     );
   }
 
+  getAudiovisuales_aleatorio(){
+    return this.http.get(
+      `${this.url}lib_mat_audiovisuales_aleatorio.php`
+    );
+  }
+
 }
