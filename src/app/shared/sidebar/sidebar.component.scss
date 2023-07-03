@@ -349,7 +349,8 @@ $hover-color:#35D8B3;
 $shadow-color:#131212;
 $bg-scrollbar :#636363;
 // colors with backgound image
-$img-bg-sidebar-wrapper:#465056;
+//$img-bg-sidebar-wrapper:#465056;
+$img-bg-sidebar-wrapper: var(--tsverde);
 $img-border-color: rgba(255, 255, 255, 0.1);
 $img-bg-footer :rgba(43, 43, 43, 0.5);
 $img-shadow-color:rgba(0, 0, 0, 0.5);
@@ -424,7 +425,7 @@ $img-shadow-color:rgba(0, 0, 0, 0.5);
             right: 0;
             bottom: 0;
             left: 0;
-            background: linear-gradient( 356deg, rgba(37, 33, 33, 1) 0%, rgba(37, 33, 33, 1) 0%, rgba(70, 80, 86, 1) 50%);
+            /*background: linear-gradient( 356deg, rgba(37, 33, 33, 1) 0%, rgba(37, 33, 33, 1) 0%, rgba(70, 80, 86, 1) 50%);*/
             background-color: $img-bg-sidebar-wrapper;
         }
         .sidebar-profile,
