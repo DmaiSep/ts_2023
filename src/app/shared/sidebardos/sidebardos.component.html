@@ -2,7 +2,7 @@
     <div class="sidebar-content">
         <perfect-scrollbar>
             <div class="sidebar-header text-center">
-                <a [routerLink]="['/']"><img src="./assets/img/ts_logo.png" width="100px"></a>
+                <a [routerLink]="['/']"><img src="./assets/img/ts-comunidad-verde.png" width="100px"></a>
             </div>
             <div class="sidebar-menu">
                 <ul>
@@ -19,7 +19,7 @@
                             <ul>
                                 <li *ngFor="let submenu of menu.submenus">
                                     <a *ngIf="submenu.tipo == 'interno'" [routerLink]="[{ outlets: { Secc: [submenu.url] }}]" (click)="toggleSidebarclose()"> {{submenu.title}}</a>
-                                    <a *ngIf="submenu.tipo == 'externo'" href="{{submenu.url}}" target="_blank" > {{submenu.title}}</a>
+                                    <a *ngIf="submenu.tipo == 'externo'" href="{{submenu.url}}" target="_blank">{{submenu.title}} <mdb-icon fas icon="external-link-square-alt" class="fa-sm"></mdb-icon></a>
                                 </li>
                             </ul>
                         </div>

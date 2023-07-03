@@ -58,7 +58,10 @@
         overflow-y: auto;
         position: relative;
         .sidebar-header {
-            padding: 10px 20px;
+            background-color: white;
+            border-radius: 0 0 25px 0;
+            padding: 30px 20px 30px;
+            margin-right: 25px;
             display: flex;
             align-items: center;
             >a {
@@ -340,12 +343,12 @@
 
 /*------------------------------default theme---------------------------------*/
 
-$bg-sidebar-wrapper: #1d1d1d;
+$bg-sidebar-wrapper: none;
 $border-color: #2b2b2b;
 $footer-top-border-color :#3a3a3a;
 $color:#fff;
 $header-menu-color :#6c7b88;
-$hover-color:#35D8B3;
+$hover-color:#fff;
 $shadow-color:#131212;
 $bg-scrollbar :#636363;
 // colors with backgound image
@@ -427,11 +430,12 @@ $img-shadow-color:rgba(0, 0, 0, 0.5);
             left: 0;
             /*background: linear-gradient( 356deg, rgba(37, 33, 33, 1) 0%, rgba(37, 33, 33, 1) 0%, rgba(70, 80, 86, 1) 50%);*/
             background-color: $img-bg-sidebar-wrapper;
+            border-radius: 0 0 35px 0;
         }
         .sidebar-profile,
         .sidebar-search,
         .sidebar-menu {
-            border-top: 1px solid $img-border-color;
+            border-top: 0px solid $img-border-color;
         }
         .sidebar-search input.search-menu,
         .sidebar-search .input-group-text {
