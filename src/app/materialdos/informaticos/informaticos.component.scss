@@ -1,3 +1,42 @@
+.zindex1 {
+    z-index: 1;
+}
+
+/*EMPIEZA ESTILOS DE GRADOS INVERTIDOS*/
+.fgradoi1 {
+    background: #efefef;
+    color: #33B6C4;
+    /*background: linear-gradient(270deg, rgba(0,164,181,1) 0%, rgba(55,117,127,1) 100%);*/
+}
+
+.fgradoi2 {
+    background: #efefef;
+    color: #8956AB;
+    /*background: linear-gradient(178deg, #673a8fb8 0%, #5a327dc7 100%);*/
+    padding: 5px;
+}
+
+.fgradoi3 {
+    background: #efefef;
+    color: #E74950;
+    /*background: linear-gradient(181deg, #e62e39c4 0%, #c82932c7 100%);*/
+    padding: 5px;
+}
+
+.toprighti {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 0px 4px 0px 14px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+/*TERMINA ESTILOS DE GRADOS INVERTIDOS*/
 
 //flechas de carrusell
 .swiper-button-next {
@@ -122,28 +161,28 @@ svg .polygon {
 }
 
 .fgrado1 {
-    background: rgb(0,164,181);
-    background: linear-gradient(181deg, rgb(111 207 221) 0%, rgb(55, 117, 127) 100%);
+    background: #33B6C4;
+    /*background: linear-gradient(181deg, rgb(111 207 221) 0%, rgb(55, 117, 127) 100%);*/
 }
 .fgrado2 {
-    background: rgb(103, 58, 143);
-    background: linear-gradient(178deg, #673a8fb8 0%, #5a327dc7 100%);
+    background: #8956AB;
+    /*background: linear-gradient(178deg, #673a8fb8 0%, #5a327dc7 100%);*/
     padding: 5px;
 }
 
 .fgrado3 {
-    background: rgb(230, 46, 57);
-    background: linear-gradient(181deg, #e62e39c4 0%, #c82932c7 100%);
+    background: #E74950;
+    /*background: linear-gradient(181deg, #e62e39c4 0%, #c82932c7 100%);*/
     padding: 5px;
 }
 svg .polygon1 {
-    fill: #40a0ac;
+    fill: #33B6C4;
 }
 svg .polygon2 {
-    fill: rgb(133 101 161);
+    fill: #8956AB;
 }
 svg .polygon3 {
-    fill: rgb(216 89 96);
+    fill: #E74950;
 }
 
 

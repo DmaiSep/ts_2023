@@ -151,8 +151,6 @@ svg .polygon {
     height: 40px;
 }
 
-
-
 /*ESTILOS DE TARJETAS INDIVIDUALES*/
 
 h1, h2, h3, h4, h5, h6, p {
@@ -213,6 +211,7 @@ p {
     padding-left: 0;
 }
 
+/*EMPIEZA ESTILOS DE GRADOS*/
 .fgrado1 {
     background: #33B6C4;
     /*background: linear-gradient(270deg, rgba(0,164,181,1) 0%, rgba(55,117,127,1) 100%);*/
@@ -229,6 +228,7 @@ p {
     /*background: linear-gradient(181deg, #e62e39c4 0%, #c82932c7 100%);*/
     padding: 5px;
 }
+/*TERMINA ESTILOS DE GRADOS*/
 
 .textw {
     color: #efefef;

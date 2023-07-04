@@ -19,7 +19,7 @@
                             <ul>
                                 <li *ngFor="let submenu of menu.submenus">
                                     <a *ngIf="submenu.tipo == 'interno'" [routerLink]="[{ outlets: { Secc: [submenu.url] }}]" (click)="toggleSidebarclose()"> {{submenu.title}}</a>
-                                    <a *ngIf="submenu.tipo == 'externo'" href="{{submenu.url}}" target="_blank">{{submenu.title}} <mdb-icon fas icon="external-link-square-alt" class="fa-sm"></mdb-icon></a>
+                                    <a *ngIf="submenu.tipo == 'externo'" href="{{submenu.url}}" target="_blank">{{submenu.title}}</a>
                                 </li>
                             </ul>
                         </div>

@@ -27,14 +27,17 @@
 
 <section *ngIf="Informaticos | pefilContent:2">
 
-    <blockquote class="blockquote bq-warning">
-        <p class="bq-title">Informaticos para el Alumno</p>
+    <blockquote class="blockquote tverde">
+        <p class="bq-title tverde">Informaticos para el Alumno</p>
     </blockquote>
     
     <swiper [config]="config">
         <div class="swiper-wrapper">
            
             <div class="card3 swiper-slide fgrado{{dat.id_grado}}" *ngFor="let dat of Informaticos | filterT2:2:gradosSelect:asigSelect:bloqueSelect | slice:0:50">
+
+                <div class="toprighti fgradoi{{dat.id_grado}} zindex1"><h4><strong>{{dat.id_grado}}º</strong></h4></div>
+
                 <div class="card-header3" style="background-image: url({{dat.img}})">
     
     
@@ -46,8 +49,9 @@
     
                 <div class="card-body3">
                     
-                    <h3 class="name3">{{dat.nom_material}}</h3>
-                    <h4 class="job-title3">{{dat.grado}}/{{dat.asignatura}}/Bloque {{dat.id_bloque}} </h4>
+                    <h3 class="name3 m-0">{{dat.nom_material}}</h3>
+                    <h4 class="job-title3 m-0">{{dat.asignatura}}</h4>
+                    <h4 class="job-title3 m-0">Bloque {{dat.id_bloque}} </h4>
                 </div>
     
                 <div class="card-footer3">
@@ -55,14 +59,14 @@
                         <div class="stat3">
                             <span class="">
                                 <a *ngIf="dat.url" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" (click)="visita(dat.id_mat_inform, dat.id_tipo_material, 1)" href="{{dat.url}}" target="_blank">
-                                    <mdb-icon fas icon="atlas" size="2x" class="white-text"></mdb-icon>
+                                    <mdb-icon fas icon="play-circle" size="2x" class="white-text m-0"></mdb-icon>
                                   </a>
                             </span>
                         </div>
                         <div class="stat3">
                             <span class="">
                                 <a *ngIf="dat.exe" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 mt-3" (click)="visita(dat.id_mat_inform, dat.id_tipo_material, 2)" href="{{dat.exe}}" target="_blank">
-                                    <mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon>
+                                    <mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text m-0"></mdb-icon>
                                 </a>
                             </span>
                         </div>
@@ -87,6 +91,7 @@
         <div class="swiper-wrapper">
            
             <div class="card3 swiper-slide fgrado{{dat.id_grado}}" *ngFor="let dat of Informaticos | filterT2:1:gradosSelect:asigSelect:bloqueSelect | slice:0:50">
+                <div class="toprighti fgradoi{{dat.id_grado}} zindex1"><h4><strong>{{dat.id_grado}}º</strong></h4></div>
                 <div class="card-header3" style="background-image: url({{dat.img}})">
     
     

@@ -3,6 +3,14 @@
     --tsverde: rgba(12,116,117,1);
 }
 
+.tverde {
+    color: var(--tsverde) !important;
+}
+
+.blockquote {
+    border-left: 0.25rem solid var(--tsverde);
+}
+
 //HEADER GOB
 .inverse2 {
     background-color: #0C231E !important;

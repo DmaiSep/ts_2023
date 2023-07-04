@@ -26,12 +26,13 @@
 </form>
 
 <section *ngIf="Audiovisuales | pefilContent:2">
-    <blockquote class="blockquote bq-warning">
-        <p class="bq-title">Audiovisuales para el Alumno</p>
+    <blockquote class="blockquote tverde">
+        <p class="bq-title tverde">Audiovisuales para el Alumno</p>
     </blockquote>
     
     <swiper [config]="config">
       <div class="swiper-wrapper">
+
           <mdb-card class="cardu swiper-slide color-block white-text fgrado{{dat.id_grado}}" *ngFor="let dat of Audiovisuales | filterT2Audio:2:gradosSelect:asigSelect:bloqueSelect | slice:0:50">
               <mdb-card-body>
                   <!-- Grid row -->
@@ -85,6 +86,7 @@
           <mdb-card class="cardu swiper-slide color-block white-text fgrado{{dat.id_grado}}" *ngFor="let dat of Audiovisuales_aletorio | filterT2AudioAle:2:gradosSelect:asigSelect:bloqueSelect | slice:0:50">
             
             <mdb-card-body>
+                <div class="toprighti fgradoi{{dat.id_grado}} zindex1"><h4>{{dat.id_grado}}º</h4></div>
                 <!-- Grid row -->
                 <div class="row">
   
@@ -93,6 +95,7 @@
   
                         <!-- Featured image -->
                         <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4 waves-light" mdbWavesEffect>
+                            
 
                               <div class="avimgfluid">
                                   <img class="img-fluid" src="./RepositorioT/audiovisuales/img/G{{dat.id_grado}}/T{{dat.id_perfil}}/A{{dat.id_asignatura}}/B{{dat.id_bloque}}/{{dat.orden}}.jpg" alt="Sample image">
@@ -111,7 +114,8 @@
                     <!-- Grid column -->
   
                     <!-- Grid column -->
-                    <div class="col-lg-7">
+                    <div class="col-lg-6">
+                        <!--INFORMACIÓN VISIBLE-->
                      
                         <!-- Category -->
                       <!--  <mdb-badge pill="true" default="true">Audiovisual</mdb-badge> -->
@@ -122,7 +126,9 @@
                         <p>{{dat.secuencia}}</p>
                         <hr class="hrw">
                         <!-- Post data -->
-                        <p>{{dat.grado}}/{{dat.asignatura}}/Bloque {{dat.id_bloque}}</p>
+                        <!--<p>{{dat.grado}}</p>-->
+                        <p class="mb-0">{{dat.asignatura}}</p>
+                        <p>Bloque {{dat.id_bloque}}</p>
                       </div>
   
                     </div>
@@ -144,12 +150,13 @@
 </section>
 
 <section *ngIf="Audiovisuales | pefilContent:1">
-    <blockquote class="blockquote bq-warning mt-5 mb-5">
-        <p class="bq-title">Audiovisuales para el Maestro</p>
+    <blockquote class="blockquote tverde mt-5 mb-5">
+        <p class="bq-title tverde">Audiovisuales para el Maestro</p>
     </blockquote>
     
     <swiper [config]="config">
         <div class="swiper-wrapper">
+            
             <mdb-card class="cardu swiper-slide color-block white-text fgrado{{dat.id_grado}}" *ngFor="let dat of Audiovisuales | filterT2Audio:1:gradosSelect:asigSelect:bloqueSelect | slice:0:50">
                 <mdb-card-body>
                     <!-- Grid row -->
@@ -179,6 +186,7 @@
       
                         <!-- Grid column -->
                         <div class="col-lg-7">
+                            
                         
                             <!-- Category -->
                            <!--<mdb-badge pill="true" default="true">Audiovisual</mdb-badge> -->
@@ -188,7 +196,9 @@
                             <p>{{dat.secuencia}}</p>
                             <hr>
                             <!-- Post data -->
-                            <p>{{dat.grado}}/{{dat.asignatura}}/Bloque {{dat.id_bloque}}</p>
+                            <!--<p>{{dat.grado}}</p>-->
+                            <p class="mb-0">{{dat.grado}}{{dat.asignatura}}</p>
+                            <p>Bloque {{dat.id_bloque}}</p>
                           </div>
       
                         </div>
@@ -202,6 +212,7 @@
             <mdb-card class="cardu swiper-slide color-block white-text fgrado{{dat.id_grado}}" *ngFor="let dat of Audiovisuales_aletorio | filterT2AudioAle:1:gradosSelect:asigSelect:bloqueSelect | slice:0:50">
                
                 <mdb-card-body>
+                    <div class="toprighti fgradoi{{dat.id_grado}} zindex1"><h4>{{dat.id_grado}}º</h4></div>
                     <!-- Grid row -->
                     <div class="row">
       
@@ -228,7 +239,7 @@
                         <!-- Grid column -->
       
                         <!-- Grid column -->
-                        <div class="col-lg-7">
+                        <div class="col-lg-6">
                          
                             <!-- Category -->
                             <!--<mdb-badge pill="true" default="true">Audiovisual</mdb-badge> -->
@@ -239,7 +250,9 @@
                             <p>{{dat.secuencia}}</p>
                             <hr class="hrw">
                             <!-- Post data -->
-                            <p>{{dat.grado}}/{{dat.asignatura}}/Bloque {{dat.id_bloque}}</p>
+                            <!--<p>{{dat.grado}}</p>-->
+                            <p class="mb-0">{{dat.asignatura}}</p>
+                            <p>Bloque {{dat.id_bloque}}</p>
                           </div>
       
                         </div>

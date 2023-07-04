@@ -20,8 +20,8 @@
 
 </form>
 <section *ngIf="libros | pefilContent:2">
-    <blockquote class="blockquote bq-warning">
-        <p class="bq-title">Libros para el Alumno</p>
+    <blockquote class="blockquote tverde">
+        <p class="bq-title tverde">Libros para el Alumno</p>
     </blockquote>
     
     <swiper [config]="config">
@@ -37,7 +37,7 @@
                 </div>
                 <div class="card-footer3">
                     <div class="text-center mb-3">
-                        <a *ngIf="dat.ver_libro" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 " (click)="visita(dat.id_libro, dat.id_tipo_material, 1)" href="{{dat.ver_libro}}" target="_blank"><mdb-icon fas icon="book" size="2x" class="white-text"></mdb-icon></a>
+                        <a *ngIf="dat.ver_libro" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 " (click)="visita(dat.id_libro, dat.id_tipo_material, 1)" href="{{dat.ver_libro}}" target="_blank"><mdb-icon fas icon="play-circle" size="2x" class="white-text"></mdb-icon></a>
                         <a *ngIf="dat.zip_libro" mdbBtn floating="true" class="z-depth-0 mt-0 mr-0 mb-0 " (click)="visita(dat.id_libro, dat.id_tipo_material, 2)" href="{{dat.zip_libro}}"><mdb-icon fas icon="cloud-download-alt" size="2x" class="white-text"></mdb-icon></a>
                     </div>
                 </div>
@@ -52,8 +52,8 @@
 </section>
 
 <section *ngIf="libros | pefilContent:1">
-    <blockquote class="blockquote bq-warning">
-        <p class="bq-title">Libros para el Maestro</p>
+    <blockquote class="blockquote tverde mt-5 mb-5">
+        <p class="bq-title tverde">Libros para el Maestro</p>
     </blockquote>
     
     <swiper [config]="config">
