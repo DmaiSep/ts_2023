@@ -36,7 +36,7 @@ export class SidebardosComponent {
         }
       });
     }else{
-      console.log("fdfd");
+      //console.log("fdfd");
     }
   }
 
