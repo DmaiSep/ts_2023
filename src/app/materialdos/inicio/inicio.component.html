@@ -1,4 +1,4 @@
-<blockquote class="blockquote bq-warning mt-5 mb-5">
+<blockquote class="blockquote mt-5 mb-5 tverde">
   <p class="bq-title">Lo más visto por la Comunidad</p>
 </blockquote>
 
@@ -9,7 +9,7 @@
     
         <!--Card image-->
         <div class="view view-cascade overlay waves-light" mdbWavesEffect>
-          <mdb-badge pill="true" primary="true" style="position: absolute;top: 10px;left: 10px;z-index: 10;">{{dat.material}}</mdb-badge>
+          <mdb-badge pill="true" style="position: absolute;top: 10px;left: 10px;z-index: 10;" class="fverde">{{dat.material}}</mdb-badge>
           <mdb-card-img src="{{dat.img}}"></mdb-card-img>
           <a>
           
@@ -22,12 +22,12 @@
           <!--Card content-->
          
           <!--Title-->
-          <h6 class="card-title">{{dat.titulo}}</h6>
+          <h6 class="card-title tverde">{{dat.titulo}}</h6>
           <!--Text-->
-          <p class="text-default">{{dat.grado}}<br>{{dat.asignatura}} </p>
+          <p class="text-default tverde">{{dat.grado}}<br>{{dat.asignatura}} </p>
          
-          <a *ngIf="dat.id_tipo_material != 3" mdbBtn color="unique" rounded="true" mdbWavesEffect href="{{dat.url}}" target="_blank">Ver</a>
-          <a *ngIf="dat.id_tipo_material == 3" mdbBtn color="unique" rounded="true" mdbWavesEffect (click)="openModal(dat.titulo, dat.url, dat.id_material, dat.id_tipo_material, 0)">Ver</a>
+          <a *ngIf="dat.id_tipo_material != 3" mdbBtn rounded="true" mdbWavesEffect href="{{dat.url}}" target="_blank" class="fverde">Ver</a>
+          <a *ngIf="dat.id_tipo_material == 3" mdbBtn rounded="true" mdbWavesEffect (click)="openModal(dat.titulo, dat.url, dat.id_material, dat.id_tipo_material, 0)" class="fverde">Ver</a>
   
         </mdb-card-body>
         <!--/.Card content-->
@@ -41,7 +41,7 @@
 </swiper>
 
 
-<blockquote class="blockquote bq-warning mt-5 mb-5">
+<blockquote class="blockquote mt-5 mb-5 tverde">
   <p class="bq-title">Material alternativo</p>
 </blockquote>
 
@@ -52,7 +52,7 @@
     
         <!--Card image-->
         <div class="view view-cascade overlay waves-light" mdbWavesEffect>
-          <mdb-badge pill="true" primary="true" style="position: absolute;top: 10px;left: 10px;z-index: 10;">{{dat.tipo_material}}</mdb-badge>
+          <mdb-badge pill="true" style="position: absolute;top: 10px;left: 10px;z-index: 10;" class="fverde">{{dat.tipo_material}}</mdb-badge>
           <mdb-card-img *ngIf="dat.img" src="{{dat.img}}"></mdb-card-img>
           <mdb-card-img *ngIf="!dat.img" src="./RepositorioT/audiovisuales/img/G{{dat.id_grado}}/T{{dat.id_perfil}}/A{{dat.id_asignatura}}/B{{dat.id_bloque}}/{{dat.orden}}.jpg"></mdb-card-img>
           <a>
@@ -66,12 +66,12 @@
           <!--Card content-->
          
           <!--Title-->
-          <h6 class="card-title">{{dat.titulo}}</h6>
+          <h6 class="card-title tverde">{{dat.titulo}}</h6>
           <!--Text-->
-          <p class="text-default">{{dat.grado}}<br>{{dat.asignatura}} </p>
+          <p class="text-default tverde">{{dat.grado}}<br>{{dat.asignatura}} </p>
          
-          <a *ngIf="dat.id_tipo_material != 3" mdbBtn color="unique" rounded="true" mdbWavesEffect (click)="visita(dat.id_material, dat.id_tipo_material, 1)" href="{{dat.url}}" target="_blank">Ver</a>
-          <a *ngIf="dat.id_tipo_material == 3" mdbBtn color="unique" rounded="true" mdbWavesEffect (click)="openModal(dat.titulo, dat.url, dat.id_material, dat.id_tipo_material, 1)">Ver</a>
+          <a *ngIf="dat.id_tipo_material != 3" mdbBtn rounded="true" mdbWavesEffect (click)="visita(dat.id_material, dat.id_tipo_material, 1)" href="{{dat.url}}" target="_blank" class="fverde">Ver</a>
+          <a *ngIf="dat.id_tipo_material == 3" mdbBtn rounded="true" mdbWavesEffect (click)="openModal(dat.titulo, dat.url, dat.id_material, dat.id_tipo_material, 1)" class="fverde">Ver</a>
   
         </mdb-card-body>
         <!--/.Card content-->

@@ -3,8 +3,22 @@
     --tsverde: rgba(12,116,117,1);
 }
 
+html, body {
+    background-color: #f8f8fb !important;
+}
+
+.badge-primary {
+    background-color: red !important;
+    color: #fff!important;
+}
+
 .tverde {
     color: var(--tsverde) !important;
+}
+
+.fverde {
+    background-color: var(--tsverde) !important;
+    color: white !important;
 }
 
 .blockquote {
