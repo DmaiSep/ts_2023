@@ -64,6 +64,9 @@ export class InformaticosComponent {
   ];
 
   ngOnInit(): void {
+    this.form.controls['asignatura'].disable();
+    this.form.controls['bloque'].disable();
+
     this._informaticos.getMenu().subscribe(res =>{
       this.menu = res;
     },err =>{
